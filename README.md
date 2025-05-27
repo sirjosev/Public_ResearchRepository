@@ -1,5 +1,3 @@
-# sambutan di repo riset
-
 # Selamat Datang di Public Research Repository
 
 Halo! Terima kasih telah mengunjungi repositori ini. Di sini, saya mengumpulkan berbagai hasil riset dan pemikiran mendalam tentang banyak topik. Repositori ini adalah perjalanan eksplorasi pengetahuan yang akan terus berkembang seiring dengan penemuan baru dan ide-ide segar.
