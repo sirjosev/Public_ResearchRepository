@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog Dashboard Infografik</title>
+    <title>Katalog Dashboard Dinamis</title>
     
     <!-- Impor Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,13 +14,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* Menggunakan font Inter sebagai default */
         body {
             font-family: 'Inter', sans-serif;
-        }
-        /* Menambahkan sedikit transisi pada perubahan mode gelap/terang */
-        body {
             transition: background-color 0.3s, color 0.3s;
+        }
+        .card-placeholder {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f1f5f9; /* slate-200 */
+            border-radius: 0.75rem; /* rounded-xl */
+            border: 2px dashed #94a3b8; /* slate-400 */
+            min-height: 280px;
+            text-align: center;
+            padding: 1rem;
+        }
+        .dark .card-placeholder {
+            background-color: #1e293b; /* slate-800 */
+            border-color: #475569; /* slate-600 */
+        }
+        .loader {
+            border: 4px solid #f3f3f3; /* grey */
+            border-top: 4px solid #3498db; /* blue */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -28,102 +52,20 @@
 
     <div class="container mx-auto px-6 py-12 md:py-20">
         
-        <!-- Bagian Header -->
         <header class="text-center mb-12 md:mb-16">
             <h1 class="text-4xl md:text-5xl font-extrabold text-slate-800 dark:text-white leading-tight">
-                Katalog Riset Data
+                Katalog Proyek
             </h1>
             <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-300">
-                Jelajahi wawasan dan temuan terbaru dari berbagai riset kami. Setiap kartu akan membawa Anda ke analisis yang lebih mendalam.
+                Direktori proyek yang dihasilkan secara dinamis. Setiap kartu di bawah ini mewakili sebuah proyek yang ditemukan di repositori ini.
             </p>
         </header>
 
-        <!-- Grid untuk Katalog -->
-        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-
-            <!-- Kartu Katalog 1: Analisis E-commerce -->
-            <a href="#page-1" class="group block bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 overflow-hidden">
-                <!-- Ilustrasi Gambar -->
-                <div class="overflow-hidden">
-                    <img src="https://placehold.co/600x400/06b6d4/white?text=Visualisasi+A" 
-                         alt="Ilustrasi Analisis Tren Pasar E-commerce" 
-                         class="w-full h-48 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
-                </div>
-                <!-- Konten Teks -->
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2 text-slate-800 dark:text-white group-hover:text-cyan-500 dark:group-hover:text-cyan-400 transition-colors duration-300">
-                        Analisis Tren Pasar E-commerce
-                    </h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed line-clamp-3">
-                        Menyelami data penjualan selama lima tahun terakhir untuk mengidentifikasi pola pertumbuhan, preferensi produk, dan perilaku konsumen di platform digital.
-                    </p>
-                    <!-- Tombol Aksi -->
-                    <div class="mt-6 flex items-center text-sm font-semibold text-cyan-600 dark:text-cyan-400">
-                        <span>Lihat Detail Riset</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Kartu Katalog 2: Performa Media Sosial -->
-            <a href="#page-2" class="group block bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 overflow-hidden">
-                <!-- Ilustrasi Gambar -->
-                <div class="overflow-hidden">
-                    <img src="https://placehold.co/600x400/8b5cf6/white?text=Visualisasi+B" 
-                         alt="Ilustrasi Performa Kampanye Media Sosial"
-                         class="w-full h-48 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
-                </div>
-                <!-- Konten Teks -->
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2 text-slate-800 dark:text-white group-hover:text-violet-500 dark:group-hover:text-violet-400 transition-colors duration-300">
-                        Performa Kampanye Media Sosial
-                    </h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed line-clamp-3">
-                        Riset ini mengukur efektivitas kampanye di berbagai platform, menganalisis metrik engagement, jangkauan, dan konversi untuk optimasi strategi masa depan.
-                    </p>
-                     <!-- Tombol Aksi -->
-                    <div class="mt-6 flex items-center text-sm font-semibold text-violet-600 dark:text-violet-400">
-                        <span>Lihat Detail Riset</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Kartu Katalog 3: Kepuasan Pelanggan -->
-            <a href="#page-3" class="group block bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 overflow-hidden">
-                <!-- Ilustrasi Gambar -->
-                <div class="overflow-hidden">
-                    <img src="https://placehold.co/600x400/ec4899/white?text=Visualisasi+C" 
-                         alt="Ilustrasi Survei Kepuasan Pelanggan"
-                         class="w-full h-48 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
-                </div>
-                <!-- Konten Teks -->
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2 text-slate-800 dark:text-white group-hover:text-pink-500 dark:group-hover:text-pink-400 transition-colors duration-300">
-                        Survei Kepuasan Pelanggan
-                    </h3>
-                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed line-clamp-3">
-                        Analisis data dari survei kepuasan pelanggan untuk menemukan faktor-faktor kunci yang mempengaruhi loyalitas dan retensi pelanggan.
-                    </p>
-                     <!-- Tombol Aksi -->
-                    <div class="mt-6 flex items-center text-sm font-semibold text-pink-600 dark:text-pink-400">
-                        <span>Lihat Detail Riset</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Anda bisa menambahkan lebih banyak kartu di sini dengan menyalin dan mengubah kontennya -->
-
+        <!-- Grid untuk Katalog, akan diisi oleh JavaScript -->
+        <main id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            <!-- Placeholder akan ditampilkan saat data dimuat -->
         </main>
         
-        <!-- Footer -->
         <footer class="text-center mt-16">
             <p class="text-sm text-slate-500 dark:text-slate-400">
                 &copy; 2024 Perusahaan Analisis Data Anda. Semua Hak Cipta Dilindungi.
@@ -132,5 +74,115 @@
 
     </div>
 
+    <script type="module">
+        // Fungsi untuk mengambil dan mem-parsing file HTML untuk mendapatkan judulnya
+        async function getPageTitle(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const text = await response.text();
+                // Menggunakan DOMParser untuk mengubah string HTML menjadi dokumen
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
+                // Mencari tag <title> dan mengembalikan isinya
+                const title = doc.querySelector('title');
+                return title ? title.innerText : 'Tanpa Judul';
+            } catch (error) {
+                console.error(`Gagal mengambil judul dari ${url}:`, error);
+                return 'Gagal Memuat Judul';
+            }
+        }
+
+        // Fungsi untuk membuat kartu proyek
+        function createProjectCard(project) {
+            // Palet warna untuk digunakan secara berulang
+            const colors = [
+                { name: 'cyan', hex: '06b6d4' },
+                { name: 'violet', hex: '8b5cf6' },
+                { name: 'pink', hex: 'ec4899' },
+                { name: 'emerald', hex: '10b981' },
+                { name: 'amber', hex: 'f59e0b' },
+            ];
+            const color = colors[Math.floor(Math.random() * colors.length)];
+
+            return `
+                <a href="${project.path}/" class="group block bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://placehold.co/600x400/${color.hex}/white?text=${encodeURIComponent(project.name)}" 
+                             alt="Ilustrasi untuk ${project.title}" 
+                             class="w-full h-48 object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-slate-800 dark:text-white group-hover:text-${color.name}-500 dark:group-hover:text-${color.name}-400 transition-colors duration-300 truncate">
+                            ${project.title}
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            Akses proyek di direktori <code>/${project.path}</code>.
+                        </p>
+                        <div class="mt-6 flex items-center text-sm font-semibold text-${color.name}-600 dark:text-${color.name}-400">
+                            <span>Kunjungi Proyek</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            `;
+        }
+
+        // Fungsi utama untuk memuat proyek
+        async function loadProjects() {
+            const grid = document.getElementById('project-grid');
+            // Menampilkan placeholder saat memuat
+            grid.innerHTML = `
+                <div class="card-placeholder">
+                    <div class="loader mb-4"></div>
+                    <p class="text-slate-500 dark:text-slate-400">Mencari proyek...</p>
+                </div>
+            `;
+
+            try {
+                // Mengambil daftar proyek dari file projects.json
+                const response = await fetch('projects.json');
+                if (!response.ok) {
+                    throw new Error('File projects.json tidak ditemukan. Pastikan file tersebut ada di root repositori Anda.');
+                }
+                const projectsData = await response.json();
+                const projectFolders = projectsData.projects;
+
+                if (!projectFolders || projectFolders.length === 0) {
+                     grid.innerHTML = `<div class="card-placeholder col-span-full"><p class="text-slate-500 dark:text-slate-400">Tidak ada proyek yang ditemukan dalam projects.json.</p></div>`;
+                     return;
+                }
+
+                // Mengambil judul untuk setiap proyek secara paralel
+                const projectPromises = projectFolders.map(async (folder) => {
+                    const title = await getPageTitle(`${folder}/index.html`);
+                    return {
+                        path: folder,
+                        name: folder.split('/').pop().replace(/[-_]/g, ' '), // Nama folder sebagai fallback
+                        title: title,
+                    };
+                });
+
+                const projects = await Promise.all(projectPromises);
+
+                // Membersihkan grid dan mengisi dengan kartu proyek
+                grid.innerHTML = '';
+                projects.forEach(project => {
+                    grid.innerHTML += createProjectCard(project);
+                });
+
+            } catch (error) {
+                console.error('Gagal memuat proyek:', error);
+                grid.innerHTML = `<div class="card-placeholder col-span-full"><p class="text-red-500">${error.message}</p></div>`;
+            }
+        }
+
+        // Memanggil fungsi utama saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', loadProjects);
+    </script>
 </body>
 </html>
