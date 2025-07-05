@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis Interaktif: Analisis Efektivitas ASEAN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            margin: auto;
+            height: 300px;
+            width: 100%;
+            max-width: 500px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 250px;
+            }
+        }
+        .bg-primary { background-color: #004AAD; }
+        .text-primary { color: #004AAD; }
+        .bg-secondary { background-color: #0062CC; }
+        .text-secondary { color: #0062CC; }
+        .bg-accent-light { background-color: #BCE1FD; }
+        .border-accent { border-color: #4A97F2; }
+    </style>
+    <!--
+    Palette Pilihan: Brilliant Blues (#004AAD, #0062CC, #4A97F2, #8EC5FC, #BCE1FD)
+
+    Rencana Naratif:
+    1.  Pendahuluan: Menyatakan sifat ganda ASEAN yang penuh keberhasilan namun juga dihadapkan pada tantangan.
+    2.  Analisis Ekonomi: Memvisualisasikan pencapaian utama (perdagangan, FDI) dan membandingkannya dengan tantangan internal (ketimpangan, ketergantungan).
+    3.  Analisis Stabilitas Regional: Menampilkan peran ASEAN sebagai penjaga perdamaian melalui diplomasi, sambil menyoroti kelemahan institusional yang membatasi kekuatan penegakannya.
+    4.  Studi Kasus Krisis: Menggunakan krisis Myanmar dan Laut Cina Selatan sebagai contoh nyata dari keterbatasan ini.
+    5.  Kesimpulan: Merangkum bahwa ASEAN adalah organisasi yang berhasil namun terkendala oleh prinsip dasarnya.
+
+    Pilihan Visualisasi:
+    - Total FDI (US$174 Miliar): Tujuan: Menginformasikan. Visualisasi: Angka Besar Tunggal. Metode: HTML Ber-style. Justifikasi: Dampak tinggi untuk metrik kunci tunggal. TIDAK MENGGUNAKAN SVG.
+    - Penghapusan Tarif Intra-ASEAN (98,6%): Tujuan: Menginformasikan. Visualisasi: Bagan Donat. Metode: Chart.js/Canvas. Justifikasi: Menunjukkan proporsi yang mendekati penuh dengan jelas. TIDAK MENGGUNAKAN SVG.
+    - Perdagangan Intra-ASEAN (22%): Tujuan: Menginformasikan/Membandingkan. Visualisasi: Bagan Donat. Metode: Chart.js/Canvas. Justifikasi: Menunjukkan komposisi perdagangan secara sederhana. TIDAK MENGGUNAKAN SVG.
+    - Kesenjangan Ekonomi (PDB per Kapita): Tujuan: Membandingkan. Visualisasi: Bagan Batang. Metode: Chart.js/Canvas. Justifikasi: Terbaik untuk membandingkan nilai di berbagai kategori (negara). TIDAK MENGGUNAKAN SVG.
+    - Implementasi Cetak Biru MEA (67,5%): Tujuan: Menginformasikan. Visualisasi: Bagan Donat. Metode: Chart.js/Canvas. Justifikasi: Memvisualisasikan hubungan bagian-ke-keseluruhan secara efektif. TIDAK MENGGUNAKAN SVG.
+    - Mitra Dagang Utama: Tujuan: Membandingkan. Visualisasi: Bagan Batang Horizontal. Metode: Chart.js/Canvas. Justifikasi: Jelas untuk peringkat dan perbandingan. TIDAK MENGGUNAKAN SVG.
+    - Prinsip Non-Intervensi: Tujuan: Mengorganisir/Menunjukkan Hubungan. Visualisasi: Diagram Alir. Metode: HTML/CSS Ber-style. Justifikasi: Menunjukkan hubungan sebab-akibat tanpa grafis kompleks. TIDAK MENGGUNAKAN SVG/Mermaid JS.
+    - Ikon Studi Kasus (Myanmar/LCS): Tujuan: Menginformasikan. Visualisasi: Ikon. Metode: Emoji Unicode. Justifikasi: Isyarat visual sederhana yang mudah dipahami. TIDAK MENGGUNAKAN SVG.
+
+    Konfirmasi: TIDAK ADA Mermaid JS atau SVG yang digunakan dalam output ini.
+    -->
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <main class="container mx-auto p-4 sm:p-6 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-primary mb-2">Analisis Efektivitas ASEAN</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">ASEAN telah meraih keberhasilan signifikan dalam integrasi ekonomi dan menjaga stabilitas regional, namun menghadapi tantangan struktural yang membatasi potensinya.</p>
+        </header>
+
+        <div class="space-y-12">
+            
+            <!-- Section: Integrasi Ekonomi -->
+            <section>
+                <h2 class="text-3xl font-bold text-secondary mb-6 pb-2 border-b-4 border-accent">📈 Integrasi Ekonomi: Mesin Pertumbuhan Kawasan</h2>
+                <p class="text-base text-gray-600 mb-8 max-w-3xl">Visi Komunitas Ekonomi ASEAN (MEA) telah mendorong kemajuan pesat dalam perdagangan dan investasi, meskipun tantangan implementasi dan kesenjangan masih menjadi isu krusial.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col justify-center items-center text-center">
+                        <h3 class="font-bold text-xl text-secondary mb-2">Investasi Asing Langsung (2021)</h3>
+                        <p class="text-6xl font-black text-primary">US$174 M</p>
+                        <p class="text-gray-500 mt-2">Meningkat 42% dari tahun sebelumnya, menunjukkan kepercayaan investor global yang tinggi.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="font-bold text-xl text-secondary mb-4 text-center">Penghapusan Tarif Intra-ASEAN</h3>
+                        <div class="chart-container h-48 sm:h-56">
+                            <canvas id="tariffChart"></canvas>
+                        </div>
+                         <p class="text-center text-gray-500 mt-4">Sebagian besar tarif perdagangan antar negara anggota telah berhasil dihilangkan.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="font-bold text-xl text-secondary mb-4 text-center">Proporsi Perdagangan Intra-ASEAN</h3>
+                        <div class="chart-container h-48 sm:h-56">
+                            <canvas id="intraAseanTradeChart"></canvas>
+                        </div>
+                        <p class="text-center text-gray-500 mt-4">Jaringan produksi regional yang kuat menjadi pilar penting bagi total perdagangan.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg md:col-span-2">
+                        <h3 class="font-bold text-xl text-secondary mb-4">Tantangan: Kesenjangan PDB per Kapita (Estimasi)</h3>
+                        <p class="text-gray-500 mb-4 text-sm">Perbedaan tingkat kemakmuran antar negara anggota menjadi hambatan dalam menciptakan kebijakan yang merata.</p>
+                        <div class="chart-container h-80">
+                            <canvas id="gdpChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-lg flex flex-col">
+                        <h3 class="font-bold text-xl text-secondary mb-4">Tantangan: Ketergantungan Eksternal</h3>
+                        <p class="text-gray-500 mb-4 text-sm">Meskipun kuat secara internal, pertumbuhan ekonomi ASEAN masih sangat dipengaruhi oleh pasar global utama.</p>
+                        <div class="flex-grow chart-container h-80">
+                            <canvas id="tradePartnersChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Stabilitas Regional -->
+            <section>
+                <h2 class="text-3xl font-bold text-secondary mb-6 pb-2 border-b-4 border-accent">🕊️ Stabilitas Regional: Pilar Diplomasi</h2>
+                 <p class="text-base text-gray-600 mb-8 max-w-3xl">Melalui "ASEAN Way", organisasi ini berhasil mencegah konflik besar dan membangun kepercayaan. Namun, prinsip non-intervensi dan konsensus seringkali menjadi pedang bermata dua.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="font-bold text-xl text-secondary mb-4">✅ Kekuatan: Kerangka Kerja Dialog</h3>
+                        <ul class="space-y-3">
+                            <li class="p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg"><strong>ARF (ASEAN Regional Forum):</strong> Membangun dialog politik dan keamanan di Asia-Pasifik.</li>
+                            <li class="p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg"><strong>EAS (East Asia Summit):</strong> Forum strategis untuk para pemimpin membahas isu regional dan global.</li>
+                            <li class="p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg"><strong>ADMM (ASEAN Defence Ministers' Meeting):</strong> Kerjasama pertahanan untuk perdamaian dan stabilitas.</li>
+                        </ul>
+                         <p class="text-gray-500 mt-4 text-sm">Pendekatan "diplomasi sunyi" terbukti mampu meredakan sengketa perbatasan seperti kasus Sipadan-Ligitan.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="font-bold text-xl text-red-600 mb-4">❌ Kelemahan: Dilema Pengambilan Keputusan</h3>
+                        <div class="relative p-4">
+                            <div class="flex flex-col sm:flex-row justify-around items-center text-center">
+                                <div class="m-2 p-3 bg-red-100 border-2 border-red-300 rounded-lg">
+                                    <p class="font-bold">Prinsip Non-Intervensi</p>
+                                </div>
+                                <div class="text-4xl text-red-400 font-bold">+</div>
+                                <div class="m-2 p-3 bg-red-100 border-2 border-red-300 rounded-lg">
+                                    <p class="font-bold">Konsensus</p>
+                                </div>
+                            </div>
+                            <div class="flex justify-center my-4">
+                                <span class="text-5xl">⬇️</span>
+                            </div>
+                            <div class="bg-red-200 border-2 border-red-400 p-4 rounded-lg text-center">
+                                <p class="font-bold text-red-800 text-lg">Respons Lambat & Keputusan Lemah</p>
+                                <p class="text-red-600 text-sm mt-1">ASEAN kesulitan bertindak tegas dalam krisis internal karena tidak adanya mekanisme penegakan atau sanksi yang mengikat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Section: Studi Kasus -->
+            <section>
+                 <h2 class="text-3xl font-bold text-secondary mb-6 pb-2 border-b-4 border-accent">⚠️ Studi Kasus: Ujian bagi Kesatuan ASEAN</h2>
+                 <p class="text-base text-gray-600 mb-8 max-w-3xl">Dua isu utama saat ini secara nyata menguji batas-batas efektivitas dan sentralitas ASEAN di kawasan.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="font-bold text-xl text-secondary mb-4">🇲🇲 Krisis Myanmar</h3>
+                        <p class="text-gray-600">Prinsip non-intervensi menjadi batasan utama dalam mengatasi krisis kemanusiaan dan politik. Kegagalan mencapai konsensus dalam implementasi *Five-Point Consensus* menunjukkan kesulitan ASEAN untuk menegakkan keputusannya sendiri, sehingga mengikis kredibilitasnya sebagai penengah konflik.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="font-bold text-xl text-secondary mb-4">🌊 Sengketa Laut Cina Selatan</h3>
+                        <p class="text-gray-600">Tindakan asertif Tiongkok secara langsung menantang kesatuan ASEAN. Ketergantungan ekonomi yang tinggi pada Tiongkok membuat negara-negara anggota sulit membentuk respons kolektif yang solid, sehingga berpotensi melemahkan ketahanan dan sentralitas ASEAN dalam arsitektur keamanan regional.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <footer class="bg-primary text-white p-8 rounded-xl shadow-lg text-center">
+                <h2 class="text-2xl font-bold mb-2">💡 Kesimpulan</h2>
+                <p class="max-w-3xl mx-auto">ASEAN sangat **efektif** sebagai platform dialog yang mencegah eskalasi konflik dan mendorong kerja sama ekonomi. Namun, efektivitasnya **terbatas** ketika dihadapkan pada krisis internal yang serius dan tekanan geopolitik eksternal, akibat prinsip non-intervensi dan mekanisme pengambilan keputusan berbasis konsensus.</p>
+            </footer>
+
+        </div>
+    </main>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    const chartColors = {
+        primary: '#0062CC',
+        secondary: '#4A97F2',
+        light: '#BCE1FD',
+        dark: '#004AAD',
+        grey: '#E5E7EB'
+    };
+
+    const defaultOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    padding: 20,
+                    boxWidth: 15,
+                    font: {
+                        size: 12
+                    }
+                }
+            },
+            tooltip: {
+                callbacks: {
+                    title: function(tooltipItems) {
+                        const item = tooltipItems[0];
+                        let label = item.chart.data.labels[item.dataIndex];
+                        return Array.isArray(label) ? label.join(' ') : label;
+                    }
+                }
+            }
+        }
+    };
+
+    function wrapLabel(str, max_width) {
+        const words = str.split(' ');
+        const lines = [];
+        let current_line = words[0];
+
+        for (let i = 1; i < words.length; i++) {
+            if (current_line.length + words[i].length + 1 < max_width) {
+                current_line += ' ' + words[i];
+            } else {
+                lines.push(current_line);
+                current_line = words[i];
+            }
+        }
+        lines.push(current_line);
+        return lines;
+    }
+
+    new Chart(document.getElementById('tariffChart'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Tarif Dihapus', 'Sisa Tarif'],
+            datasets: [{
+                data: [98.6, 1.4],
+                backgroundColor: [chartColors.primary, chartColors.grey],
+                borderColor: '#FFFFFF',
+                borderWidth: 4,
+                hoverOffset: 4
+            }]
+        },
+        options: { ...defaultOptions, cutout: '70%' }
+    });
+    
+    new Chart(document.getElementById('intraAseanTradeChart'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Perdagangan Intra-ASEAN', 'Dengan Mitra Eksternal'],
+            datasets: [{
+                data: [22, 78],
+                backgroundColor: [chartColors.secondary, chartColors.light],
+                borderColor: '#FFFFFF',
+                borderWidth: 4,
+                hoverOffset: 4
+            }]
+        },
+        options: { ...defaultOptions, cutout: '70%' }
+    });
+
+    const gdpData = {
+        labels: ['Singapura', 'Brunei', 'Malaysia', 'Thailand', 'Indonesia', 'Vietnam', 'Filipina', 'Kamboja', 'Laos', 'Myanmar'],
+        datasets: [{
+            label: 'PDB per Kapita (USD - Estimasi)',
+            data: [82800, 37200, 13200, 7700, 4700, 4100, 3600, 1700, 2000, 1200],
+            backgroundColor: chartColors.secondary,
+            borderColor: chartColors.dark,
+            borderWidth: 1,
+            borderRadius: 5
+        }]
+    };
+    new Chart(document.getElementById('gdpChart'), {
+        type: 'bar',
+        data: gdpData,
+        options: {
+            ...defaultOptions,
+            indexAxis: 'y',
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value) {
+                            return '$' + (value / 1000) + 'k';
+                        }
+                    }
+                }
+            },
+            plugins: { ...defaultOptions.plugins, legend: { display: false } }
+        }
+    });
+    
+    const tradePartnersData = {
+        labels: ['Intra-ASEAN', 'Tiongkok', 'Amerika Serikat', 'Uni Eropa', 'Jepang', 'Lainnya'],
+        datasets: [{
+            label: '% dari Total Perdagangan',
+            data: [22.9, 18.9, 10.9, 8.3, 7.9, 31.1],
+            backgroundColor: [
+                chartColors.primary, 
+                '#EF4444', 
+                '#3B82F6',
+                '#F59E0B', 
+                '#8B5CF6',
+                chartColors.grey
+            ],
+            borderRadius: 5
+        }]
+    };
+    new Chart(document.getElementById('tradePartnersChart'), {
+        type: 'bar',
+        data: tradePartnersData,
+        options: {
+            ...defaultOptions,
+             plugins: { ...defaultOptions.plugins, legend: { display: false } }
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>
