@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis: Momen Penting The Fed & Dampaknya ke Pasar Global</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 640px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flowchart-node {
+            border: 2px solid #48C9B0;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            background-color: #ffffff;
+            text-align: center;
+            font-weight: 600;
+            color: #17A589;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .flowchart-line {
+            height: 2px;
+            background-color: #48C9B0;
+            flex-grow: 1;
+        }
+        .flowchart-arrow::after {
+            content: '▶';
+            color: #48C9B0;
+            margin-left: -8px;
+        }
+        .flowchart-branch::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -20px;
+            width: 2px;
+            height: 20px;
+            background-color: #48C9B0;
+        }
+         .flowchart-branch::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -20px;
+            height: 2px;
+            background-color: #48C9B0;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-[#17A589] mb-2">Momen Krusial The Fed</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Keputusan bank sentral AS membentuk denyut pasar keuangan global. Pahami kapan dan bagaimana pengaruhnya terjadi.</p>
+        </header>
+
+        <section id="main-events" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#1ABC9C]">Acara Utama yang Mengguncang Pasar</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="card p-6">
+                    <div class="text-3xl font-bold text-[#48C9B0] mb-3">🗓️</div>
+                    <h3 class="text-2xl font-bold mb-2">Pertemuan FOMC</h3>
+                    <p class="text-gray-600 mb-4">Forum paling berpengaruh yang diadakan <span class="font-bold text-2xl text-[#17A589]">8</span> kali setahun untuk menentukan kebijakan moneter.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-semibold">Suku Bunga:</span> Keputusan utama yang ditunggu.</li>
+                        <li><span class="font-semibold">Dot Plot:</span> Proyeksi suku bunga masa depan.</li>
+                        <li><span class="font-semibold">Konferensi Pers:</span> Komentar Ketua The Fed.</li>
+                    </ul>
+                </div>
+                
+                <div class="card p-6">
+                    <div class="text-3xl font-bold text-[#48C9B0] mb-3">🏔️</div>
+                    <h3 class="text-2xl font-bold mb-2">Jackson Hole Symposium</h3>
+                    <p class="text-gray-600 mb-4">Acara tahunan di bulan Agustus yang sering menjadi panggung sinyal kebijakan jangka panjang dari Ketua The Fed.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-semibold text-red-600">Contoh 2022:</span> Pidato Hawkish jatuhkan pasar.</li>
+                        <li><span class="font-semibold text-green-600">Contoh 2020:</span> Sinyal stimulus picu rebound.</li>
+                    </ul>
+                </div>
+                
+                <div class="card p-6">
+                    <div class="text-3xl font-bold text-[#48C9B0] mb-3">🏛️</div>
+                    <h3 class="text-2xl font-bold mb-2">Testimoni Kongres</h3>
+                    <p class="text-gray-600 mb-4">Laporan kebijakan moneter semesteran di hadapan parlemen AS pada bulan Februari dan Juli.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                         <li>Komentar mengenai inflasi & resesi dapat memicu volatilitas pasar.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="key-data" class="mb-16">
+             <h2 class="text-3xl font-bold text-center mb-8 text-[#1ABC9C]">Data Ekonomi Pendorong Kebijakan</h2>
+             <div class="card p-8 text-center">
+                 <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">The Fed sangat bergantung pada data. Pasar bereaksi keras jika data ini menyimpang dari ekspektasi, karena dapat mengubah arah kebijakan.</p>
+                 <div class="flex flex-wrap justify-center gap-4">
+                     <div class="bg-[#A3E4D7] text-[#17A589] font-bold py-2 px-4 rounded-full">Non-Farm Payrolls (NFP)</div>
+                     <div class="bg-[#A3E4D7] text-[#17A589] font-bold py-2 px-4 rounded-full">Consumer Price Index (CPI)</div>
+                     <div class="bg-[#A3E4D7] text-[#17A589] font-bold py-2 px-4 rounded-full">PCE Inflation</div>
+                 </div>
+             </div>
+        </section>
+
+        <section id="impact-chart" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-[#1ABC9C]">Peringkat Dampak ke Pasar Global</h2>
+            <p class="text-lg text-gray-600 text-center mb-8 max-w-2xl mx-auto">Tidak semua pengumuman diciptakan sama. Beberapa peristiwa secara konsisten memiliki bobot lebih besar bagi investor global.</p>
+            <div class="card p-4 md:p-6">
+                <div class="chart-container">
+                    <canvas id="impactBarChart"></canvas>
+                </div>
+            </div>
+        </section>
+        
+        <section id="market-reaction" class="mb-12">
+            <h2 class="text-3xl font-bold text-center mb-2 text-[#1ABC9C]">Alur Reaksi Pasar</h2>
+            <p class="text-lg text-gray-600 text-center mb-10 max-w-2xl mx-auto">Sinyal The Fed dapat dikategorikan menjadi dua: 'Hawkish' yang ketat dan 'Dovish' yang longgar, masing-masing dengan dampak yang dapat diprediksi.</p>
+            
+            <div class="card p-8">
+                <div class="flex flex-col items-center">
+                    <div class="flowchart-node mb-8">Sinyal The Fed</div>
+                    <div class="w-1/2 h-10 border-l-2 border-r-2 border-t-2 border-[#48C9B0] rounded-t-lg"></div>
+                    
+                    <div class="w-full flex justify-around">
+                        <div class="w-1/2 flex flex-col items-center px-2">
+                             <div class="flowchart-node bg-[#F9F871] border-[#F9B208] text-[#D97706] mb-4">🦅 Hawkish (Ketat)</div>
+                             <p class="text-center text-sm text-gray-500 mb-4">Cenderung menaikkan suku bunga untuk melawan inflasi.</p>
+                             <div class="w-full space-y-4">
+                                <div class="flowchart-node">💵 USD Menguat</div>
+                                <div class="flowchart-node">📈 Saham & Aset Risiko Turun</div>
+                             </div>
+                        </div>
+                        <div class="w-1/2 flex flex-col items-center px-2">
+                            <div class="flowchart-node bg-[#D1FAE5] border-[#10B981] text-[#059669] mb-4">🕊️ Dovish (Longgar)</div>
+                            <p class="text-center text-sm text-gray-500 mb-4">Cenderung memotong suku bunga untuk mendorong pertumbuhan.</p>
+                            <div class="w-full space-y-4">
+                                <div class="flowchart-node">💵 USD Melemah</div>
+                                <div class="flowchart-node">📈 Saham & Aset Risiko Naik</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 text-sm mt-12">
+            <p>Infografis ini dirancang untuk memberikan gambaran umum. Selalu lakukan riset Anda sendiri sebelum mengambil keputusan investasi.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxWidth && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            if (currentLine) {
+                lines.push(currentLine);
+            }
+            return lines;
+        }
+
+        const ctx = document.getElementById('impactBarChart').getContext('2d');
+        const rawLabels = ['Pertemuan FOMC & Konferensi Pers', 'Jackson Hole Symposium', 'Testimoni di Kongres', 'Rilis Data Ekonomi Kunci (NFP, CPI)'];
+        const processedLabels = rawLabels.map(label => wrapLabel(label, 16));
+
+        const impactBarChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: processedLabels,
+                datasets: [{
+                    label: 'Tingkat Dampak Relatif',
+                    data: [4, 3, 2.5, 3.5],
+                    backgroundColor: [
+                        '#17A589',
+                        '#48C9B0',
+                        '#A3E4D7',
+                        '#58D68D'
+                    ],
+                    borderColor: [
+                         '#17A589',
+                        '#48C9B0',
+                        '#A3E4D7',
+                        '#58D68D'
+                    ],
+                    borderWidth: 1,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: {
+                            color: '#e0e0e0',
+                            borderColor: '#e0e0e0',
+                        },
+                        ticks: {
+                           display: false
+                        }
+                    },
+                    y: {
+                         grid: {
+                            display: false,
+                        },
+                        ticks: {
+                            color: '#333',
+                            font: {
+                                weight: '600'
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: true,
+                        backgroundColor: '#333',
+                        titleFont: {
+                           size: 14,
+                           weight: 'bold'
+                        },
+                        bodyFont: {
+                           size: 12
+                        },
+                        padding: 10,
+                        cornerRadius: 6,
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                }
+                                return label;
+                            },
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.x !== null) {
+                                    const value = context.parsed.x;
+                                    if(value === 4) label += 'Sangat Tinggi';
+                                    else if(value === 3.5) label += 'Tinggi (jika mengubah ekspektasi)';
+                                    else if(value === 3) label += 'Tinggi';
+                                    else if(value === 2.5) label += 'Sedang-Tinggi';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
