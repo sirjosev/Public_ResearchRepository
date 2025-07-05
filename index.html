@@ -75,25 +75,7 @@
     </div>
 
     <script type="module">
-        // Fungsi untuk mengambil dan mem-parsing file HTML untuk mendapatkan judulnya
-        async function getPageTitle(url) {
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const text = await response.text();
-                // Menggunakan DOMParser untuk mengubah string HTML menjadi dokumen
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
-                // Mencari tag <title> dan mengembalikan isinya
-                const title = doc.querySelector('title');
-                return title ? title.innerText : 'Tanpa Judul';
-            } catch (error) {
-                console.error(`Gagal mengambil judul dari ${url}:`, error);
-                return 'Gagal Memuat Judul';
-            }
-        }
+        // Fungsi getPageTitle tidak lagi diperlukan karena projects.json sudah menyediakan judul.
 
         // Fungsi untuk membuat kartu proyek
         function createProjectCard(project) {
@@ -150,24 +132,23 @@
                     throw new Error('File projects.json tidak ditemukan. Pastikan file tersebut ada di root repositori Anda.');
                 }
                 const projectsData = await response.json();
-                const projectFolders = projectsData.projects;
+                // Langsung gunakan data dari projects.json karena sudah berupa array
+                const projectsDataFromFile = projectsData;
 
-                if (!projectFolders || projectFolders.length === 0) {
+                if (!projectsDataFromFile || projectsDataFromFile.length === 0) {
                      grid.innerHTML = `<div class="card-placeholder col-span-full"><p class="text-slate-500 dark:text-slate-400">Tidak ada proyek yang ditemukan dalam projects.json.</p></div>`;
                      return;
                 }
 
-                // Mengambil judul untuk setiap proyek secara paralel
-                const projectPromises = projectFolders.map(async (folder) => {
-                    const title = await getPageTitle(`${folder}/index.html`);
+                // Data sudah memiliki judul, jadi tidak perlu mengambilnya lagi.
+                // Cukup format data agar sesuai dengan yang diharapkan oleh createProjectCard.
+                const projects = projectsDataFromFile.map(project => {
                     return {
-                        path: folder,
-                        name: folder.split('/').pop().replace(/[-_]/g, ' '), // Nama folder sebagai fallback
-                        title: title,
+                        path: project.name, // 'name' dari JSON adalah nama folder/path
+                        name: project.name.replace(/[-_]/g, ' '), // Nama yang lebih ramah tampilan
+                        title: project.title, // 'title' dari JSON
                     };
                 });
-
-                const projects = await Promise.all(projectPromises);
 
                 // Membersihkan grid dan mengisi dengan kartu proyek
                 grid.innerHTML = '';
