@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis Laporan Pasar Keuangan Indonesia - 8 September 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Latar belakang abu-abu muda */
+        }
+        .card {
+            background-color: white;
+            border-radius: 1.5rem; /* Lebih bulat */
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .header-gradient {
+            background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .kpi-card {
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+            color: white;
+        }
+        .kpi-value {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+        .kpi-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1e3a8a; /* Biru tua */
+            text-align: center;
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        .tag-green {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+        .tag-red {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+        .tag-blue {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+        .tag-yellow {
+            background-color: #fef9c3;
+            color: #854d0e;
+        }
+        .divider {
+            border-left: 2px dashed #9ca3af;
+            height: 80%;
+            align-self: center;
+        }
+        /* Style untuk ikon SVG */
+        .icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .corporate-icon {
+            width: 3rem;
+            height: 3rem;
+        }
+        .risk-icon {
+            width: 2rem;
+            height: 2rem;
+            color: #ef4444; /* Merah untuk risiko */
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+    <div class="max-w-7xl mx-auto">
+        <!-- Header Utama -->
+        <header class="mb-8 text-white p-8 rounded-3xl header-gradient shadow-lg">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-center">Laporan Pasar Keuangan Indonesia</h1>
+            <p class="text-center text-lg md:text-xl mt-2 opacity-90">Analisis Mendalam: 8 September 2025</p>
+        </header>
+
+        <!-- Ringkasan Eksekutif & KPI -->
+        <div class="card mb-8">
+            <h2 class="section-title">Ringkasan Pasar: Penuh Ekstrem</h2>
+            <p class="text-center text-gray-600 max-w-4xl mx-auto mb-8">
+                Pasar saham Indonesia terbelah antara lonjakan harga komoditas global dan tekanan pengetatan moneter global. IHSG melemah <strong>-0.75%</strong> ke level <strong>7,150</strong>, namun di baliknya terjadi rotasi sektoral yang tajam di tengah aksi jual bersih asing sebesar <strong>IDR 1.2 Triliun</strong>. Ini adalah "pasar pemilih saham" di mana fundamental perusahaan menjadi kunci.
+            </p>
+            
+            <!-- Indikator Kunci Pasar -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="kpi-card bg-red-600">
+                    <div class="kpi-value">7,150</div>
+                    <div class="kpi-label">Penutupan IHSG (-0.75%)</div>
+                </div>
+                <div class="kpi-card bg-red-700">
+                    <div class="kpi-value">-1.2 T</div>
+                    <div class="kpi-label">Arus Bersih Asing (IDR)</div>
+                </div>
+                <div class="kpi-card bg-yellow-600">
+                    <div class="kpi-value">16,450</div>
+                    <div class="kpi-label">Nilai Tukar IDR/USD</div>
+                </div>
+                <div class="kpi-card bg-blue-700">
+                    <div class="kpi-value">6.25%</div>
+                    <div class="kpi-label">BI 7-Day RR Rate</div>
+                </div>
+                 <div class="kpi-card bg-green-700 col-span-1">
+                    <div class="kpi-value">$95</div>
+                    <div class="kpi-label">Minyak Mentah Brent (/barel)</div>
+                </div>
+                <div class="kpi-card bg-gray-600 col-span-1">
+                     <div class="kpi-value">7.15%</div>
+                    <div class="kpi-label">Imbal Hasil Obligasi 10-Thn</div>
+                </div>
+                <div class="kpi-card bg-purple-700 col-span-2">
+                    <div class="kpi-value">49.5</div>
+                    <div class="kpi-label">PMI Manufaktur Tiongkok (Kontraksi)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Medan Pertarungan Makroekonomi -->
+        <div class="card mb-8">
+            <h2 class="section-title">Medan Pertarungan Makroekonomi</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- Bayang-bayang The Fed -->
+                <div class="flex flex-col items-center p-4 rounded-xl bg-gray-50">
+                    <svg class="icon text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">Bayang-bayang The Fed (Hawkish)</h3>
+                    <p class="text-sm text-gray-600">Ekspektasi suku bunga AS yang lebih tinggi memicu penguatan Dolar AS, menyebabkan arus modal keluar dari Indonesia dan menekan Rupiah.</p>
+                </div>
+                <!-- Narasi Ganda Tiongkok & Komoditas -->
+                <div class="flex flex-col items-center p-4 rounded-xl bg-gray-50">
+                     <svg class="icon text-yellow-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0 .75-.75v-.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">Sinyal Ganda: Tiongkok & Komoditas</h3>
+                    <p class="text-sm text-gray-600">Perlambatan manufaktur Tiongkok menekan logam industri, namun lonjakan harga energi memberikan penyeimbang, menciptakan bifurkasi di sektor komoditas.</p>
+                </div>
+                <!-- Aksi Penyeimbangan Bank Indonesia -->
+                <div class="flex flex-col items-center p-4 rounded-xl bg-gray-50">
+                    <svg class="icon text-blue-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5-1.5V3h-3v4.5M3 9h18M3 9v12a1.5 1.5 0 0 0 1.5 1.5h15A1.5 1.5 0 0 0 21 21V9" /></svg>
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">Langkah Berisiko Bank Indonesia</h3>
+                    <p class="text-sm text-gray-600">BI mempertahankan suku bunga untuk menopang pertumbuhan, menerima pelemahan Rupiah. Sebuah pertaruhan untuk melindungi ekonomi domestik dari biaya pinjaman yang lebih tinggi.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pemisahan Besar (The Great Divide) -->
+        <div class="card mb-8">
+            <h2 class="section-title">"Pemisahan Besar" di Dalam IHSG</h2>
+            <div class="flex flex-col md:flex-row justify-center items-stretch gap-8">
+                <!-- Pemenang -->
+                <div class="w-full md:w-1/2 bg-green-50 p-6 rounded-2xl border-2 border-green-200">
+                    <h3 class="text-2xl font-bold text-green-800 mb-4 text-center">PEMENANG</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-lg bg-white shadow-sm">
+                            <h4 class="font-bold text-lg">Sektor Energi & Bahan Baku</h4>
+                            <p class="text-sm text-gray-600">Diuntungkan oleh harga komoditas tinggi dan berfungsi sebagai lindung nilai inflasi. Modal investor mengalir ke sektor ini.</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-white shadow-sm">
+                            <p class="font-semibold text-gray-700">Pendorong Utama:</p>
+                            <ul class="list-disc list-inside text-sm text-gray-600 mt-1">
+                                <li>Harga Minyak Brent di <strong>$95/barel</strong></li>
+                                <li>Berita positif spesifik emiten (mis: cadangan baru MDKA)</li>
+                                <li>Berfungsi sebagai <strong>inflation hedge</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Divider -->
+                <div class="hidden md:flex items-center">
+                    <div class="text-4xl font-extrabold text-gray-400">VS</div>
+                </div>
+                 <!-- Pecundang -->
+                <div class="w-full md:w-1/2 bg-red-50 p-6 rounded-2xl border-2 border-red-200">
+                    <h3 class="text-2xl font-bold text-red-800 mb-4 text-center">PECUNDANG</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-lg bg-white shadow-sm">
+                            <h4 class="font-bold text-lg">Sektor Teknologi & Properti</h4>
+                            <p class="text-sm text-gray-600">Tertekan oleh pelemahan Rupiah, sensitivitas terhadap suku bunga, dan kenaikan tingkat diskonto.</p>
+                        </div>
+                        <div class="p-4 rounded-lg bg-white shadow-sm">
+                             <p class="font-semibold text-gray-700">Tekanan Utama:</p>
+                            <ul class="list-disc list-inside text-sm text-gray-600 mt-1">
+                                <li>Ekspektasi kenaikan suku bunga (KPR lebih mahal)</li>
+                                <li>Pelemahan Rupiah (biaya impor naik)</li>
+                                <li>Tingkat diskonto lebih tinggi menekan valuasi saham teknologi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sorotan Korporat -->
+        <div class="card mb-8">
+            <h2 class="section-title">Sorotan Korporat & Rekomendasi</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- MDKA -->
+                <div class="flex flex-col items-center text-center p-6 bg-blue-50 rounded-2xl border border-blue-200 h-full">
+                    <svg class="corporate-icon text-yellow-500 mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9A2.25 2.25 0 0 0 18.75 6.75h-1.5a3 3 0 1 0-6 0H5.25A2.25 2.25 0 0 0 3 9m18 0h-1.5a3 3 0 1 0-6 0h-1.5m-3 0h3.75" /></svg>
+                    <h3 class="text-xl font-bold">MDKA</h3>
+                    <span class="tag tag-green my-2">Beli</span>
+                    <p class="text-2xl font-extrabold text-blue-900 mb-2">TP: IDR 4,500</p>
+                    <p class="text-sm text-gray-600">Penemuan cadangan emas baru menciptakan fundamental kuat yang mampu melawan sentimen makro negatif. Berpotensi mengalami <strong>re-rating</strong>.</p>
+                </div>
+                 <!-- GOTO -->
+                <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-2xl border border-gray-200 h-full">
+                    <svg class="corporate-icon text-green-600 mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a3.375 3.375 0 0 1 3.375-3.375h1.5a1.125 1.125 0 0 1 1.125 1.125v-1.5a3.375 3.375 0 0 1 3.375-3.375H15M12 14.25v-1.5a3.375 3.375 0 0 1 3.375-3.375h1.5a1.125 1.125 0 0 1 1.125 1.125v-1.5a3.375 3.375 0 0 1 3.375-3.375H21.75" /></svg>
+                    <h3 class="text-xl font-bold">GOTO</h3>
+                    <span class="tag tag-yellow my-2">Tahan</span>
+                    <p class="text-2xl font-extrabold text-blue-900 mb-2">TP: IDR 60</p>
+                    <p class="text-sm text-gray-600">Upaya efisiensi melalui kemitraan logistik positif, namun dibayangi oleh tekanan makro yang berat pada sektor teknologi.</p>
+                </div>
+                <!-- ADRO -->
+                <div class="flex flex-col items-center text-center p-6 bg-gray-800 text-white rounded-2xl border border-gray-700 h-full">
+                    <svg class="corporate-icon text-gray-300 mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.73-.626 1.182-.638l3.03.249a.75.75 0 0 1 .729.729l-.249 3.03c-.012.452-.254.865-.638 1.182l-3.03 2.496M11.42 15.17 6.37 10.125a2.652 2.652 0 0 1 0-3.75l5.877-5.877a2.652 2.652 0 0 1 3.75 0L21 6.375M3 12h8.25" /></svg>
+                    <h3 class="text-xl font-bold">ADRO</h3>
+                    <span class="tag tag-blue my-2">Overweight</span>
+                     <p class="text-2xl font-extrabold mb-2">&nbsp;</p> <!-- Spacer -->
+                    <p class="text-sm text-gray-300">Penerima manfaat langsung dari siklus harga energi yang tinggi. Merupakan saham siklikal dan lindung nilai inflasi yang taktis.</p>
+                </div>
+                <!-- BREN -->
+                <div class="flex flex-col items-center text-center p-6 bg-green-50 rounded-2xl border border-green-200 h-full">
+                    <svg class="corporate-icon text-green-700 mb-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" /></svg>
+                    <h3 class="text-xl font-bold">BREN</h3>
+                    <span class="tag tag-blue my-2">Akumulasi</span>
+                     <p class="text-2xl font-extrabold mb-2">&nbsp;</p> <!-- Spacer -->
+                    <p class="text-sm text-gray-600">Cerita pertumbuhan sekuler jangka panjang dalam transisi energi melalui ekspansi panas bumi. Investasi strategis untuk portofolio ESG.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Prospek & Strategi -->
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Tesis & Strategi Portofolio -->
+            <div class="card">
+                <h2 class="section-title">Prospek & Strategi Portofolio</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-bold text-lg text-gray-800 mb-2">Tesis Pasar: Hati-hati & Sangat Selektif</h4>
+                        <p class="text-sm text-gray-600">IHSG akan tetap fluktuatif selama The Fed hawkish. Tema utama: eksploitasi "Divergensi Besar" antara sektor komoditas yang kuat dan sektor sensitif suku bunga yang lemah.</p>
+                    </div>
+                    <div class="space-y-4">
+                         <div class="flex items-start gap-4 p-4 bg-green-50 rounded-lg">
+                            <div class="text-green-700 font-bold text-lg">▲</div>
+                            <div>
+                                <h5 class="font-semibold text-green-800">INTI (Overweight)</h5>
+                                <p class="text-sm text-gray-700">Pertahankan/tambah posisi di Energi (ADRO) dan Bahan Baku (MDKA).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-red-50 rounded-lg">
+                            <div class="text-red-700 font-bold text-lg">▼</div>
+                            <div>
+                                <h5 class="font-semibold text-red-800">KURANGI (Underweight)</h5>
+                                <p class="text-sm text-gray-700">Kurangi eksposur ke Teknologi (GOTO) karena tekanan makro.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start gap-4 p-4 bg-blue-50 rounded-lg">
+                             <div class="text-blue-700 font-bold text-lg">◷</div>
+                            <div>
+                                <h5 class="font-semibold text-blue-800">JANGKA PANJANG (Selektif)</h5>
+                                <p class="text-sm text-gray-700">Akumulasi BREN untuk eksposur ke tren energi terbarukan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Risiko Utama -->
+            <div class="card">
+                 <h2 class="section-title">Risiko Utama yang Perlu Dipantau</h2>
+                 <div class="space-y-4">
+                     <!-- Global -->
+                     <div class="flex items-center gap-4">
+                         <svg class="risk-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" /></svg>
+                         <div>
+                             <h5 class="font-semibold text-gray-800">Global</h5>
+                             <p class="text-sm text-gray-600">Perubahan sikap The Fed (lebih agresif atau dovish) akan menjadi pendorong utama. Data inflasi dan ketenagakerjaan AS sangat krusial.</p>
+                         </div>
+                     </div>
+                      <!-- Domestik -->
+                     <div class="flex items-center gap-4">
+            
