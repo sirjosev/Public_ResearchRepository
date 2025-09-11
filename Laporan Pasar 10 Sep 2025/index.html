@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis Interaktif: Analisis Pasar Saham Indonesia (10 September 2025)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #e2e8f0; /* Slate 200 */
+        }
+        .card {
+            background-color: #1e293b; /* Slate 800 */
+            border: 1px solid #334155; /* Slate 700 */
+            border-radius: 0.75rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        .tag {
+            background-color: #334155; /* Slate 700 */
+            color: #94a3b8; /* Slate 400 */
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            background-color: #1e293b;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            width: 90%;
+            max-width: 600px;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+        .stock-rec-card {
+            cursor: pointer;
+        }
+        .kpi-value {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #f8fafc; /* Slate 50 */
+        }
+        .kpi-label {
+            font-size: 0.875rem;
+            color: #94a3b8; /* Slate 400 */
+        }
+        .up-trend { color: #22c55e; /* Green 500 */ }
+        .down-trend { color: #ef4444; /* Red 500 */ }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">Analisis Pasar Saham Indonesia</h1>
+            <p class="text-lg text-slate-400">Menavigasi Geopolitik & Politik Domestik (per 10 September 2025)</p>
+        </header>
+
+        <!-- Ringkasan Eksekutif -->
+        <section class="mb-12">
+            <div class="card p-6">
+                <h2 class="text-2xl font-bold text-cyan-400 mb-4 flex items-center"><i class="fas fa-file-alt mr-3"></i>Ringkasan Eksekutif</h2>
+                <p class="text-slate-300">
+                    Pasar saham Indonesia mengalami <strong class="text-white">bifurkasi (terbelah)</strong>. Di satu sisi, IHSG dan saham blue-chip tertekan oleh ketidakpastian politik domestik yang memicu arus keluar dana asing secara masif. Di sisi lain, sektor energi dan material mendapat sentimen positif dari eskalasi geopolitik di Timur Tengah yang melonjakkan harga komoditas. Infografis ini membedah peluang dan risiko di tengah pasar yang bergejolak.
+                </p>
+            </div>
+        </section>
+
+        <!-- Arena Makro-Geopolitik -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-white mb-6 text-center">Arena Makro & Geopolitik</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Dampak Geopolitik -->
+                <div class="card p-6">
+                    <div class="flex items-center text-amber-400 mb-4">
+                        <i class="fas fa-fire-flame-curved fa-2x mr-4"></i>
+                        <h3 class="text-xl font-bold">Guncangan Geopolitik Timur Tengah</h3>
+                    </div>
+                    <p class="text-slate-300 mb-4">Serangan militer Israel di Qatar memicu lonjakan harga minyak global dan komoditas, menciptakan premi risiko geopolitik yang signifikan.</p>
+                    <div class="flex justify-around text-center">
+                        <div>
+                            <p class="kpi-value up-trend"><i class="fas fa-arrow-up"></i>8%</p>
+                            <p class="kpi-label">Lonjakan Awal Brent</p>
+                        </div>
+                        <div>
+                            <p class="kpi-value up-trend">$95</p>
+                            <p class="kpi-label">Tembus Level per Barel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Efek Purbaya & Net Sell Asing -->
+                <div class="card p-6">
+                    <div class="flex items-center text-red-400 mb-4">
+                        <i class="fas fa-money-bill-transfer fa-2x mr-4"></i>
+                        <h3 class="text-xl font-bold">"Efek Purbaya" & Pelarian Modal</h3>
+                    </div>
+                    <p class="text-slate-300 mb-4">Penunjukan Menteri Keuangan baru memicu aksi jual bersih asing besar-besaran, menekan saham-saham perbankan big caps.</p>
+                    <div class="text-center">
+                        <p class="kpi-value down-trend">Rp 4,5 T</p>
+                        <p class="kpi-label mb-2">Net Sell Asing (9 Sep 2025)</p>
+                        <p class="kpi-value down-trend">Rp 60,2 T</p>
+                        <p class="kpi-label">Total Net Sell YTD</p>
+                    </div>
+                </div>
+
+                <!-- Prospek IHSG -->
+                <div class="card p-6">
+                    <div class="flex items-center text-blue-400 mb-4">
+                        <i class="fas fa-chart-line fa-2x mr-4"></i>
+                        <h3 class="text-xl font-bold">Prospek Teknis IHSG</h3>
+                    </div>
+                    <p class="text-slate-300 mb-4">IHSG diprediksi melanjutkan pelemahan, terbebani oleh sentimen negatif dan arus keluar dana asing. Proyeksi CGS Intl. Sekuritas:</p>
+                    <div class="flex justify-around text-center">
+                        <div>
+                            <p class="text-lg font-semibold text-red-400">Support</p>
+                            <p class="text-slate-100">7520 & 7410</p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-semibold text-green-400">Resistance</p>
+                            <p class="text-slate-100">7740 & 7845</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aksi Korporasi -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-white mb-6 text-center">Manuver Strategis Korporasi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card p-6">
+                    <span class="tag mb-4 inline-block">PANI</span>
+                    <h3 class="text-lg font-bold text-purple-400 mb-2">Rights Issue Jumbo</h3>
+                    <p class="text-sm text-slate-300">Target dana <strong class="text-white">~Rp 16,1 T</strong> untuk konsolidasi aset anak usaha (CBDK), berpotensi menaikkan NAV hingga 23%.</p>
+                </div>
+                <div class="card p-6">
+                    <span class="tag mb-4 inline-block">SSIA</span>
+                    <h3 class="text-lg font-bold text-green-400 mb-2">Komitmen Dividen</h3>
+                    <p class="text-sm text-slate-300">Manajemen menegaskan rasio pembayaran dividen <strong class="text-white">~30%</strong> dari laba bersih, sinyal kepercayaan diri di tengah tantangan.</p>
+                </div>
+                <div class="card p-6">
+                    <span class="tag mb-4 inline-block">IMPC</span>
+                    <h3 class="text-lg font-bold text-sky-400 mb-2">Private Placement</h3>
+                    <p class="text-sm text-slate-300">Menerbitkan 600 juta saham baru di harga <strong class="text-white">Rp 810/saham</strong> untuk penambahan modal dan ekspansi.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rekomendasi Trading -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-white mb-6 text-center">Rekomendasi Trading (Speculative Buy)</h2>
+            <p class="text-slate-400 text-center mb-8">Oleh CGS International Sekuritas. Klik pada setiap saham untuk melihat detail.</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+                <!-- Stock placeholders will be injected by JS -->
+            </div>
+        </section>
+        
+        <!-- Sintesis dan Strategi -->
+        <section>
+            <h2 class="text-3xl font-bold text-white mb-6 text-center">Sintesis & Strategi ke Depan</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="card p-6">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-3"><i class="fas fa-balance-scale-right mr-2"></i>Strategi Barbel</h3>
+                    <p class="text-slate-300">Sikap hati-hati pada IHSG secara umum, namun <strong class="text-white">overweight pada sektor dengan katalis kuat</strong> seperti energi dan logam mulia. Untuk saham domestik, fokus pada <strong class="text-white">nilai dan pertahanan (value & defense)</strong>.</p>
+                </div>
+                <div class="card p-6">
+                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="text-lg font-bold text-red-400 mb-2"><i class="fas fa-exclamation-triangle mr-2"></i>Risiko Penurunan</h4>
+                            <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+                                <li>Eskalasi geopolitik lebih lanjut</li>
+                                <li>Arus keluar modal asing berkelanjutan</li>
+                                <li>Kekhawatiran resesi global</li>
+                            </ul>
+                        </div>
+                        <div>
+                             <h4 class="text-lg font-bold text-green-400 mb-2"><i class="fas fa-rocket mr-2"></i>Katalis Kenaikan</h4>
+                            <ul class="list-disc list-inside text-sm text-slate-300 space-y-1">
+                                <li>Kejelasan kebijakan fiskal baru</li>
+                                <li>De-eskalasi geopolitik</li>
+                                <li>Ketahanan ekonomi domestik</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 text-slate-500 text-sm">
+            <p>Infografis ini dibuat berdasarkan laporan "Analisis Pasar Saham dan Rekomendasi Trading" tertanggal 10 September 2025.</p>
+            <p>Bukan merupakan saran investasi. Selalu lakukan riset mandiri.</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="stock-modal" class="modal-overlay">
+        <div class="modal-content" id="modal-content-area">
+            <!-- Modal content will be injected by JS -->
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const stockData = {
+                ENRG: {
+                    name: "PT Energi Mega Persada Tbk",
+                    category: "Energi (Geopolitik)",
+                    icon: "fa-solid fa-gas-pump",
+                    color: "text-orange-400",
+                    analysis: "Penerima manfaat langsung dari lonjakan harga minyak global akibat premi risiko geopolitik. Pendapatan berkorelasi langsung dengan harga minyak mentah.",
+                    support: 590,
+                    cutLoss: 575,
+                    target: "620-635"
+                },
+                AUTO: {
+                    name: "PT Astra Otoparts Tbk",
+                    category: "Otomotif (Domestik)",
+                    icon: "fa-solid fa-car",
+                    color: "text-blue-400",
+                    analysis: "Profil defensif dengan valuasi P/E rendah dan imbal hasil dividen tinggi. Taruhan bahwa investor akan beralih ke perusahaan stabil di pasar yang bergejolak.",
+                    support: 2380,
+                    cutLoss: 2330,
+                    target: "2480-2530"
+                },
+                INCO: {
+                    name: "PT Vale Indonesia Tbk",
+                    category: "Komoditas (Nikel)",
+                    icon: "fa-solid fa-mountain",
+                    color: "text-gray-400",
+                    analysis: "Mendapat manfaat dari sentimen 'risk-on' yang lebih luas di sektor komoditas. Permainan teknis pada potensi minat baru pada aset riil di tengah volatilitas.",
+                    support: 3870,
+                    cutLoss: 3790,
+                    target: "4030-4110"
+                },
+                MEDC: {
+                    name: "PT Medco Energi Internasional Tbk",
+                    category: "Energi (Geopolitik)",
+                    icon: "fa-solid fa-oil-well",
+                    color: "text-orange-500",
+                    analysis: "Sama seperti ENRG, diuntungkan oleh harga minyak yang lebih tinggi. Basis aset yang lebih besar dan terdiversifikasi menjadi daya tarik tambahan.",
+                    support: 1205,
+                    cutLoss: 1180,
+                    target: "1255-1280"
+                },
+                EMTK: {
+                    name: "PT Elang Mahkota Teknologi Tbk",
+                    category: "Teknologi (Domestik)",
+                    icon: "fa-solid fa-satellite-dish",
+                    color: "text-indigo-400",
+                    analysis: "Taruhan spekulatif pada pertumbuhan jangka panjang ekonomi digital Indonesia. Diharapkan momentum saham berlanjut didorong oleh cerita korporat spesifik.",
+                    support: 1215,
+                    cutLoss: 1190,
+                    target: "1265-1290"
+                },
+                ARCI: {
+                    name: "PT Archi Indonesia Tbk",
+                    category: "Safe-Haven (Emas)",
+                    icon: "fa-solid fa-gem",
+                    color: "text-yellow-400",
+                    analysis: "Aset safe-haven klasik yang diuntungkan dari ketidakpastian. Permainan taktis langsung pada aliran modal ke aset aman setelah harga emas melonjak.",
+                    support: 920,
+                    cutLoss: 900,
+                    target: "960-980"
+                }
+            };
+
+            const recContainer = document.querySelector('.grid.grid-cols-2.sm\\:grid-cols-3.lg\\:grid-cols-6');
+            const modalOverlay = document.getElementById('stock-modal');
+            const modalContentArea = document.getElementById('modal-content-area');
+
+            Object.keys(stockData).forEach(ticker => {
+                const stock = stockData[ticker];
+                const card = document.createElement('div');
+                card.className = 'card p-4 stock-rec-card flex flex-col items-center justify-center';
+                card.setAttribute('data-ticker', ticker);
+                card.innerHTML = `
+                    <i class="${stock.icon} fa-2x ${stock.color} mb-2"></i>
+                    <h4 class="font-bold text-xl text-white">${ticker}</h4>
+                    <p class="text-xs text-slate-400">${stock.category.split(' ')[0]}</p>
+                `;
+                recContainer.appendChild(card);
+            });
+
+            recContainer.addEventListener('click', (e) => {
+                const card = e.target.closest('.stock-rec-card');
+                if (card) {
+                    const ticker = card.dataset.ticker;
+                    const stock = stockData[ticker];
+                    
+                    modalContentArea.innerHTML = `
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold ${stock.color}">${ticker} - ${stock.name}</h3>
+                                <p class="text-slate-400">${stock.category}</p>
+                            </div>
+                            <button id="close-modal" class="text-slate-400 hover:text-white">&times;</button>
+                        </div>
+                        <p class="text-slate-300 mb-6">${stock.analysis}</p>
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div>
+                                <p class="text-sm text-red-400 font-semibold">Support / Cut Loss</p>
+                                <p class="text-lg text-white font-bold">Rp ${stock.support} / < Rp ${stock.cutLoss}</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-green-400 font-semibold">Target Jangka Pendek</p>
+                                <p class="text-lg text-white font-bold">Rp ${stock.target}</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-cyan-400 font-semibold">Rekomendasi</p>
+                                <p class="text-lg text-white font-bold">Speculative Buy</p>
+                            </div>
+                        </div>
+                    `;
+                    modalOverlay.classList.add('active');
+                }
+            });
+
+            modalOverlay.addEventListener('click', function(e) {
+                if (e.target === this || e.target.closest('#close-modal')) {
+                    modalOverlay.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
