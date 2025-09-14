@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis Pasar Keuangan - 12 September 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark Gray */
+            color: #F3F4F6; /* Light Gray */
+        }
+        .card {
+            background-color: #1F2937; /* Gray 800 */
+            border-radius: 0.75rem;
+            border: 1px solid #374151; /* Gray 700 */
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        .tab-button {
+            transition: all 0.3s ease;
+        }
+        .tab-button.active {
+            background-color: #3B82F6; /* Blue 500 */
+            color: #FFFFFF;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .pill-red {
+            background-color: #991B1B; color: #FEE2E2;
+        }
+        .pill-green {
+            background-color: #14532D; color: #DCFCE7;
+        }
+        .pill-yellow {
+             background-color: #713F12; color: #FEF9C3;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-400">Tinjauan Pasar Keuangan Interaktif</h1>
+            <p class="text-lg text-gray-400 mt-2">12 September 2025: Strategi Bertahan di Tengah Ketidakpastian Global</p>
+        </header>
+
+        <!-- Main Dashboard -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-6 text-center">Dasbor Indikator Pasar Utama</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- IHSG Card -->
+                <div class="card p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-semibold text-lg text-gray-200">IHSG</h3>
+                        <i data-lucide="bar-chart-3" class="w-6 h-6 text-red-400"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-red-400">7.250</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-red-400 font-semibold text-lg">-0,8%</span>
+                        <p class="text-xs text-gray-400 ml-3">Sentimen risk-off global & arus keluar asing.</p>
+                    </div>
+                </div>
+                <!-- USD/IDR Card -->
+                <div class="card p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-semibold text-lg text-gray-200">USD/IDR</h3>
+                        <i data-lucide="dollar-sign" class="w-6 h-6 text-red-400"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-red-400">15.850</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-red-400 font-semibold text-lg">+0,5%</span>
+                        <p class="text-xs text-gray-400 ml-3">Indeks Dolar (DXY) kuat & sikap hawkish The Fed.</p>
+                    </div>
+                </div>
+                <!-- Arus Asing Card -->
+                <div class="card p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-semibold text-lg text-gray-200">Arus Bersih Asing (Saham)</h3>
+                        <i data-lucide="log-out" class="w-6 h-6 text-red-400"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-red-400">- Rp 800 M</p>
+                    <div class="flex items-center mt-2">
+                        <p class="text-xs text-gray-400">Pelarian investor ke aset aman (US Treasury).</p>
+                    </div>
+                </div>
+                <!-- Dow Jones Card -->
+                <div class="card p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-semibold text-lg text-gray-200">Dow Jones</h3>
+                        <i data-lucide="trending-down" class="w-6 h-6 text-red-400"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-red-400">38.500</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-red-400 font-semibold text-lg">-1,2%</span>
+                        <p class="text-xs text-gray-400 ml-3">Data IHK AS lebih tinggi dari ekspektasi.</p>
+                    </div>
+                </div>
+                <!-- US Treasury Card -->
+                <div class="card p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-semibold text-lg text-gray-200">Imbal Hasil US Treasury 10-Thn</h3>
+                        <i data-lucide="line-chart" class="w-6 h-6 text-green-400"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-green-400">4,35%</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-green-400 font-semibold text-lg">+10 bps</span>
+                        <p class="text-xs text-gray-400 ml-3">Kekhawatiran inflasi & ekspektasi kenaikan suku bunga.</p>
+                    </div>
+                </div>
+                 <!-- Minyak Brent Card -->
+                <div class="card p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-semibold text-lg text-gray-200">Minyak Mentah Brent</h3>
+                        <i data-lucide="fuel" class="w-6 h-6 text-green-400"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-green-400">$95/barel</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-green-400 font-semibold text-lg">+1,5%</span>
+                        <p class="text-xs text-gray-400 ml-3">Pembatasan pasokan OPEC+ & ketegangan geopolitik.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Macro Landscape -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-6 text-center">Lanskap Makroekonomi Global: Efek Berantai The Fed</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <div class="card p-4 text-center max-w-xs">
+                    <i data-lucide="flame" class="w-10 h-10 mx-auto text-orange-400 mb-2"></i>
+                    <h3 class="font-semibold">Inflasi AS Tinggi</h3>
+                    <p class="text-sm text-gray-400">Data IHK di atas ekspektasi, menantang harapan pelonggaran kebijakan.</p>
+                </div>
+                <div class="transform rotate-90 md:rotate-0">
+                    <i data-lucide="arrow-right-circle" class="w-8 h-8 text-blue-400"></i>
+                </div>
+                <div class="card p-4 text-center max-w-xs">
+                    <i data-lucide="landmark" class="w-10 h-10 mx-auto text-blue-400 mb-2"></i>
+                    <h3 class="font-semibold">Sikap Hawkish The Fed</h3>
+                    <p class="text-sm text-gray-400">Narasi "higher for longer" menguat, pasar antisipasi kenaikan suku bunga.</p>
+                </div>
+                <div class="transform rotate-90 md:rotate-0">
+                    <i data-lucide="arrow-right-circle" class="w-8 h-8 text-blue-400"></i>
+                </div>
+                <div class="card p-4 text-center max-w-xs">
+                    <i data-lucide="arrow-up-right" class="w-10 h-10 mx-auto text-green-400 mb-2"></i>
+                    <h3 class="font-semibold">Imbal Hasil US Treasury Naik</h3>
+                    <p class="text-sm text-gray-400">Aset "bebas risiko" menjadi lebih menarik, menyedot modal global.</p>
+                </div>
+                <div class="transform rotate-90 md:rotate-0">
+                    <i data-lucide="arrow-right-circle" class="w-8 h-8 text-blue-400"></i>
+                </div>
+                <div class="card p-4 text-center max-w-xs">
+                    <i data-lucide="globe" class="w-10 h-10 mx-auto text-red-400 mb-2"></i>
+                    <h3 class="font-semibold">Capital Outflow</h3>
+                    <p class="text-sm text-gray-400">Modal keluar dari pasar negara berkembang, termasuk Indonesia.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Stock Recommendations -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-white mb-6 text-center">Analisis & Rekomendasi Saham Interaktif</h2>
+            <div class="flex justify-center space-x-2 sm:space-x-4 mb-6">
+                <button class="tab-button active font-semibold py-2 px-4 rounded-lg bg-gray-700 hover:bg-gray-600" data-tab="bbca">BBCA</button>
+                <button class="tab-button font-semibold py-2 px-4 rounded-lg bg-gray-700 hover:bg-gray-600" data-tab="tlkm">TLKM</button>
+                <button class="tab-button font-semibold py-2 px-4 rounded-lg bg-gray-700 hover:bg-gray-600" data-tab="adro">ADRO</button>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <!-- BBCA Content -->
+                <div id="bbca" class="tab-content active fade-in">
+                    <div class="card p-6">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Bank Central Asia (BBCA)</h3>
+                                <p class="text-gray-400">Jangkar Defensif di Tengah Badai</p>
+                            </div>
+                            <span class="pill-green text-lg font-bold px-4 py-1 rounded-full mt-2 sm:mt-0">BELI</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 text-center mb-6">
+                            <div>
+                                <p class="text-sm text-gray-400">Harga Saat Ini</p>
+                                <p class="text-xl font-semibold">Rp 9.500</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400">Target Harga</p>
+                                <p class="text-xl font-semibold text-green-400">Rp 10.500</p>
+                            </div>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Tesis Investasi:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                            <li><strong>Pelarian ke Kualitas (Flight to Quality):</strong> Dianggap sebagai aset aman di sektor keuangan Indonesia.</li>
+                            <li><strong>Fundamental Terbaik di Kelasnya:</strong> Neraca kokoh, NIM terlindungi oleh basis CASA yang besar, dan rasio NPL terendah.</li>
+                            <li><strong>Proksi Ekonomi Konsumen:</strong> Bertaruh pada ketahanan belanja konsumen Indonesia yang lebih stabil daripada siklus korporasi.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- TLKM Content -->
+                <div id="tlkm" class="tab-content fade-in">
+                    <div class="card p-6">
+                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Telkom Indonesia (TLKM)</h3>
+                                <p class="text-gray-400">Utilitas Stabil dengan Potensi Terbatas</p>
+                            </div>
+                            <span class="pill-yellow text-lg font-bold px-4 py-1 rounded-full mt-2 sm:mt-0">TAHAN</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 text-center mb-6">
+                            <div>
+                                <p class="text-sm text-gray-400">Harga Saat Ini</p>
+                                <p class="text-xl font-semibold">Rp 3.800</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400">Target Harga</p>
+                                <p class="text-xl font-semibold text-yellow-300">Rp 4.200</p>
+                            </div>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Tesis Investasi:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                           <li><strong>Pendapatan Defensif:</strong> Aliran pendapatan mirip utilitas karena layanan data dan internet adalah kebutuhan esensial.</li>
+                           <li><strong>Kompetisi Ketat:</strong> Tekanan harga dari pesaing membatasi kemampuan menaikkan margin.</li>
+                           <li><strong>Belanja Modal (CapEx) Besar:</strong> Peluncuran 5G membebani arus kas bebas dan membatasi potensi dividen, sehingga potensi kenaikan harga menjadi terbatas.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ADRO Content -->
+                <div id="adro" class="tab-content fade-in">
+                    <div class="card p-6">
+                         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Adaro Energy (ADRO)</h3>
+                                <p class="text-gray-400">Risiko Siklikal dan Tantangan Struktural</p>
+                            </div>
+                            <span class="pill-red text-lg font-bold px-4 py-1 rounded-full mt-2 sm:mt-0">JUAL</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 text-center mb-6">
+                            <div>
+                                <p class="text-sm text-gray-400">Harga Saat Ini</p>
+                                <p class="text-xl font-semibold">Rp 2.800</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400">Target Harga</p>
+                                <p class="text-xl font-semibold text-red-400">Rp 2.500</p>
+                            </div>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Tesis Investasi:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-300">
+                           <li><strong>Puncak Siklus Komoditas:</strong> Pendapatan sangat bergantung pada harga batu bara yang prospek jangka panjangnya negatif.</li>
+                           <li><strong>Diversifikasi Belum Terbukti:</strong> Proyek energi terbarukan masih bersifat jangka panjang, padat modal, dan kontribusinya minimal saat ini.</li>
+                           <li><strong>Tantangan ESG Struktural:</strong> Semakin banyak investor institusional yang menghindari saham bahan bakar fosil, membatasi potensi kenaikan valuasi secara permanen.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic Framework -->
+        <section>
+            <h2 class="text-2xl font-bold text-white mb-6 text-center">Kerangka Strategis: Prioritaskan Kualitas & Pelestarian Modal</h2>
+            <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card p-5 flex items-start">
+                    <i data-lucide="shield-check" class="w-8 h-8 text-blue-400 mr-4 flex-shrink-0"></i>
+                    <div>
+                        <h3 class="font-semibold text-lg">Neraca Keuangan Kokoh</h3>
+                        <p class="text-sm text-gray-400">Cari perusahaan dengan utang rendah, terutama utang dalam Dolar AS, untuk mengurangi risiko pelemahan Rupiah.</p>
+                    </div>
+                </div>
+                <div class="card p-5 flex items-start">
+                    <i data-lucide="gem" class="w-8 h-8 text-blue-400 mr-4 flex-shrink-0"></i>
+                    <div>
+                        <h3 class="font-semibold text-lg">Pricing Power</h3>
+                        <p class="text-sm text-gray-400">Pilih pemimpin pasar yang mampu meneruskan kenaikan biaya kepada pelanggan untuk melindungi margin.</p>
+                    </div>
+                </div>
+                <div class="card p-5 flex items-start">
+                    <i data-lucide="home" class="w-8 h-8 text-blue-400 mr-4 flex-shrink-0"></i>
+                    <div>
+                        <h3 class="font-semibold text-lg">Fokus Domestik</h3>
+                        <p class="text-sm text-gray-400">Perusahaan dengan pendapatan domestik lebih terisolasi dari perlambatan ekonomi global dan volatilitas valas.</p>
+                    </div>
+                </div>
+                <div class="card p-5 flex items-start">
+                    <i data-lucide="database" class="w-8 h-8 text-blue-400 mr-4 flex-shrink-0"></i>
+                    <div>
+                        <h3 class="font-semibold text-lg">Arus Kas & Dividen Konsisten</h3>
+                        <p class="text-sm text-gray-400">Rekam jejak arus kas bebas yang kuat memberikan imbal hasil nyata saat keuntungan modal tidak pasti.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 text-gray-500 text-sm">
+            <p>Data berdasarkan laporan pasar per 12 September 2025.</p>
+            <p>Infografis ini hanya untuk tujuan informasi dan bukan merupakan nasihat investasi.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Interactive Tabs Logic
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to the clicked button and corresponding content
+                button.classList.add('active');
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
