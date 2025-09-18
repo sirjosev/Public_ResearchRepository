@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis Interaktif: Analisis Pasar Keuangan Indonesia - 18 September 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .highlight {
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .pill {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-900 text-center">Analisis Pasar Keuangan Indonesia</h1>
+            <p class="text-center text-gray-600 mt-1 text-sm md:text-base">Ringkasan Interaktif | 18 September 2025</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Key Points Section -->
+        <section id="ringkasan">
+            <h2 class="section-title">Poin-Poin Kunci Pasar Hari Ini</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: The Fed -->
+                <a href="#makroekonomi" class="card p-6 block">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
+                        <h3 class="text-xl font-bold text-gray-900">The Fed Pangkas Suku Bunga</h3>
+                    </div>
+                    <p class="text-gray-600">Pemangkasan 25 bps ke <span class="highlight">4.0% - 4.25%</span> direspons datar oleh pasar karena ekspektasi yang lebih tinggi.</p>
+                </a>
+                <!-- Card 2: Purbaya Effect -->
+                <a href="#makroekonomi" class="card p-6 block">
+                     <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-500 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                        <h3 class="text-xl font-bold text-gray-900">"Purbaya Effect"</h3>
+                    </div>
+                    <p class="text-gray-600">Sentimen positif pasar merespons Menkeu baru, harapkan kebijakan fiskal <span class="highlight">pro-pertumbuhan</span>.</p>
+                </a>
+                <!-- Card 3: Likuiditas BUMN -->
+                <a href="#perbankan" class="card p-6 block">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-indigo-500 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        <h3 class="text-xl font-bold text-gray-900">Injeksi Likuiditas Bank BUMN</h3>
+                    </div>
+                    <p class="text-gray-600">Suntikan dana <span class="highlight">Rp200 Triliun</span> untuk melonggarkan likuiditas dan menurunkan LDR Himbara.</p>
+                </a>
+                <!-- Card 4: BMRI -->
+                <a href="#perbankan" class="card p-6 block">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-500 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l4-4 4 4m0 6l-4 4-4-4" /></svg>
+                        <h3 class="text-xl font-bold text-gray-900">Kontradiksi Saham BMRI</h3>
+                    </div>
+                    <p class="text-gray-600">Perang narasi antara <span class="highlight">rekomendasi Beli</span> (karena dukungan pemerintah) vs <span class="highlight">Tahan</span> (karena risiko modal).</p>
+                </a>
+                <!-- Card 5: GIAA -->
+                <a href="#korporasi" class="card p-6 block">
+                     <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-500 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
+                        <h3 class="text-xl font-bold text-gray-900">Transformasi GIAA</h3>
+                    </div>
+                    <p class="text-gray-600">Danantara memimpin restrukturisasi dengan fokus pada <span class="highlight">tata kelola dan efisiensi</span> strategis.</p>
+                </a>
+                <!-- Card 6: DADA -->
+                <a href="#korporasi" class="card p-6 block">
+                    <div class="flex items-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-500 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>
+                        <h3 class="text-xl font-bold text-gray-900">Spekulasi Saham DADA</h3>
+                    </div>
+                    <p class="text-gray-600">Harga meroket <span class="highlight">>700%</span> di tengah rumor akuisisi oleh raksasa properti Jepang.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Spacer -->
+        <div class="my-16 border-t border-gray-200"></div>
+
+        <!-- Macroeconomy Section -->
+        <section id="makroekonomi">
+            <h2 class="section-title">Lanskap Makroekonomi</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div class="card p-8">
+                    <h3 class="text-2xl font-bold mb-4">Respon Datar Terhadap The Fed</h3>
+                    <p class="text-gray-600 mb-4">FOMC memangkas suku bunga 25 bps untuk merespon pelemahan pasar tenaga kerja AS. Namun, langkah ini <span class="font-semibold">sudah diantisipasi pasar</span>, bahkan sebagian mengharapkan pemotongan lebih agresif.</p>
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                        <p class="font-semibold text-blue-800">Sinyal Tidak Pasti dari "Dot Plot"</p>
+                        <p class="text-blue-700 mt-2">Proyeksi suku bunga anggota komite The Fed menunjukkan perpecahan internal, menciptakan ketidakpastian arah kebijakan ke depan dan menetralkan sentimen positif.</p>
+                    </div>
+                </div>
+                <div class="card p-8">
+                    <h3 class="text-2xl font-bold mb-4">Dominasi Sentimen Domestik: "Purbaya Effect"</h3>
+                    <p class="text-gray-600 mb-4">Pasar dengan cepat mengalihkan fokus pada pergantian Menteri Keuangan. Setelah ketidakpastian awal, sentimen berbalik positif, melahirkan fenomena <span class="font-semibold">"Purbaya Effect"</span>.</p>
+                     <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                        <p class="font-semibold text-green-800">Ekspektasi Kebijakan Pro-Pertumbuhan</p>
+                        <p class="text-green-700 mt-2">Investor berspekulasi kepemimpinan baru akan membawa kebijakan fiskal yang lebih ekspansif, yang berpotensi menguntungkan pasar saham secara keseluruhan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spacer -->
+        <div class="my-16 border-t border-gray-200"></div>
+
+        <!-- Banking Sector Section -->
+        <section id="perbankan">
+            <h2 class="section-title">Fokus Sektor Perbankan: Dilema BMRI</h2>
+            <div class="card p-8 mb-8">
+                <h3 class="text-2xl font-bold mb-2">Respons Krisis Likuiditas</h3>
+                <p class="text-gray-600 max-w-3xl mx-auto text-center">Pemerintah menyuntikkan <span class="highlight">Rp200 Triliun</span> ke bank Himbara untuk menjaga stabilitas sistem keuangan. Langkah ini positif dalam jangka pendek, namun mengonfirmasi adanya tekanan likuiditas yang nyata.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                <div class="lg:col-span-3 card p-8">
+                    <h3 class="text-2xl font-bold mb-4">Perbandingan Rekomendasi Analis BMRI</h3>
+                    <p class="text-gray-600 mb-6">Saham BMRI menjadi pusat perdebatan dengan pandangan yang sangat kontras dari para analis, menyoroti konflik antara dukungan jangka pendek dan risiko fundamental.</p>
+                    <canvas id="bmriChart"></canvas>
+                </div>
+                <div class="lg:col-span-2 space-y-6">
+                    <div class="card p-6 border-l-4 border-green-500">
+                        <h4 class="text-xl font-bold text-green-700 mb-2">Narasi Bullish (Beli)</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Dukungan likuiditas pemerintah</li>
+                            <li>Valuasi saham dianggap menarik</li>
+                            <li>Potensi pertumbuhan digital</li>
+                        </ul>
+                    </div>
+                    <div class="card p-6 border-l-4 border-red-500">
+                        <h4 class="text-xl font-bold text-red-700 mb-2">Narasi Bearish (Tahan/Jual)</h4>
+                         <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Kebijakan dividen tinggi mengikis modal</li>
+                            <li>Rasio kecukupan modal (CAR) menurun</li>
+                            <li>Peningkatan Aset Tertimbang Menurut Risiko (ATMR)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spacer -->
+        <div class="my-16 border-t border-gray-200"></div>
+
+        <!-- Corporate Events Section -->
+        <section id="korporasi">
+            <h2 class="section-title">Peristiwa Korporasi Utama</h2>
+            <div class="space-y-8">
+                <!-- GIAA Card -->
+                <div class="card overflow-hidden md:flex">
+                    <div class="md:w-1/3 bg-cyan-500 text-white p-8 flex flex-col justify-center items-center">
+                        <h3 class="text-3xl font-bold">GIAA</h3>
+                        <p class="text-cyan-100">PT Garuda Indonesia</p>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h4 class="text-2xl font-bold mb-2">Model Baru Transformasi BUMN</h4>
+                        <p class="text-gray-600 mb-4">Di bawah arahan <span class="highlight">Danantara</span> (Sovereign Wealth Fund), GIAA menerima suntikan dana Rp6,65 Triliun. Fokusnya adalah perbaikan fundamental operasional, tata kelola yang baik, dan efisiensi strategis, termasuk potensi merger dengan Pelita Air.</p>
+                        <span class="pill bg-cyan-100 text-cyan-800">Restrukturisasi</span>
+                    </div>
+                </div>
+
+                <!-- DADA Card -->
+                 <div class="card overflow-hidden md:flex">
+                     <div class="md:w-2/3 p-8">
+                        <h4 class="text-2xl font-bold mb-2">Gelembung Spekulatif Saham</h4>
+                        <p class="text-gray-600 mb-4">Harga saham meroket lebih dari <span class="highlight">700%</span> didorong oleh rumor akuisisi oleh raksasa properti Jepang. Fenomena ini menunjukkan tingginya selera risiko pasar dan kekuatan narasi, meskipun valuasi terlepas dari fundamental.</p>
+                        <span class="pill bg-amber-100 text-amber-800">Rumor Pasar</span>
+                    </div>
+                    <div class="md:w-1/3 bg-amber-500 text-white p-8 flex flex-col justify-center items-center order-first md:order-last">
+                        <h3 class="text-3xl font-bold">DADA</h3>
+                        <p class="text-amber-100">PT Diamond Food</p>
+                    </div>
+                </div>
+
+                <!-- ENRG Card -->
+                <div class="card overflow-hidden md:flex">
+                    <div class="md:w-1/3 bg-gray-800 text-white p-8 flex flex-col justify-center items-center">
+                        <h3 class="text-3xl font-bold">ENRG</h3>
+                        <p class="text-gray-300">PT Energi Mega Persada</p>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h4 class="text-2xl font-bold mb-2">Prospek Cerah Sektor Energi</h4>
+                        <p class="text-gray-600 mb-4">Kinerja saham impresif (<span class="highlight">>200% setahun</span>) didukung fundamental kuat dan sentimen bullish harga komoditas energi global. Analis memproyeksikan pertumbuhan pendapatan dan laba yang signifikan ke depan.</p>
+                        <span class="pill bg-gray-200 text-gray-800">Fundamental Kuat</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Spacer -->
+        <div class="my-16 border-t border-gray-200"></div>
+
+        <!-- Sentiment & Outlook -->
+        <section id="outlook">
+             <h2 class="section-title">Sentimen dan Outlook Strategis</h2>
+             <div class="card p-8">
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Peluang Utama</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center mr-3 font-bold">✔</span>
+                                <div><span class="font-semibold">Bank BUMN:</span> Peluang taktis dari dukungan likuiditas pemerintah pada valuasi yang tertekan.</div>
+                            </li>
+                             <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center mr-3 font-bold">✔</span>
+                                <div><span class="font-semibold">Kisah Restrukturisasi (GIAA):</span> Potensi keuntungan jangka panjang jika transformasi oleh Danantara berhasil.</div>
+                            </li>
+                             <li class="flex items-start">
+                                <span class="flex-shrink-0 h-6 w-6 rounded-full bg-green-100 text-green-700 flex items-center justify-center mr-3 font-bold">✔</span>
+                                <div><span class="font-semibold">Sektor Komoditas (ENRG):</span> Eksposur terhadap siklus kenaikan harga energi dengan fundamental internal yang solid.</div>
+                            </li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h3 class="text-2xl font-bold mb-4">Risiko Utama</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                 <span class="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-red-700 flex items-center justify-center mr-3 font-bold">!</span>
+                                <div><span class="font-semibold">Eksekusi Kebijakan:</span> Ketidakpastian arah kebijakan fiskal Menkeu baru.</div>
+                            </li>
+                             <li class="flex items-start">
+                                 <span class="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-red-700 flex items-center justify-center mr-3 font-bold">!</span>
+                                <div><span class="font-semibold">Kesehatan Perbankan:</span> Risiko masalah permodalan yang lebih dalam di balik suntikan likuiditas.</div>
+                            </li>
+                             <li class="flex items-start">
+                                 <span class="flex-shrink-0 h-6 w-6 rounded-full bg-red-100 text-red-700 flex items-center justify-center mr-3 font-bold">!</span>
+                                <div><span class="font-semibold">Gelembung Spekulatif:</span> Potensi koreksi tajam pada saham yang digerakkan rumor seperti DADA.</div>
+                            </li>
+                        </ul>
+                    </div>
+                 </div>
+                 <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h4 class="text-xl font-semibold text-center text-gray-800">Rekomendasi Strategis</h4>
+                    <p class="text-center text-gray-600 mt-2 max-w-3xl mx-auto">Dalam pasar yang didorong narasi domestik, investor disarankan mengadopsi pendekatan seimbang: pertahankan eksposur inti pada saham berkualitas dan alokasikan sebagian portofolio untuk peluang taktis. Uji tuntas dan skeptisisme adalah kunci.</p>
+                 </div>
+             </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <p>&copy; 2025 Analisis Pasar Keuangan. Infografis dihasilkan secara interaktif.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="to-top-button" title="Kembali ke atas"
+        class="hidden fixed z-50 bottom-8 right-8 border-0 w-12 h-12 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold flex justify-center items-center transition-opacity duration-300 hover:bg-indigo-600">
+        &uarr;
+    </button>
+
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Chart.js implementation for BMRI recommendations
+        const ctx = document.getElementById('bmriChart').getContext('2d');
+        const bmriChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['DBS (Bearish)', 'Konsensus Analis', 'Ciptadana', 'Macquarie (Bullish)'],
+                datasets: [{
+                    label: 'Target Harga (Rp)',
+                    data: [3900, 5848, 6200, 6460],
+                    backgroundColor: [
+                        'rgba(239, 68, 68, 0.6)', // red
+                        'rgba(167, 139, 250, 0.6)', // purple
+                        'rgba(59, 130, 246, 0.6)', // blue
+                        'rgba(34, 197, 94, 0.6)', // green
+                    ],
+                    borderColor: [
+                        'rgba(239, 68, 68, 1)',
+                        'rgba(167, 139, 250, 1)',
+                        'rgba(59, 130, 246, 1)',
+                        'rgba(34, 197, 94, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value, index, values) {
+                                return 'Rp' + value.toLocaleString('id-ID');
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                         callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.x !== null) {
+                                    label += 'Rp' + context.parsed.x.toLocaleString('id-ID');
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+        
+        // Back to Top Button Logic
+        var toTopButton = document.getElementById("to-top-button");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                toTopButton.classList.remove("hidden");
+            } else {
+                toTopButton.classList.add("hidden");
+            }
+        };
+
+        toTopButton.onclick = function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+    </script>
+
+</body>
+</html>
+
