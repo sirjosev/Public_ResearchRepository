@@ -148,27 +148,69 @@
                 <h3 class="text-2xl font-bold mb-2">Respons Krisis Likuiditas</h3>
                 <p class="text-gray-600 max-w-3xl mx-auto text-center">Pemerintah menyuntikkan <span class="highlight">Rp200 Triliun</span> ke bank Himbara untuk menjaga stabilitas sistem keuangan. Langkah ini positif dalam jangka pendek, namun mengonfirmasi adanya tekanan likuiditas yang nyata.</p>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
-                <div class="lg:col-span-3 card p-8">
-                    <h3 class="text-2xl font-bold mb-4">Perbandingan Rekomendasi Analis BMRI</h3>
-                    <p class="text-gray-600 mb-6">Saham BMRI menjadi pusat perdebatan dengan pandangan yang sangat kontras dari para analis, menyoroti konflik antara dukungan jangka pendek dan risiko fundamental.</p>
-                    <canvas id="bmriChart"></canvas>
+            
+            <div class="card p-8">
+                <h3 class="text-2xl font-bold mb-1 text-center">Perang Narasi Saham BMRI</h3>
+                <p class="text-gray-600 mb-6 text-center">Pandangan analis terbelah antara optimisme dukungan pemerintah dan kekhawatiran fundamental permodalan.</p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+                    <!-- Chart -->
+                    <div class="lg:col-span-3 h-80">
+                         <canvas id="bmriChart"></canvas>
+                    </div>
+                    <!-- Table -->
+                    <div class="lg:col-span-2">
+                        <div class="overflow-x-auto rounded-lg border border-gray-200">
+                            <table class="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-left">Analis/Sumber</th>
+                                        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-left">Rekomendasi</th>
+                                        <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900 text-left">Target Harga</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr class="odd:bg-white even:bg-gray-50">
+                                        <td class="whitespace-nowrap px-4 py-2 font-medium text-red-600">DBS</td>
+                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700"><span class="pill bg-red-100 text-red-800">Tahan</span></td>
+                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">Rp 3.900</td>
+                                    </tr>
+                                    <tr class="odd:bg-white even:bg-gray-50">
+                                        <td class="whitespace-nowrap px-4 py-2 font-medium text-purple-600">Konsensus Analis</td>
+                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700"><span class="pill bg-purple-100 text-purple-800">Netral</span></td>
+                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">Rp 5.848</td>
+                                    </tr>
+                                    <tr class="odd:bg-white even:bg-gray-50">
+                                        <td class="whitespace-nowrap px-4 py-2 font-medium text-blue-600">Ciptadana</td>
+                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700"><span class="pill bg-blue-100 text-blue-800">Beli</span></td>
+                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">Rp 6.200</td>
+                                    </tr>
+                                    <tr class="odd:bg-white even:bg-gray-50">
+                                        <td class="whitespace-nowrap px-4 py-2 font-medium text-green-600">Macquarie</td>
+                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700"><span class="pill bg-green-100 text-green-800">Beli</span></td>
+                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">Rp 6.460</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <div class="lg:col-span-2 space-y-6">
-                    <div class="card p-6 border-l-4 border-green-500">
-                        <h4 class="text-xl font-bold text-green-700 mb-2">Narasi Bullish (Beli)</h4>
-                        <ul class="list-disc list-inside text-gray-600 space-y-1">
-                            <li>Dukungan likuiditas pemerintah</li>
-                            <li>Valuasi saham dianggap menarik</li>
-                            <li>Potensi pertumbuhan digital</li>
+
+                <div class="mt-8 pt-6 border-t border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="border-l-4 border-green-500 bg-green-50 p-4 rounded-r-lg">
+                        <h4 class="text-xl font-bold text-green-800 mb-2">Narasi Bullish (Optimistis)</h4>
+                        <ul class="list-disc list-inside text-green-900 space-y-1">
+                            <li>Dukungan likuiditas dari pemerintah menjamin stabilitas.</li>
+                            <li>Valuasi saham dianggap menarik pasca koreksi.</li>
+                            <li>Potensi pertumbuhan dari ekspansi layanan digital.</li>
                         </ul>
                     </div>
-                    <div class="card p-6 border-l-4 border-red-500">
-                        <h4 class="text-xl font-bold text-red-700 mb-2">Narasi Bearish (Tahan/Jual)</h4>
-                         <ul class="list-disc list-inside text-gray-600 space-y-1">
-                            <li>Kebijakan dividen tinggi mengikis modal</li>
-                            <li>Rasio kecukupan modal (CAR) menurun</li>
-                            <li>Peningkatan Aset Tertimbang Menurut Risiko (ATMR)</li>
+                    <div class="border-l-4 border-red-500 bg-red-50 p-4 rounded-r-lg">
+                        <h4 class="text-xl font-bold text-red-800 mb-2">Narasi Bearish (Pesimistis)</h4>
+                         <ul class="list-disc list-inside text-red-900 space-y-1">
+                            <li>Kebijakan dividen tinggi berisiko menggerus modal inti.</li>
+                            <li>Rasio kecukupan modal (CAR) menunjukkan tren menurun.</li>
+                            <li>Peningkatan Aset Tertimbang Menurut Risiko (ATMR) menekan permodalan.</li>
                         </ul>
                     </div>
                 </div>
@@ -184,7 +226,7 @@
             <div class="space-y-8">
                 <!-- GIAA Card -->
                 <div class="card overflow-hidden md:flex">
-                    <div class="md:w-1/3 bg-cyan-500 text-white p-8 flex flex-col justify-center items-center">
+                    <div class="md:w-1/3 bg-cyan-500 text-white p-8 flex flex-col justify-center items-center text-center">
                         <h3 class="text-3xl font-bold">GIAA</h3>
                         <p class="text-cyan-100">PT Garuda Indonesia</p>
                     </div>
@@ -202,7 +244,7 @@
                         <p class="text-gray-600 mb-4">Harga saham meroket lebih dari <span class="highlight">700%</span> didorong oleh rumor akuisisi oleh raksasa properti Jepang. Fenomena ini menunjukkan tingginya selera risiko pasar dan kekuatan narasi, meskipun valuasi terlepas dari fundamental.</p>
                         <span class="pill bg-amber-100 text-amber-800">Rumor Pasar</span>
                     </div>
-                    <div class="md:w-1/3 bg-amber-500 text-white p-8 flex flex-col justify-center items-center order-first md:order-last">
+                    <div class="md:w-1/3 bg-amber-500 text-white p-8 flex flex-col justify-center items-center text-center order-first md:order-last">
                         <h3 class="text-3xl font-bold">DADA</h3>
                         <p class="text-amber-100">PT Diamond Food</p>
                     </div>
@@ -210,7 +252,7 @@
 
                 <!-- ENRG Card -->
                 <div class="card overflow-hidden md:flex">
-                    <div class="md:w-1/3 bg-gray-800 text-white p-8 flex flex-col justify-center items-center">
+                    <div class="md:w-1/3 bg-gray-800 text-white p-8 flex flex-col justify-center items-center text-center">
                         <h3 class="text-3xl font-bold">ENRG</h3>
                         <p class="text-gray-300">PT Energi Mega Persada</p>
                     </div>
@@ -305,7 +347,7 @@
         const bmriChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['DBS (Bearish)', 'Konsensus Analis', 'Ciptadana', 'Macquarie (Bullish)'],
+                labels: ['DBS (Tahan)', 'Konsensus', 'Ciptadana (Beli)', 'Macquarie (Beli)'],
                 datasets: [{
                     label: 'Target Harga (Rp)',
                     data: [3900, 5848, 6200, 6460],
@@ -328,7 +370,8 @@
                 indexAxis: 'y',
                 scales: {
                     x: {
-                        beginAtZero: true,
+                        beginAtZero: false,
+                        min: 3500,
                         ticks: {
                             callback: function(value, index, values) {
                                 return 'Rp' + value.toLocaleString('id-ID');
@@ -379,4 +422,5 @@
 
 </body>
 </html>
+
 
