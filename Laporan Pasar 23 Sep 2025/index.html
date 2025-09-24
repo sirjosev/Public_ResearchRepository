@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis Interaktif: Analisis Pasar Keuangan Indonesia - 23 September 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+        }
+        .chart-container {
+            position: relative;
+            height: 300px;
+            width: 100%;
+        }
+        .card {
+            background-color: #1f2937; /* bg-gray-800 */
+            border: 1px solid #374151; /* border-gray-700 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(99, 102, 241, 0.1);
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            border-bottom: 1px dotted #6366f1; /* indigo-500 */
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 250px;
+            background-color: #374151; /* bg-gray-700 */
+            color: #fff;
+            text-align: left;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -125px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .tab-button {
+            transition: all 0.3s ease;
+        }
+        .tab-button.active {
+            background-color: #4f46e5; /* bg-indigo-600 */
+            color: white;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <!-- Header -->
+        <header class="text-center mb-12 fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-2">Analisis Pasar Keuangan Indonesia</h1>
+            <p class="text-lg text-gray-400">Tinjauan Interaktif untuk 23 September 2025</p>
+        </header>
+
+        <!-- Ringkasan Utama -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="card p-6 rounded-xl fade-in" style="animation-delay: 0.1s;">
+                <h3 class="font-bold text-xl text-indigo-400 mb-2">Pendorong Utama</h3>
+                <p class="text-gray-300">Pasar digerakkan oleh perubahan kebijakan fiskal domestik dan sentimen makroekonomi global yang mendukung aset berisiko.</p>
+            </div>
+            <div class="card p-6 rounded-xl fade-in" style="animation-delay: 0.2s;">
+                <h3 class="font-bold text-xl text-indigo-400 mb-2">"Efek Purbaya"</h3>
+                <p class="text-gray-300">Langkah Menkeu baru memicu <span class="tooltip">re-rating<span class="tooltiptext">Penilaian ulang nilai fundamental suatu saham atau sektor berdasarkan informasi baru.</span></span> pada sektor tembakau dan pemberantasan produk ilegal.</p>
+            </div>
+            <div class="card p-6 rounded-xl fade-in" style="animation-delay: 0.3s;">
+                <h3 class="font-bold text-xl text-indigo-400 mb-2">Likuiditas Solid</h3>
+                <p class="text-gray-300">IPO PT Merdeka Gold (EMAS) yang <span class="tooltip">oversubscribed<span class="tooltiptext">Kelebihan permintaan saham dibandingkan jumlah yang ditawarkan saat IPO.</span></span> secara masif menandakan likuiditas pasar yang kuat.</p>
+            </div>
+            <div class="card p-6 rounded-xl fade-in" style="animation-delay: 0.4s;">
+                <h3 class="font-bold text-xl text-indigo-400 mb-2">Stimulus Properti</h3>
+                <p class="text-gray-300">Perpanjangan insentif <span class="tooltip">PPN DTP<span class="tooltiptext">Pajak Pertambahan Nilai Ditanggung Pemerintah. Pemerintah menanggung PPN properti untuk mendorong daya beli.</span></span> menopang permintaan domestik dan stabilitas perbankan.</p>
+            </div>
+        </div>
+        
+        <!-- Lanskap Makroekonomi -->
+        <section class="mb-12 card p-6 md:p-8 rounded-2xl fade-in">
+            <h2 class="text-3xl font-bold mb-6 text-center text-purple-400">Lanskap Makroekonomi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                <div>
+                    <p class="text-gray-400 text-sm">IHSG (22/09/25)</p>
+                    <p class="text-3xl font-bold text-red-400">8.040</p>
+                    <p class="text-sm text-red-400">-0,14%</p>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-sm">Net Buy Asing</p>
+                    <p class="text-3xl font-bold text-green-400">Rp 491,7 M</p>
+                    <p class="text-sm text-gray-500">Menandakan rotasi modal selektif.</p>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-sm">USD/IDR</p>
+                    <p class="text-3xl font-bold">16.622</p>
+                    <p class="text-sm text-red-400">-0,08%</p>
+                </div>
+                <div>
+                    <p class="text-gray-400 text-sm">Harga Emas Global</p>
+                    <p class="text-3xl font-bold text-yellow-400">Rekor Baru</p>
+                    <p class="text-sm text-gray-500">Didukung ekspektasi pemangkasan suku bunga The Fed.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dampak Kebijakan Pemerintah -->
+        <section class="mb-12 fade-in">
+            <h2 class="text-3xl font-bold mb-6 text-center text-purple-400">Dampak Kebijakan Pemerintah</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Efek Purbaya -->
+                <div class="card p-6 md:p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-4 text-center">💥 Efek Purbaya: Kebangkitan Sektor Tembakau</h3>
+                    <p class="text-gray-400 mb-6 text-center">Kritik Menkeu Purbaya terhadap tarif cukai 57% yang "terlalu tinggi" dan komitmen memberantas rokok ilegal memicu reli saham tembakau.</p>
+                    <div class="chart-container">
+                        <canvas id="tobaccoStockChart"></canvas>
+                    </div>
+                     <p class="text-xs text-gray-500 mt-4 text-center">Kinerja Saham Tembakau Pasca Pernyataan Menkeu</p>
+                </div>
+                <!-- Insentif Properti -->
+                <div class="card p-6 md:p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-4 text-center">🏠 Menjaga Momentum Properti</h3>
+                    <p class="text-gray-400 mb-6 text-center">Perpanjangan insentif PPN DTP 100% untuk properti hingga Rp 5 Miliar menstimulasi pasar dan menjaga stabilitas NPL perbankan.</p>
+                    <div class="bg-gray-900 p-6 rounded-lg">
+                        <div class="flex justify-between items-center border-b border-gray-700 pb-3 mb-3">
+                            <span class="text-gray-300">Harga Properti ≤ Rp 2 Miliar</span>
+                            <span class="font-bold text-green-400">PPN DTP 100%</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Harga > Rp 2 M - ≤ Rp 5 M</span>
+                            <span class="font-bold text-green-400">PPN DTP 100% (atas porsi 2M)</span>
+                        </div>
+                         <p class="text-center mt-6 text-lg">Potensi Penghematan Konsumen: <br><span class="text-3xl font-bold text-yellow-400">Hingga Rp 220 Juta</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aksi Korporasi Signifikan -->
+        <section class="mb-12 fade-in">
+            <h2 class="text-3xl font-bold mb-6 text-center text-purple-400">Aksi Korporasi Signifikan</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- IPO EMAS -->
+                <div class="card p-6 md:p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-4 text-center">🥇 IPO Terbesar 2025: Merdeka Gold (EMAS)</h3>
+                    <p class="text-gray-400 mb-6 text-center">Meskipun masih <span class="tooltip">pra-pendapatan<span class="tooltiptext">Perusahaan yang belum menghasilkan pendapatan dari operasi intinya, biasanya masih dalam tahap pengembangan atau eksplorasi.</span></span>, IPO EMAS sukses besar berkat reputasi sponsor dan momentum harga emas.</p>
+                     <div class="chart-container">
+                        <canvas id="ipoFundsChart"></canvas>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-4 text-center">Alokasi Dana Hasil IPO EMAS (Total Rp 4,65 T)</p>
+                </div>
+                <!-- Manuver BREN -->
+                <div class="card p-6 md:p-8 rounded-2xl">
+                     <h3 class="text-2xl font-bold mb-4 text-center">⚡️ Strategi BREN: Menuju Indeks Global</h3>
+                    <p class="text-gray-400 mb-6">Pelepasan saham oleh afiliasi pengendali bukan sinyal negatif, melainkan manuver strategis untuk menambah <span class="tooltip">free float<span class="tooltiptext">Jumlah saham yang tersedia untuk diperdagangkan secara bebas di pasar oleh investor publik.</span></span> demi memenuhi kriteria inklusi ke indeks global seperti MSCI & FTSE.</p>
+                    <div class="bg-gray-900 p-6 rounded-lg text-center">
+                        <p class="text-lg">Tujuan Utama:</p>
+                        <p class="text-3xl font-bold text-indigo-400 my-3">Masuk Indeks Acuan</p>
+                        <p class="text-gray-300">Menciptakan permintaan "paksa" dari dana pasif (ETF, reksa dana indeks) dan berpotensi menaikkan valuasi saham dalam jangka panjang.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rekomendasi Strategis -->
+        <section class="fade-in">
+            <h2 class="text-3xl font-bold mb-6 text-center text-purple-400">Sintesis & Rekomendasi Strategis</h2>
+            <div class="card p-6 md:p-8 rounded-2xl">
+                <!-- Tab Buttons -->
+                <div class="flex flex-wrap justify-center border-b border-gray-700 mb-6">
+                    <button class="tab-button py-2 px-6 font-semibold text-gray-400 border-b-2 border-transparent hover:text-white hover:border-indigo-500 active" onclick="openTab(event, 'peluang')">Peluang Investasi</button>
+                    <button class="tab-button py-2 px-6 font-semibold text-gray-400 border-b-2 border-transparent hover:text-white hover:border-indigo-500" onclick="openTab(event, 'prospek')">Prospek Sektoral</button>
+                    <button class="tab-button py-2 px-6 font-semibold text-gray-400 border-b-2 border-transparent hover:text-white hover:border-indigo-500" onclick="openTab(event, 'risiko')">Risiko & Mitigasi</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div id="peluang" class="tab-content active">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-xl font-bold text-indigo-400 mb-2">📈 Tema Momentum Berbasis Kebijakan</h4>
+                            <p class="text-gray-300"><span class="font-semibold">Implementasi:</span> Ambil posisi <span class="tooltip">Overweight<span class="tooltiptext">Rekomendasi untuk memiliki porsi investasi di suatu saham/sektor lebih besar dari bobotnya di indeks acuan.</span></span> pada sektor Tembakau (GGRM, HMSP) dan Properti (emiten dengan eksposur harga < Rp 5 Miliar).</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-indigo-400 mb-2">🎯 Tema Situasi Khusus & Berbasis Peristiwa</h4>
+                             <p class="text-gray-300"><span class="font-semibold">Implementasi:</span> <span class="tooltip">Wait-and-see<span class="tooltiptext">Sikap menunggu dan mengamati perkembangan pasar sebelum mengambil keputusan investasi.</span></span> untuk EMAS pasca euforia IPO. Akumulasi bertahap untuk BREN sebagai antisipasi masuknya ke indeks acuan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="prospek" class="tab-content">
+                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <h4 class="text-xl font-bold text-green-400 mb-2">Tembakau: Overweight</h4>
+                            <p class="text-gray-300">Prospek sangat positif didorong potensi kebijakan cukai yang bersahabat dan pemberantasan rokok ilegal. Rekomendasi: <span class="font-bold">BUY</span> GGRM & HMSP.</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-green-400 mb-2">Properti: Overweight</h4>
+                             <p class="text-gray-300">Didukung penuh insentif PPN DTP hingga akhir 2025. Rekomendasi: <span class="font-bold">BUY</span> pengembang dengan portofolio segmen menengah.</p>
+                        </div>
+                         <div>
+                            <h4 class="text-xl font-bold text-yellow-400 mb-2">Tambang Emas: Neutral to Overweight</h4>
+                             <p class="text-gray-300">Didukung harga emas rekor, namun risiko spesifik emiten perlu dicermati. EMAS dikategorikan sebagai <span class="font-bold">High-Risk/High-Return</span>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="risiko" class="tab-content">
+                    <ul class="list-disc list-inside space-y-4 text-gray-300">
+                        <li>
+                            <span class="font-semibold text-red-400">Risiko Implementasi Kebijakan:</span> Retorika kuat mungkin menghadapi tantangan birokrasi.
+                            <br><span class="text-sm text-gray-400"><span class="font-bold">Mitigasi:</span> Pantau rilis peraturan resmi (PMK).</span>
+                        </li>
+                        <li>
+                            <span class="font-semibold text-red-400">Risiko Pasar Global:</span> Perubahan sentimen suku bunga The Fed dapat menekan harga emas.
+                            <br><span class="text-sm text-gray-400"><span class="font-bold">Mitigasi:</span> Lakukan diversifikasi portofolio yang sehat.</span>
+                        </li>
+                        <li>
+                            <span class="font-semibold text-red-400">Risiko Spesifik Emiten:</span> Risiko eksekusi proyek EMAS dan valuasi premium BREN.
+                            <br><span class="text-sm text-gray-400"><span class="font-bold">Mitigasi:</span> Lakukan analisis valuasi independen.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-12 text-gray-500 text-sm">
+            <p>Infografis ini dibuat berdasarkan dokumen "Laporan Analisis Pasar Keuangan Indonesia – 23 September 2025".</p>
+            <p>Ini bukan merupakan nasihat keuangan. Lakukan riset Anda sendiri sebelum berinvestasi.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Data dan Opsi untuk Grafik Saham Tembakau
+            const tobaccoCtx = document.getElementById('tobaccoStockChart').getContext('2d');
+            new Chart(tobaccoCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['GGRM', 'HMSP', 'WIIM'],
+                    datasets: [{
+                        label: 'Kenaikan Saham (%)',
+                        data: [17.89, 16.03, 18.67],
+                        backgroundColor: [
+                            'rgba(74, 222, 128, 0.6)', // green-400
+                            'rgba(99, 102, 241, 0.6)', // indigo-500
+                            'rgba(168, 85, 247, 0.6)'  // purple-500
+                        ],
+                        borderColor: [
+                            'rgba(74, 222, 128, 1)',
+                            'rgba(99, 102, 241, 1)',
+                            'rgba(168, 85, 247, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        title: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                            ticks: { 
+                                color: '#d1d5db',
+                                callback: function(value) { return value + '%' }
+                            }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: '#d1d5db', font: { size: 14 } }
+                        }
+                    }
+                }
+            });
+
+            // Data dan Opsi untuk Grafik Dana IPO EMAS
+            const ipoFundsCtx = document.getElementById('ipoFundsChart').getContext('2d');
+            new Chart(ipoFundsCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Pelunasan Utang ke Induk (MDKA)', 'Modal Kerja & Lainnya'],
+                    datasets: [{
+                        data: [86.55, 13.45],
+                        backgroundColor: [
+                            'rgba(239, 68, 68, 0.7)', // red-500
+                            'rgba(59, 130, 246, 0.7)' // blue-500
+                        ],
+                        borderColor: [
+                             '#1f2937',
+                             '#1f2937'
+                        ],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#d1d5db',
+                                boxWidth: 15,
+                                padding: 20
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+               
