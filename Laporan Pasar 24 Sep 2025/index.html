@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Update: Gold Rally - 24 September 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#202A53] text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2">Market Analysis & Trading Ideas</h1>
+            <p class="text-lg text-[#43A3E3]">CGS International Sekuritas Indonesia | 24 September 2025</p>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="bg-[#00428B] p-6 rounded-xl shadow-lg text-center">
+                <h3 class="text-md font-semibold text-gray-300 uppercase">IHSG (JCI)</h3>
+                <p class="text-4xl font-bold text-white mt-2">8,162.30</p>
+                <p class="text-sm text-green-400 font-medium">+37.10 (+0.46%)</p>
+            </div>
+            <div class="bg-[#00428B] p-6 rounded-xl shadow-lg text-center">
+                <h3 class="text-md font-semibold text-gray-300 uppercase">Gold Spot Price</h3>
+                <p class="text-4xl font-bold text-white mt-2">$3,764.01</p>
+                <p class="text-sm text-green-400 font-medium">+$17.31 (+0.46%)</p>
+            </div>
+            <div class="bg-[#00428B] p-6 rounded-xl shadow-lg text-center">
+                <h3 class="text-md font-semibold text-gray-300 uppercase">Oil (WTI)</h3>
+                <p class="text-4xl font-bold text-white mt-2">$63.41</p>
+                <p class="text-sm text-green-400 font-medium">+$0.77 (+1.23%)</p>
+            </div>
+            <div class="bg-[#00428B] p-6 rounded-xl shadow-lg text-center">
+                <h3 class="text-md font-semibold text-gray-300 uppercase">VIX (Fear Index)</h3>
+                <p class="text-4xl font-bold text-white mt-2">16.64</p>
+                <p class="text-sm text-red-400 font-medium">+$0.54 (+3.35%)</p>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div class="lg:col-span-2 bg-[#F0F8FF] rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-[#202A53] mb-4">Gold Hits New All-Time High</h2>
+                <p class="text-gray-600 mb-4">
+                    Gold prices surged to a new record, breaking US$3,800 per troy ounce. This rally is fueled by expectations of further interest rate cuts by the U.S. Federal Reserve and heightened geopolitical uncertainty, which increases demand for safe-haven assets. Projections suggest prices could even reach US$4,000 to US$5,000 next year, creating a significant tailwind for gold-related equities.
+                </p>
+                <div class="chart-container h-[350px] md:h-[400px]">
+                    <canvas id="goldPriceChart"></canvas>
+                </div>
+            </div>
+            <div class="bg-[#F0F8FF] rounded-lg shadow-md p-6 text-[#202A53]">
+                <h2 class="text-2xl font-bold mb-6">Key Drivers of the Rally</h2>
+                <div class="space-y-6">
+                    <div class="flex items-center">
+                        <div class="bg-[#43A3E3] text-white rounded-full h-12 w-12 flex items-center justify-center font-bold text-2xl mr-4">1</div>
+                        <div>
+                            <h3 class="font-bold text-lg">Fed Rate Cut Expectations</h3>
+                            <p class="text-gray-600 text-sm">Market probability for Fed rate cuts in October and December stands at 89.8% and 75.4% respectively, making non-yielding gold more attractive.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center h-8">
+                        <span class="text-4xl text-[#0075C4]">↓</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#0075C4] text-white rounded-full h-12 w-12 flex items-center justify-center font-bold text-2xl mr-4">2</div>
+                        <div>
+                            <h3 class="font-bold text-lg">Geopolitical Instability</h3>
+                            <p class="text-gray-600 text-sm">Ongoing global tensions and political uncertainty in major economies enhance gold's role as a primary safe-haven asset for investors.</p>
+                        </div>
+                    </div>
+                     <div class="flex justify-center h-8">
+                        <span class="text-4xl text-[#00428B]">↓</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="bg-[#00428B] text-white rounded-full h-12 w-12 flex items-center justify-center font-bold text-2xl mr-4">3</div>
+                        <div>
+                            <h3 class="font-bold text-lg">Central Bank Purchases</h3>
+                            <p class="text-gray-600 text-sm">Aggressive buying from central banks, particularly from China, continues to absorb supply and provide strong support for higher prices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mb-12">
+             <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-white">Riding the Golden Wave: Sector Performance</h2>
+                <p class="text-gray-300">The gold price surge has directly translated into strong performance for Indonesian gold mining and producing equities.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+                <div class="md:col-span-3 bg-[#F0F8FF] rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-[#202A53] mb-4">Gold Stock Daily Gains (%)</h3>
+                     <p class="text-gray-600 mb-4">
+                       Leading gold-related stocks on the IDX posted significant gains, outperforming the broader market as investors capitalized on the rising commodity price. ARCI led the pack with an impressive 7.34% increase.
+                    </p>
+                    <div class="chart-container h-80">
+                        <canvas id="goldStocksChart"></canvas>
+                    </div>
+                </div>
+                <div class="md:col-span-2 bg-[#F0F8FF] rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-[#202A53] mb-4">Foreign Net Buy on Gold Stocks</h3>
+                    <p class="text-gray-600 mb-4">
+                        Foreign investors showed strong interest, accumulating positions in key gold stocks. ANTM was the clear favorite, attracting over 70% of the foreign inflow among this peer group.
+                    </p>
+                    <div class="chart-container h-80">
+                        <canvas id="foreignNetBuyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-white">Trading Ideas & Corporate Actions</h2>
+                 <p class="text-gray-300">Key recommendations and market-moving news from our research desk.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-[#F0F8FF] rounded-lg shadow-md p-6 text-[#202A53]">
+                    <h3 class="text-xl font-bold mb-4">CGS Speculative Buy Recommendations</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left">
+                            <thead class="text-xs text-[#202A53] uppercase bg-gray-200">
+                                <tr>
+                                    <th scope="col" class="px-4 py-3">Ticker</th>
+                                    <th scope="col" class="px-4 py-3">Support</th>
+                                    <th scope="col" class="px-4 py-3">Cut Loss <</th>
+                                    <th scope="col" class="px-4 py-3">Short Term Target</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">SMRA</td>
+                                    <td class="px-4 py-3">438</td>
+                                    <td class="px-4 py-3 text-red-600">428</td>
+                                    <td class="px-4 py-3 text-green-600">458-468</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">PWON</td>
+                                    <td class="px-4 py-3">382</td>
+                                    <td class="px-4 py-3 text-red-600">374</td>
+                                    <td class="px-4 py-3 text-green-600">398-406</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">PSAB</td>
+                                    <td class="px-4 py-3">555</td>
+                                    <td class="px-4 py-3 text-red-600">540</td>
+                                    <td class="px-4 py-3 text-green-600">585-600</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">HRTA</td>
+                                    <td class="px-4 py-3">925</td>
+                                    <td class="px-4 py-3 text-red-600">905</td>
+                                    <td class="px-4 py-3 text-green-600">965-985</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="px-4 py-3 font-medium">INCO</td>
+                                    <td class="px-4 py-3">4180</td>
+                                    <td class="px-4 py-3 text-red-600">4090</td>
+                                    <td class="px-4 py-3 text-green-600">4360-4450</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium">TINS</td>
+                                    <td class="px-4 py-3">1170</td>
+                                    <td class="px-4 py-3 text-red-600">1145</td>
+                                    <td class="px-4 py-3 text-green-600">1220-1245</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="bg-[#F0F8FF] rounded-lg shadow-md p-6 text-[#202A53]">
+                    <h3 class="text-xl font-bold mb-4">Corporate Spotlight: PSAB Divestment</h3>
+                    <p class="text-gray-600 mb-2">
+                        PT J Resources Asia Pasifik Tbk (PSAB) plans to divest its Doup gold mine to a subsidiary of PT United Tractors Tbk (UNTR).
+                    </p>
+                    <div class="bg-blue-100 border-l-4 border-[#0075C4] p-4">
+                        <p class="font-bold">Transaction Value:</p>
+                        <p class="text-2xl font-bold text-[#00428B]">~US$ 540 Million</p>
+                        <p class="text-sm text-gray-700">(approx. Rp 8.85 Trillion)</p>
+                    </div>
+                    <p class="text-gray-600 mt-4 text-sm">
+                        This significant corporate action has drawn market attention to PSAB, highlighting the high value of gold assets in the current climate. The deal involves the acquisition of PT Arafura Surya Alam (ASA), the PSAB subsidiary managing the mine.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-12 pt-8 border-t border-gray-700">
+            <p class="text-sm text-gray-400">PT CGS International Sekuritas Indonesia</p>
+            <p class="text-xs text-gray-500 mt-2">
+                Disclaimer: This information is for informational purposes only and does not constitute an offer or solicitation to buy or sell any securities. Trading involves risks.
+            </p>
+        </footer>
+
+    </div>
+
+    <script>
+        const chartTooltipTitleCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        const wrapLabel = (label) => {
+            const maxLen = 16;
+            if (label.length <= maxLen) return label;
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxLen) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            });
+            if (currentLine) lines.push(currentLine);
+            return lines;
+        };
+
+        const goldPriceCtx = document.getElementById('goldPriceChart').getContext('2d');
+        new Chart(goldPriceCtx, {
+            type: 'line',
+            data: {
+                labels: ['Sep 18', 'Sep 19', 'Sep 22', 'Sep 23', 'Sep 24'],
+                datasets: [{
+                    label: 'Gold Spot Price (USD)',
+                    data: [3685, 3720, 3740, 3790, 3764],
+                    backgroundColor: 'rgba(67, 163, 227, 0.2)',
+                    borderColor: '#0075C4',
+                    tension: 0.3,
+                    fill: true,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        ticks: { color: '#202A53' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#202A53' }
+                    }
+                },
+                ...chartTooltipTitleCallback
+            }
+        });
+        
+        const goldStocksCtx = document.getElementById('goldStocksChart').getContext('2d');
+        const goldStockLabels = ['ARCI', 'MDKA', 'HRTA', 'PSAB', 'ANTM'];
+        new Chart(goldStocksCtx, {
+            type: 'bar',
+            data: {
+                labels: goldStockLabels,
+                datasets: [{
+                    label: 'Daily Gain (%)',
+                    data: [7.34, 5.88, 5.36, 4.76, 3.77],
+                    backgroundColor: ['#00428B', '#0075C4', '#43A3E3', '#202A53', '#0075C4'],
+                    borderColor: '#F0F8FF',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                     x: {
+                        grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                        ticks: { color: '#202A53' }
+                    },
+                    y: {
+                        grid: { display: false },
+                        ticks: { color: '#202A53' }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    ...chartTooltipTitleCallback.plugins
+                }
+            }
+        });
+        
+        const foreignNetBuyCtx = document.getElementById('foreignNetBuyChart').getContext('2d');
+        const foreignNetBuyLabels = ['ANTM (95.9m)', 'ARCI (25m)', 'HRTA (10.9m)'].map(wrapLabel);
+        new Chart(foreignNetBuyCtx, {
+            type: 'doughnut',
+            data: {
+                labels: foreignNetBuyLabels,
+                datasets: [{
+                    label: 'Foreign Net Buy (Rp)',
+                    data: [95.9, 25, 10.9],
+                    backgroundColor: [
+                        '#00428B',
+                        '#0075C4',
+                        '#43A3E3'
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#202A53',
+                            boxWidth: 20
+                        }
+                    },
+                    ...chartTooltipTitleCallback.plugins,
+                    tooltip: {
+                         callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                return Array.isArray(label) ? label.join(' ') : label;
+                            },
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += new Intl.NumberFormat('id-ID').format(context.parsed) + ' M';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
