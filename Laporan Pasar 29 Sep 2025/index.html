@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis Intelijen Pasar - 29 September 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Slate 900 */
+            color: #cbd5e1; /* Slate 300 */
+        }
+        .card {
+            background-color: #1e293b; /* Slate 800 */
+            border: 1px solid #334155; /* Slate 700 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .tab-button {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .tab-button.active {
+            background-color: #38bdf8; /* Sky 400 */
+            color: #0f172a; /* Slate 900 */
+        }
+        .stock-accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        .tag-green { background-color: #10b981; color: white; }
+        .tag-yellow { background-color: #f59e0b; color: #1e293b; }
+        .tag-red { background-color: #ef4444; color: white; }
+        .tag-blue { background-color: #3b82f6; color: white; }
+        .audio-player-container {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2">Laporan Intelijen Pasar Harian</h1>
+            <p class="text-xl text-sky-400 font-medium">29 September 2025</p>
+        </header>
+
+        <!-- Executive Briefing -->
+        <section class="mb-12">
+            <div class="card p-6 rounded-xl">
+                <h2 class="text-2xl font-bold text-sky-400 mb-4 border-l-4 border-sky-400 pl-4">Tesis Investasi Utama</h2>
+                <div class="bg-slate-900 p-4 rounded-lg">
+                    <p class="text-center text-lg md:text-xl font-semibold text-white">"Pertumbuhan Defensif dengan Lindung Nilai Komoditas"</p>
+                    <p class="text-center text-slate-400 mt-2">Memprioritaskan perusahaan tangguh dengan neraca kokoh, dilengkapi eksposur taktis pada sektor energi dan logam.</p>
+                </div>
+
+                <h3 class="text-xl font-bold text-white mt-8 mb-4">3 Faktor Kunci untuk Dipantau</h3>
+                <div class="grid md:grid-cols-3 gap-4 text-center">
+                    <div class="bg-slate-700 p-4 rounded-lg">
+                        <i class="fas fa-dollar-sign text-3xl text-green-400 mb-2"></i>
+                        <h4 class="font-semibold text-white">Volatilitas Rupiah</h4>
+                        <p class="text-sm text-slate-400">Barometer sentimen risiko merespons pergerakan Dolar AS.</p>
+                    </div>
+                    <div class="bg-slate-700 p-4 rounded-lg">
+                        <i class="fas fa-exchange-alt text-3xl text-blue-400 mb-2"></i>
+                        <h4 class="font-semibold text-white">Arus Dana Asing</h4>
+                        <p class="text-sm text-slate-400">Mengukur keyakinan investor institusional global.</p>
+                    </div>
+                    <div class="bg-slate-700 p-4 rounded-lg">
+                        <i class="fas fa-mountain text-3xl text-yellow-400 mb-2"></i>
+                        <h4 class="font-semibold text-white">Harga Komoditas</h4>
+                        <p class="text-sm text-slate-400">Mempengaruhi kinerja saham sektor energi & pertambangan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download & Audio Player -->
+        <section class="mb-12 grid md:grid-cols-2 gap-8 items-center">
+            <!-- Download Button -->
+            <div class="text-center">
+                 <a href="#" id="gdrive-link" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-transform transform hover:scale-105">
+                    <i class="fas fa-file-download mr-2"></i> Unduh Laporan Lengkap (.pdf)
+                </a>
+                <p class="text-xs text-slate-500 mt-2">Ganti tanda '#' pada href di kode dengan link Google Drive Anda.</p>
+            </div>
+            <!-- Audio Player -->
+            <div class="audio-player-container p-4 rounded-lg">
+                <h3 class="font-semibold text-white mb-2 text-center">Dengarkan Ringkasan Audio</h3>
+                <audio controls class="w-full">
+                    <source src="#" type="audio/mpeg">
+                    <!-- GANTI TANDA '#' PADA SRC DI ATAS DENGAN LINK FILE AUDIO DARI GOOGLE DRIVE ANDA -->
+                    Browser Anda tidak mendukung elemen audio.
+                </audio>
+                 <p class="text-xs text-slate-500 mt-2 text-center">Pastikan link audio dapat diakses publik.</p>
+            </div>
+        </section>
+
+        <!-- Analisis Makroekonomi -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-white text-center mb-8">Analisis Lanskap Makroekonomi</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card p-6 rounded-xl">
+                    <h3 class="text-xl font-bold text-red-400 mb-4 flex items-center"><i class="fas fa-globe-americas mr-3"></i>Prospek Global</h3>
+                    <ul class="space-y-3 list-disc list-inside text-slate-300">
+                        <li><span class="font-semibold">Sikap Hawkish The Fed:</span> Diperkuat data PCE AS, mendorong narasi suku bunga "higher for longer".</li>
+                        <li><span class="font-semibold">Dolar AS Menguat:</span> Memberi tekanan pada mata uang negara berkembang.</li>
+                        <li><span class="font-semibold">Pemulihan Tiongkok Lamban:</span> Data PMI manufaktur masih rapuh, membatasi permintaan global.</li>
+                    </ul>
+                </div>
+                <div class="card p-6 rounded-xl">
+                    <h3 class="text-xl font-bold text-green-400 mb-4 flex items-center"><i class="fas fa-flag mr-3"></i>Prospek Domestik</h3>
+                    <ul class="space-y-3 list-disc list-inside text-slate-300">
+                        <li><span class="font-semibold">Dilema Bank Indonesia:</span> Menjaga stabilitas Rupiah vs. mendorong pertumbuhan.</li>
+                        <li><span class="font-semibold">Inflasi Inti Tetap Tinggi:</span> Menjustifikasi BI untuk mempertahankan sikap waspada.</li>
+                        <li><span class="font-semibold">Risiko "Stagflasi Impor":</span> Terjepit antara inflasi impor dan perlambatan pertumbuhan.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tinjauan Sektoral -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-white text-center mb-8">Tinjauan Sektoral Mendalam</h2>
+            <div class="card p-6 rounded-xl">
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-6" id="sector-tabs">
+                    <button data-target="keuangan" class="tab-button active font-semibold py-2 px-4 rounded-full">Keuangan</button>
+                    <button data-target="energi" class="tab-button font-semibold py-2 px-4 rounded-full">Energi & Pertambangan</button>
+                    <button data-target="teknologi" class="tab-button font-semibold py-2 px-4 rounded-full">Teknologi</button>
+                    <button data-target="konsumer" class="tab-button font-semibold py-2 px-4 rounded-full">Konsumer</button>
+                </div>
+                <div id="sector-content" class="bg-slate-900 p-6 rounded-lg min-h-[250px]">
+                    <!-- Konten Sektor akan di-load di sini oleh JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Rekomendasi Saham -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-white text-center mb-8">Rekomendasi Saham Unggulan</h2>
+            <div class="space-y-4" id="stock-accordion">
+                <!-- BBCA -->
+                <div class="card rounded-xl overflow-hidden">
+                    <button class="stock-accordion-header w-full text-left p-4 flex justify-between items-center bg-slate-700 hover:bg-slate-600">
+                        <div class="flex items-center">
+                            <span class="text-2xl font-bold text-blue-400 mr-4">BBCA</span>
+                            <div>
+                                <h3 class="font-bold text-lg text-white">PT Bank Central Asia Tbk</h3>
+                                <p class="text-sm text-slate-400">Core Defensive Holding</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                             <span class="tag tag-green">BUY</span>
+                             <p class="text-xs text-slate-300 mt-1">Potensi: <span class="font-bold text-green-400">+17.9%</span></p>
+                        </div>
+                    </button>
+                    <div class="stock-accordion-content p-6">
+                        <p class="mb-4">Direkomendasikan sebagai pilar portofolio defensif. BBCA adalah "benteng kualitas" dengan keunggulan struktural pada rasio dana murah (CASA) tertinggi dan ekosistem digital superior (myBCA, Blu) yang menciptakan basis nasabah loyal dan efisiensi operasional.</p>
+                        <div class="flex justify-between items-center text-center border-t border-slate-700 pt-4">
+                            <div>
+                                <p class="text-xs text-slate-400">Harga Saat Ini</p>
+                                <p class="font-bold text-white text-lg">IDR 9,750</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Target Harga (12 bln)</p>
+                                <p class="font-bold text-sky-400 text-lg">IDR 11,500</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ADRO -->
+                <div class="card rounded-xl overflow-hidden">
+                    <button class="stock-accordion-header w-full text-left p-4 flex justify-between items-center bg-slate-700 hover:bg-slate-600">
+                        <div class="flex items-center">
+                            <span class="text-2xl font-bold text-yellow-400 mr-4">ADRO</span>
+                            <div>
+                                <h3 class="font-bold text-lg text-white">PT Adaro Energy Indonesia Tbk</h3>
+                                <p class="text-sm text-slate-400">Tactical Commodity Hedge</p>
+                            </div>
+                        </div>
+                         <div class="text-right">
+                             <span class="tag tag-green">BUY</span>
+                             <p class="text-xs text-slate-300 mt-1">Potensi: <span class="font-bold text-green-400">+22.6%</span></p>
+                        </div>
+                    </button>
+                    <div class="stock-accordion-content p-6">
+                        <p class="mb-4">Menawarkan peluang sebagai lindung nilai taktis terhadap inflasi. Pasar belum sepenuhnya menghargai transformasi strategis perusahaan ke bisnis smelter aluminium dan energi terbarukan (Adaro Green), yang menjadi mesin pertumbuhan baru.</p>
+                         <div class="flex justify-between items-center text-center border-t border-slate-700 pt-4">
+                            <div>
+                                <p class="text-xs text-slate-400">Harga Saat Ini</p>
+                                <p class="font-bold text-white text-lg">IDR 3,100</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Target Harga (12 bln)</p>
+                                <p class="font-bold text-sky-400 text-lg">IDR 3,800</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MAPI -->
+                 <div class="card rounded-xl overflow-hidden">
+                    <button class="stock-accordion-header w-full text-left p-4 flex justify-between items-center bg-slate-700 hover:bg-slate-600">
+                        <div class="flex items-center">
+                            <span class="text-2xl font-bold text-purple-400 mr-4">MAPI</span>
+                            <div>
+                                <h3 class="font-bold text-lg text-white">PT Mitra Adiperkasa Tbk</h3>
+                                <p class="text-sm text-slate-400">Contrarian Opportunity</p>
+                            </div>
+                        </div>
+                         <div class="text-right">
+                             <span class="tag tag-blue">TACTICAL BUY</span>
+                             <p class="text-xs text-slate-300 mt-1">Potensi: <span class="font-bold text-green-400">+20.0%</span></p>
+                        </div>
+                    </button>
+                    <div class="stock-accordion-content p-6">
+                        <p class="mb-4">Peluang kontrarian karena MAPI dominan menyasar konsumen kelas menengah-atas yang daya belinya lebih tangguh terhadap inflasi. Kinerja fundamentalnya lebih kuat dari valuasi pasarnya saat ini.</p>
+                         <div class="flex justify-between items-center text-center border-t border-slate-700 pt-4">
+                            <div>
+                                <p class="text-xs text-slate-400">Harga Saat Ini</p>
+                                <p class="font-bold text-white text-lg">IDR 1,750</p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Target Harga (12 bln)</p>
+                                <p class="font-bold text-sky-400 text-lg">IDR 2,100</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Risiko Utama -->
+        <section>
+             <h2 class="text-3xl font-bold text-white text-center mb-8">Risiko Utama & Pertimbangan</h2>
+             <div class="grid md:grid-cols-3 gap-6">
+                 <div class="card p-5 rounded-xl border-l-4 border-red-500">
+                     <h3 class="font-bold text-red-400 mb-2">Eskalasi Geopolitik</h3>
+                     <p class="text-sm">Dapat memicu lonjakan harga energi, positif bagi eksportir namun negatif bagi inflasi domestik dan subsidi.</p>
+                 </div>
+                 <div class="card p-5 rounded-xl border-l-4 border-red-500">
+                     <h3 class="font-bold text-red-400 mb-2">Sikap The Fed Lebih Hawkish</h3>
+                     <p class="text-sm">Akan menekan Rupiah, memaksa BI merespons keras, dan berpotensi memicu perlambatan ekonomi tajam.</p>
+                 </div>
+                 <div class="card p-5 rounded-xl border-l-4 border-orange-500">
+                     <h3 class="font-bold text-orange-400 mb-2">Risiko "Angsa Hitam"</h3>
+                     <p class="text-sm">De-eskalasi konflik global yang tak terduga dapat menyebabkan kejatuhan harga komoditas secara cepat.</p>
+                 </div>
+             </div>
+        </section>
+
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Data untuk konten sektoral
+            const sectorData = {
+                keuangan: {
+                    title: "Sektor Keuangan",
+                    view: "Overweight",
+                    tagClass: "tag-green",
+                    content: "Berada di posisi yang diuntungkan dalam lingkungan saat ini. Katalisator utamanya adalah sikap hawkish Bank Indonesia, yang memungkinkan bank untuk memperlebar Marjin Bunga Bersih (NIM). Bank-bank 'Big Four' dipandang sebagai benteng pertahanan (safe haven) karena permodalan yang kuat dan likuiditas melimpah."
+                },
+                energi: {
+                    title: "Sektor Energi & Pertambangan",
+                    view: "Tactical Overweight",
+                    tagClass: "tag-yellow",
+                    content: "Direkomendasikan untuk pembobotan lebih secara taktis. Katalisator jangka pendek datang dari harga batu bara yang tetap tinggi. Secara struktural, kebijakan hilirisasi pemerintah untuk nikel dan tembaga menjadi pendorong jangka panjang yang signifikan."
+                },
+                teknologi: {
+                    title: "Sektor Teknologi",
+                    view: "Underweight",
+                    tagClass: "tag-red",
+                    content: "Menghadapi tantangan ganda dari kenaikan suku bunga yang menekan valuasi, dan lingkungan risk-off global yang merugikan sentimen untuk sektor dengan beta tinggi ini. Ada sinyal tekanan valuasi dari penurunan nilai portofolio oleh perusahaan modal ventura lokal."
+                },
+                konsumer: {
+                    title: "Sektor Konsumer",
+                    view: "Neutral (Staples) / Underweight (Discretionary)",
+                    tagClass: "tag-red",
+                    content: "Perlu dibedakan. Barang Konsumsi Primer (Staples) menunjukkan resiliensi karena permintaan inelastis, namun menghadapi tekanan marjin. Barang Konsumsi Non-Primer (Discretionary) terekspos secara langsung terhadap pelemahan daya beli konsumen di tengah inflasi dan suku bunga tinggi."
+                }
+            };
+
+            const tabsContainer = document.getElementById('sector-tabs');
+            const contentContainer = document.getElementById('sector-content');
+
+            // Fungsi untuk menampilkan konten sektor
+            function showSectorContent(sectorKey) {
+                const data = sectorData[sectorKey];
+                contentContainer.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-2xl font-bold text-white">${data.title}</h3>
+                        <span class="tag ${data.tagClass}">${data.view}</span>
+                    </div>
+                    <p class="mt-4 text-slate-300">${data.content}</p>
+                `;
+            }
+
+            // Event listener untuk tabs
+            tabsContainer.addEventListener('click', function(e) {
+                if (e.target.tagName === 'BUTTON') {
+                    // Hapus kelas active dari semua tombol
+                    tabsContainer.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+                    // Tambahkan kelas active ke tombol yang diklik
+                    e.target.classList.add('active');
+                    // Tampilkan konten yang sesuai
+                    const sectorKey = e.target.getAttribute('data-target');
+                    showSectorContent(sectorKey);
+                }
+            });
+
+            // Tampilkan konten default saat halaman dimuat
+            showSectorContent('keuangan');
+
+         
