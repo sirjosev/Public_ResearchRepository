@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Pasar Keuangan - 30 September 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .tab-button.active {
+            border-color: #3b82f6;
+            background-color: #3b82f6;
+            color: #ffffff;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .kpi-card {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-5xl font-bold text-gray-900">Laporan Intelijen Pasar</h1>
+            <p class="text-lg md:text-xl text-gray-600 mt-2">Menavigasi Pertemuan Risiko Kebijakan Fiskal, Moneter, dan Perdagangan per 30 September 2025</p>
+        </header>
+
+        <!-- Ringkasan Eksekutif -->
+        <section id="ringkasan" class="mb-12">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    Ringkasan Eksekutif
+                </h2>
+                <p class="text-gray-700 leading-relaxed">
+                    Pasar keuangan berada di titik kritis, dihimpit oleh tiga ketidakpastian utama: potensi penutupan pemerintahan AS, kebijakan moneter Federal Reserve yang terancam oleh "pemadaman data", dan meningkatnya gesekan perdagangan global. Laporan ini membedah setiap risiko dan menawarkan pandangan strategis untuk menavigasi volatilitas di Kuartal 4 2025.
+                </p>
+            </div>
+        </section>
+
+        <!-- Kontrol Interaktif -->
+        <div id="interactive-section" class="bg-white p-6 rounded-lg shadow-lg mb-12">
+            <div class="flex flex-wrap justify-center border-b border-gray-200 mb-6 -mt-2">
+                <button class="tab-button text-sm md:text-base py-3 px-4 md:px-6 font-semibold text-gray-600 border-b-4 border-transparent hover:bg-gray-100 hover:border-blue-500 transition active" onclick="showTab('fiskal')">
+                    🏛️ Risiko Fiskal
+                </button>
+                <button class="tab-button text-sm md:text-base py-3 px-4 md:px-6 font-semibold text-gray-600 border-b-4 border-transparent hover:bg-gray-100 hover:border-blue-500 transition" onclick="showTab('moneter')">
+                    💵 Risiko Moneter
+                </button>
+                <button class="tab-button text-sm md:text-base py-3 px-4 md:px-6 font-semibold text-gray-600 border-b-4 border-transparent hover:bg-gray-100 hover:border-blue-500 transition" onclick="showTab('perdagangan')">
+                    🌍 Risiko Perdagangan
+                </button>
+                 <button class="tab-button text-sm md:text-base py-3 px-4 md:px-6 font-semibold text-gray-600 border-b-4 border-transparent hover:bg-gray-100 hover:border-blue-500 transition" onclick="showTab('strategi')">
+                    🧭 Sintesis & Strategi
+                </button>
+            </div>
+
+            <!-- Konten Tab -->
+            <div>
+                <!-- Tab Risiko Fiskal -->
+                <div id="fiskal-content" class="tab-content active">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Jurang Makroekonomi: Ancaman Penutupan Pemerintahan AS</h3>
+                    <p class="mb-6 text-gray-600">Probabilitas penutupan sangat tinggi, namun risiko utamanya bukan biaya langsung, melainkan efek "pemadaman data" yang melumpuhkan kemampuan The Fed untuk mengambil keputusan.</p>
+                    <div class="grid md:grid-cols-3 gap-4 text-center">
+                        <div class="kpi-card p-4 rounded-lg">
+                            <div class="text-4xl font-bold text-red-600">74%</div>
+                            <div class="text-sm font-semibold text-gray-500 mt-1">Probabilitas Penutupan</div>
+                        </div>
+                        <div class="kpi-card p-4 rounded-lg">
+                            <div class="text-4xl font-bold text-red-600">$7 Miliar</div>
+                            <div class="text-sm font-semibold text-gray-500 mt-1">Estimasi Kerugian per Minggu</div>
+                        </div>
+                        <div class="kpi-card p-4 rounded-lg">
+                            <div class="text-4xl font-bold text-red-600">0.2 pp</div>
+                            <div class="text-sm font-semibold text-gray-500 mt-1">Hambatan PDB per Minggu</div>
+                        </div>
+                    </div>
+                     <div class="mt-6 p-4 bg-red-50 border-l-4 border-red-500 rounded">
+                        <h4 class="font-bold text-red-800">Risiko Sistemik: Pemadaman Data</h4>
+                        <p class="text-red-700">Penundaan rilis Laporan Ketenagakerjaan dan Indeks Harga Konsumen memaksa Federal Reserve untuk "terbang buta", meningkatkan risiko kesalahan kebijakan moneter secara signifikan.</p>
+                    </div>
+                </div>
+
+                <!-- Tab Risiko Moneter -->
+                <div id="moneter-content" class="tab-content">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Lintasan Pelonggaran The Fed di Tengah Arus Lintang</h3>
+                    <p class="mb-6 text-gray-600">The Fed memulai siklus pelonggaran dengan memangkas suku bunga, namun panduan ke depan kini dibayangi oleh disfungsi fiskal dan kurangnya data ekonomi utama.</p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="kpi-card p-4 rounded-lg">
+                            <h4 class="font-semibold text-lg mb-2 text-blue-700">Pemangkasan Suku Bunga September</h4>
+                            <p class="text-3xl font-bold">25 <span class="text-xl">bps</span></p>
+                            <p class="text-gray-500">Ke rentang target 4.00% - 4.25%</p>
+                            <p class="mt-2 text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded-full inline-block">Langkah "Manajemen Risiko"</p>
+                        </div>
+                        <div class="kpi-card p-4 rounded-lg">
+                             <h4 class="font-semibold text-lg mb-2 text-blue-700">Proyeksi Suku Bunga Akhir 2025</h4>
+                            <p class="text-3xl font-bold">3.50% - 3.75%</p>
+                            <p class="text-gray-500">Menurut "Dot Plot" FOMC</p>
+                             <p class="mt-2 text-sm text-gray-600">Ekspektasi pasar cenderung lebih *dovish*.</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-500 rounded">
+                        <h4 class="font-bold text-yellow-800">Dilema Mandat Ganda</h4>
+                        <p class="text-yellow-700">The Fed memprioritaskan data lapangan kerja di atas inflasi. Pemangkasan suku bunga mengindikasikan bahwa risiko pelemahan pasar tenaga kerja dianggap lebih mendesak daripada risiko inflasi yang sedikit di atas target.</p>
+                    </div>
+                </div>
+
+                <!-- Tab Risiko Perdagangan -->
+                <div id="perdagangan-content" class="tab-content">
+                     <h3 class="text-xl font-bold mb-4 text-gray-800">Perdagangan Global di Bawah Tekanan Tarif</h3>
+                    <p class="mb-6 text-gray-600">Kebijakan tarif AS tidak hanya membebani konsumen domestik tetapi juga secara fundamental membentuk ulang rantai pasokan global dan mengekspor tekanan deflasi.</p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="kpi-card p-4 rounded-lg">
+                            <h4 class="font-semibold text-lg mb-2 text-green-700">Lonjakan Tarif Efektif Rata-Rata AS (AETR)</h4>
+                            <div class="flex items-baseline justify-center space-x-2">
+                                <p class="text-3xl font-bold">2.2%</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                                <p class="text-3xl font-bold text-red-600">7.1%</p>
+                            </div>
+                            <p class="text-gray-500 mt-1">Dengan potensi kenaikan hingga 17.0%</p>
+                        </div>
+                         <div class="kpi-card p-4 rounded-lg">
+                             <h4 class="font-semibold text-lg mb-2 text-green-700">Poros Strategis Tiongkok</h4>
+                            <p class="text-gray-600">Tiongkok berhasil mengalihkan ekspor ke pasar alternatif seperti India dan Asia Tenggara, yang menciptakan rekor ekspor baru dan mengurangi dampak penuh dari tarif AS.</p>
+                        </div>
+                    </div>
+                     <div class="mt-6 p-4 bg-green-50 border-l-4 border-green-500 rounded">
+                        <h4 class="font-bold text-green-800">Konsekuensi Jangka Panjang</h4>
+                        <p class="text-green-700">Kebijakan tarif secara tidak sengaja mempercepat terciptanya rantai pasokan global baru yang tidak berpusat di AS, yang dapat mengurangi pengaruh ekonomi AS dalam jangka panjang.</p>
+                    </div>
+                </div>
+
+                <!-- Tab Sintesis & Strategi -->
+                <div id="strategi-content" class="tab-content">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Prospek Strategis untuk Kuartal 4 2025</h3>
+                    <p class="mb-6 text-gray-600">Risiko-risiko ini saling terkait, menciptakan lingkaran umpan balik yang dapat memperdalam perlambatan ekonomi. Diperlukan pendekatan alokasi portofolio yang hati-hati.</p>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-lg border">
+                             <h4 class="font-semibold text-lg mb-3 text-gray-800">Mitigasi Risiko</h4>
+                             <ul class="space-y-2 list-disc list-inside text-gray-700">
+                                <li><span class="font-semibold">Alokasi Emas:</span> Lonjakan harga ke rekor tertinggi memvalidasi perannya sebagai aset *safe-haven* utama.</li>
+                                <li><span class="font-semibold">Pendapatan Tetap:</span> Penurunan imbal hasil Treasury menunjukkan adanya pelarian ke aset berkualitas (*flight to quality*).</li>
+                             </ul>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-lg border">
+                             <h4 class="font-semibold text-lg mb-3 text-gray-800">Posisi Sektor</h4>
+                             <ul class="space-y-2 list-disc list-inside">
+                                 <li><span class="font-semibold text-green-700">Overweight:</span> Sektor teknologi, terutama yang terkait infrastruktur AI.</li>
+                                 <li><span class="font-semibold text-red-700">Underweight:</span> Sektor diskresioner konsumen (misal: pariwisata, barang rumah tangga) dan industri yang bergantung pada kontrak pemerintah.</li>
+                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Aksi: Download dan Audio -->
+        <section id="aksi" class="text-center">
+            <h2 class="text-2xl font-bold mb-6 text-gray-900">Sumber Daya Tambahan</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                 <!-- Tombol Download -->
+                <a href="#" id="downloadButton" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition shadow-md w-full md:w-auto">
+                    Unduh Laporan Lengkap (.pdf)
+                </a>
+                
+                <!-- Pemutar Audio -->
+                <div class="bg-white p-4 rounded-lg shadow-md w-full md:w-auto">
+                    <label for="audioPlayer" class="block text-sm font-medium text-gray-700 mb-2">Dengarkan Ringkasan Audio</label>
+                    <audio id="audioPlayer" controls class="w-full">
+                        <!-- PENTING: Ganti '#' dengan link langsung ke file audio Anda di Google Drive -->
+                        <source src="#" type="audio/mpeg">
+                        Browser Anda tidak mendukung elemen audio.
+                    </audio>
+                </div>
+            </div>
+            <p class="text-xs text-gray-500 mt-4">
+                * Harap ganti link placeholder pada tombol unduh dan pemutar audio dengan URL Google Drive Anda yang sebenarnya.
+            </p>
+        </section>
+
+
+    </div>
+
+    <script>
+        // Fungsi untuk menampilkan tab
+        function showTab(tabName) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            document.getElementById(tabName + '-content').classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // PENTING: Ganti '#' dengan link ke file PDF Anda di Google Drive
+        document.getElementById('downloadButton').addEventListener('click', function(e) {
+            const driveLink = '#'; 
+            if (driveLink === '#') {
+                e.preventDefault();
+                alert('Harap perbarui kode untuk menambahkan tautan Google Drive ke laporan lengkap.');
+            } else {
+                this.href = driveLink;
+            }
+        });
+
+        // PENTING: Logika untuk audio player
+        const audioPlayer = document.getElementById('audioPlayer');
+        const audioSource = audioPlayer.querySelector('source');
+        if (audioSource.getAttribute('src') === '#') {
+           // Menonaktifkan player jika tidak ada sumber audio
+           audioPlayer.style.opacity = '0.5';
+           audioPlayer.style.pointerEvents = 'none';
+           
+           // Menambahkan pesan untuk pengguna
+           const audioContainer = audioPlayer.parentElement;
+           let warning = audioContainer.querySelector('.audio-warning');
+           if (!warning) {
+                warning = document.createElement('p');
+                warning.textContent = 'Sumber audio belum diatur.';
+                warning.className = 'text-red-500 text-xs mt-1 audio-warning';
+                audioContainer.appendChild(warning);
+           }
+        }
+    </script>
+
+</body>
+</html>
+
