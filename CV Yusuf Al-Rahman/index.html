@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Yusuf Al-Rahman</title>
+    <title>CV - Yusuf Al-Rahman (Pastel)</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
 
         :root {
-            --primary-color: #0d2c44;
-            --secondary-color: #f4f7f6;
-            --accent-color: #4CAF50; /* A fresh green accent */
-            --text-dark: #333;
+            /* --- PALET WARNA PASTEL --- */
+            --primary-color: #b2c8df; /* Pastel Blue */
+            --secondary-color: #fdfaf6; /* Soft Cream */
+            --accent-color: #d8b4a0; /* Dusty Rose */
+            --text-dark: #5c5470; /* Muted Purple/Gray */
             --text-light: #ffffff;
             --border-color: #e0e0e0;
         }
@@ -45,7 +46,7 @@
             width: 350px;
             height: 350px;
             background-color: var(--primary-color);
-            opacity: 0.9;
+            opacity: 0.8;
             border-radius: 50%;
             z-index: 0;
         }
@@ -59,14 +60,14 @@
             height: 200px;
             background-color: var(--accent-color);
             opacity: 0.8;
-            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Bentuk diamond */
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
             z-index: 0;
         }
 
         /* --- Kolom Kiri --- */
         .left-column {
             background-color: var(--primary-color);
-            color: var(--text-light);
+            color: var(--text-dark); /* Diubah agar teks terbaca di background pastel */
             padding: 40px 25px;
             position: relative;
             z-index: 1;
@@ -100,7 +101,7 @@
             width: 20px;
             margin-right: 15px;
             text-align: center;
-            color: var(--accent-color);
+            color: #fff;
         }
 
         .section {
@@ -110,11 +111,11 @@
         .section-title {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.3rem;
-            color: var(--accent-color);
+            color: var(--text-light);
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border-bottom: 2px solid var(--accent-color);
+            border-bottom: 2px solid var(--text-light);
             padding-bottom: 8px;
         }
         
@@ -139,7 +140,7 @@
         .progress-bar {
             width: 100%;
             height: 8px;
-            background-color: rgba(255,255,255,0.3);
+            background-color: rgba(255,255,255,0.4);
             border-radius: 4px;
         }
 
@@ -151,7 +152,9 @@
         
         .digital-tools .tool {
             display: inline-block;
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(82, 75, 96, 0.1);
+            border: 1px solid var(--accent-color);
+            color: var(--text-dark);
             border-radius: 15px;
             padding: 5px 12px;
             margin: 3px;
@@ -173,7 +176,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 2.8rem;
             margin: 0;
-            color: var(--primary-color);
+            color: var(--text-dark);
         }
 
         .header h2 {
@@ -192,7 +195,7 @@
         .main-section-title {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
-            color: var(--primary-color);
+            color: var(--text-dark);
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 3px solid var(--primary-color);
@@ -242,9 +245,15 @@
         .project {
             padding: 15px;
             margin-bottom: 15px;
-            background-color: var(--secondary-color);
+            background-color: #fdf6f0;
             border-left: 5px solid var(--accent-color);
             border-radius: 0 8px 8px 0;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .project:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
         
         .project-title {
@@ -285,6 +294,10 @@
         @media print {
             .container {
                 margin: 0;
+                box-shadow: none;
+            }
+            .project:hover {
+                transform: none;
                 box-shadow: none;
             }
         }
