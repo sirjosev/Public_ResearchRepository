@@ -3,316 +3,409 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Interaktif - Yusuf Al-Rahman</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>CV - Yusuf Al-Rahman</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
 
         :root {
-            --primary-color: #2c3e50; /* Midnight Blue */
-            --secondary-color: #3498db; /* Bright Blue */
-            --accent-color: #18bc9c;   /* Teal */
-            --light-bg: #f8f9fa;
-            --dark-text: #34495e;
-            --white-color: #ffffff;
+            --primary-color: #0d2c44;
+            --secondary-color: #f4f7f6;
+            --accent-color: #4CAF50; /* A fresh green accent */
+            --text-dark: #333;
+            --text-light: #ffffff;
+            --border-color: #e0e0e0;
         }
 
         body {
             font-family: 'Roboto', sans-serif;
-            line-height: 1.7;
-            background-color: var(--light-bg);
-            color: var(--dark-text);
             margin: 0;
-            padding: 0; /* Padding diatur di container */
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: var(--text-dark);
+            -webkit-print-color-adjust: exact;
         }
 
         .container {
-            width: 100%;
-            max-width: 1200px; /* Batas lebar maksimum untuk layar besar */
-            margin: 0 auto;
-            padding: 0 40px; /* Padding di sisi kiri dan kanan */
-            box-sizing: border-box;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: var(--text-light);
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
         }
 
-        /* --- Header Section --- */
-        .header {
+        /* --- Bentuk Dekoratif --- */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -150px;
+            left: -150px;
+            width: 350px;
+            height: 350px;
             background-color: var(--primary-color);
-            color: var(--white-color);
-            padding: 40px;
-            margin: 0 -40px; /* Membuat header full-width relatif terhadap container */
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            opacity: 0.9;
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .container::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            right: -80px;
+            width: 200px;
+            height: 200px;
+            background-color: var(--accent-color);
+            opacity: 0.8;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Bentuk diamond */
+            z-index: 0;
+        }
+
+        /* --- Kolom Kiri --- */
+        .left-column {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 40px 25px;
+            position: relative;
+            z-index: 1;
         }
 
         .profile-pic {
-            width: 130px;
-            height: 130px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            border: 4px solid var(--accent-color);
-            object-fit: cover;
-        }
-
-        .header-info h1 {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            font-size: 2.8em;
-            font-weight: 600;
+            border: 5px solid var(--accent-color);
+            margin: 20px auto 30px;
+            background-color: #ccc;
+            background-image: url('https://via.placeholder.com/150'); /* Ganti dengan URL foto Anda */
+            background-size: cover;
+            background-position: center;
         }
         
-        .header-info h2 {
-            margin: 5px 0 15px;
-            font-weight: 300;
-            font-size: 1.2em;
-            color: var(--accent-color);
+        .contact-info {
+            list-style-type: none;
+            padding: 0;
         }
         
-        .contact-widget {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px 25px;
-            font-size: 0.95em;
-        }
-
-        .contact-widget a {
-            color: #bdc3c7;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-widget a:hover {
-            color: var(--accent-color);
-        }
-
-        .contact-widget i {
-            margin-right: 8px;
-            color: var(--secondary-color);
-        }
-
-        /* --- Main Content --- */
-        .main-content {
-            padding: 40px 0;
-        }
-        
-        .section {
-            background: var(--white-color);
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .section-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.8em;
-            font-weight: 600;
-            color: var(--primary-color);
-            border-bottom: 3px solid var(--accent-color);
-            padding-bottom: 10px;
-            margin-top: 0;
+        .contact-info li {
             margin-bottom: 15px;
             display: flex;
             align-items: center;
+            font-size: 0.9rem;
         }
-        
-        .section-title i {
+
+        .contact-info .icon {
+            width: 20px;
             margin-right: 15px;
-            font-size: 1.1em;
-        }
-        
-        .section-subtitle {
-            font-style: italic;
-            color: #7f8c8d;
-            margin-top: -10px;
-            margin-bottom: 30px;
-            border-left: 3px solid #bdc3c7;
-            padding-left: 15px;
-        }
-        
-        /* --- Skill Bars Chart --- */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-        
-        .skill-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .skill-item h4 {
-            margin: 0;
-            font-weight: 500;
-            flex-basis: 250px; /* Lebar tetap untuk nama skill */
-            flex-shrink: 0;
-        }
-        
-        .skill-bar-container {
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .skill-bar {
-            flex-grow: 1;
-            background-color: #e0e0e0;
-            border-radius: 5px;
-            overflow: hidden;
-            height: 22px;
-            cursor: help; /* Menandakan ada tooltip */
-        }
-        
-        .skill-level {
-            background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
-            height: 100%;
-            border-radius: 5px;
-            transition: width 0.8s ease-in-out;
-        }
-        
-        .skill-label {
-            font-weight: 500;
-            color: var(--primary-color);
-            width: 90px; /* Lebar tetap untuk label */
-            text-align: left;
-        }
-        
-        /* --- Timeline for Experience --- */
-        .timeline {
-            position: relative;
-            padding-left: 40px;
-            border-left: 3px solid var(--accent-color);
-        }
-        
-        .timeline-item { position: relative; margin-bottom: 30px; }
-        .timeline-item:last-child { margin-bottom: 0; }
-        .timeline-dot {
-            position: absolute;
-            left: -50px;
-            top: 4px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            border: 3px solid var(--accent-color);
-        }
-
-        .job-title { font-weight: 700; font-size: 1.2em; color: var(--primary-color); }
-        .job-details { color: #777; margin-bottom: 10px; }
-        
-        .timeline ul { list-style-type: none; padding-left: 0; }
-        .timeline li { position: relative; padding-left: 20px; margin-bottom: 8px; }
-        .timeline li::before {
-            content: '›';
-            position: absolute;
-            left: 0;
+            text-align: center;
             color: var(--accent-color);
-            font-size: 1.5em;
-            line-height: 1;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 8px;
+        }
+        
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .skill-name {
+            font-weight: 500;
+            margin-bottom: 5px;
+            width: 100%;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background-color: rgba(255,255,255,0.3);
+            border-radius: 4px;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: var(--accent-color);
+            border-radius: 4px;
+        }
+        
+        .digital-tools .tool {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 5px 12px;
+            margin: 3px;
+            font-size: 0.85rem;
+        }
+
+        /* --- Kolom Kanan --- */
+        .right-column {
+            padding: 50px 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            margin: 0;
+            color: var(--primary-color);
+        }
+
+        .header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--accent-color);
+            margin: 5px 0 0;
+        }
+        
+        .summary p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .main-section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .main-section-title .icon {
+            margin-right: 15px;
+            color: var(--accent-color);
+            font-size: 1.8rem;
+        }
+
+        .job {
+            margin-bottom: 25px;
+        }
+
+        .job-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .job-company {
+            font-weight: 500;
+            color: var(--accent-color);
+        }
+
+        .job-date {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .job-description {
+            padding-left: 20px;
+            line-height: 1.5;
+            border-left: 2px solid var(--accent-color);
+        }
+        
+        .job-description li {
+            margin-bottom: 8px;
+        }
+        
+        .project {
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: var(--secondary-color);
+            border-left: 5px solid var(--accent-color);
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .project-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin: 0 0 5px 0;
+        }
+        
+        .project-desc {
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .degree {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .university {
+            font-weight: 500;
+            margin: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .container::before, .container::after {
+                display: none;
+            }
+        }
+        
+        @media print {
+            .container {
+                margin: 0;
+                box-shadow: none;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <header class="header">
-        <img src="https://media.licdn.com/dms/image/v2/D5603AQFJycJgumVOMA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1691390038406?e=1758153600&v=beta&t=H-q_QZPXwpU_Of3wU2_7YXNpRN-u27oX96EUp_bZ0bg" alt="Foto Profil Yusuf Al-Rahman" class="profile-pic">
-        <div class="header-info">
-            <h1>YUSUF AL-RAHMAN</h1>
-            <h2>Machine Learning & Data Specialist</h2>
-            <div class="contact-widget">
-                <a href="mailto:sirjosephholmes@gmail.com"><i class="fas fa-envelope"></i>sirjosephholmes@gmail.com</a>
-                <a href="https://github.com/sirjosev" target="_blank"><i class="fab fa-github"></i>github.com/sirjosev</a>
-                <a href="https://www.linkedin.com/in/yusuf-al-rahman-8049a21b3/" target="_blank"><i class="fab fa-linkedin"></i>linkedin.com/in/yusuf-al-rahman</a>
-            </div>
-        </div>
-    </header>
+    <div class="container">
+        <aside class="left-column">
+            
+            <div class="profile-pic"></div>
+            
+            <section class="section">
+                <h2 class="section-title">Kontak</h2>
+                <ul class="contact-info">
+                    <li><span class="icon">📞</span> +62 800-0000-0000</li>
+                    <li><span class="icon">✉️</span> yusuf.rahman@email.com</li>
+                    <li><span class="icon">📍</span> Kota Bogor, Indonesia</li>
+                    <li><span class="icon">🔗</span> linkedin.com/in/yusufalrahman</li>
+                </ul>
+            </section>
 
-    <main class="main-content">
-        <div class="section">
-            <h2 class="section-title"><i class="fas fa-user-tie"></i>Professional Summary</h2>
-            <p>Seorang pengembang perangkat lunak dengan spesialisasi dalam <strong>Machine Learning</strong> dan <strong>Analisis Data</strong>. Bersemangat dalam merancang dan menerapkan solusi cerdas untuk menganalisis data secara <em>real-time</em>. Memiliki pengalaman dalam membangun prototipe sistem IoT, mulai dari perancangan alur data sensor hingga implementasi model prediktif untuk optimisasi. Terampil dalam Python, pengembangan model ML, dan arsitektur data berbasis <em>cloud</em>.</p>
-        </div>
+            <section class="section">
+                <h2 class="section-title">Keahlian Inti</h2>
+                <ul class="skills-list">
+                    <li>
+                        <span class="skill-name">Supply Chain Management</span>
+                        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                    </li>
+                    <li>
+                        <span class="skill-name">Manajemen Logistik & Ekspor</span>
+                        <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                    </li>
+                    <li>
+                        <span class="skill-name">Kontrol Kualitas (QA/QC)</span>
+                        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                    </li>
+                     <li>
+                        <span class="skill-name">Analisis Biaya & Efisiensi</span>
+                        <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
+                    </li>
+                    <li>
+                        <span class="skill-name">Manajemen Supplier</span>
+                        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="section digital-tools">
+                <h2 class="section-title">Digital Tools</h2>
+                <span class="tool">Microsoft Excel (Advanced)</span>
+                <span class="tool">Power BI (Intermediate)</span>
+                <span class="tool">Pivot Tables & Power Query</span>
+                <span class="tool">Sistem ERP (Familiar)</span>
+                <span class="tool">Google Workspace</span>
+            </section>
 
-        <div class="section">
-            <h2 class="section-title"><i class="fas fa-cogs"></i>Technical Expertise</h2>
-            <p class="section-subtitle">Level keahlian di bawah ini merepresentasikan tingkat kepercayaan dan frekuensi penerapan dalam proyek-proyek profesional & personal terbaru. Arahkan kursor pada bar untuk melihat konteks penggunaan.</p>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <h4>Python & Machine Learning</h4>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar" title="Diterapkan secara ekstensif pada proyek prediksi, klasifikasi, clustering, dan analisis kode sumber.">
-                            <div class="skill-level" style="width: 95%;"></div>
-                        </div>
-                        <span class="skill-label">Expert</span>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <h4>Data Analysis (Pandas, NumPy)</h4>
-                    <div class="skill-bar-container">
-                         <div class="skill-bar" title="Digunakan secara rutin untuk pembersihan, transformasi, dan analisis data eksplorasi (EDA) di hampir semua proyek data.">
-                            <div class="skill-level" style="width: 90%;"></div>
-                        </div>
-                        <span class="skill-label">Advanced</span>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <h4>Docker & Cloud (Firebase)</h4>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar" title="Berpengalaman dalam containerization aplikasi (Python/Node.js) dan deployment, serta menggunakan Firebase sebagai backend & database real-time.">
-                            <div class="skill-level" style="width: 80%;"></div>
-                        </div>
-                        <span class="skill-label">Advanced</span>
-                    </div>
-                </div>
-                 <div class="skill-item">
-                    <h4>JavaScript & Web Frontend</h4>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar" title="Membangun beberapa antarmuka pengguna interaktif dan portofolio dinamis menggunakan Vanilla JS (ES6+) dan terhubung ke API/backend.">
-                            <div class="skill-level" style="width: 85%;"></div>
-                        </div>
-                        <span class="skill-label">Advanced</span>
-                    </div>
-                </div>
-                 <div class="skill-item">
-                    <h4>IoT Prototyping (ESP32/C++)</h4>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar" title="Merancang dan mengkalibrasi perangkat keras. Mampu menulis firmware untuk membaca data sensor dan mengirimkannya melalui protokol HTTP/MQTT.">
-                            <div class="skill-level" style="width: 75%;"></div>
-                        </div>
-                        <span class="skill-label">Proficient</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2 class="section-title"><i class="fas fa-briefcase"></i>Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="job-title">Researcher Staff</div>
-                    <div class="job-details">Universitas Trilogi | April 2024 - Sep 2024</div>
-                    <ul>
-                        <li>Mengembangkan model machine learning untuk optimisasi katup AC sentral berdasarkan data real-time dari sensor IoT.</li>
-                        <li>Merancang dan mengimplementasikan pipeline pemrosesan data untuk sistem integrasi sensor.</li>
+        </aside>
+
+        <main class="right-column">
+            <header class="header">
+                <h1>Yusuf Al-Rahman</h1>
+                <h2>Operations & Supply Chain Specialist</h2>
+            </header>
+
+            <section class="summary">
+                <h3 class="main-section-title"><span class="icon">👤</span> Profil</h3>
+                <p>
+                    Seorang profesional operasional yang terbukti berhasil dalam mengelola seluruh siklus rantai pasok end-to-end, khususnya dalam lingkungan ekspor yang dinamis. Berpengalaman dalam manajemen logistik, kontrol kualitas, dan optimisasi proses untuk mendorong efisiensi biaya dan kepuasan pelanggan. Memiliki kemampuan analisis data yang kuat untuk memberikan rekomendasi strategis dan bersemangat untuk menerapkan keahlian ini dalam skala yang lebih besar.
+                </p>
+            </section>
+
+            <section class="experience">
+                <h3 class="main-section-title"><span class="icon">💼</span> Pengalaman Kerja</h3>
+                <div class="job">
+                    <h4 class="job-title">Chief Operating Officer (COO)</h4>
+                    <p class="job-company">PT. Suka Bumi Resources</p>
+                    <p class="job-date">Agustus 2025 – Saat Ini</p>
+                    <ul class="job-description">
+                        <li>Mengelola dan mengawasi keseluruhan operasi harian, dari pengadaan barang dari supplier hingga pengiriman ke pembeli internasional.</li>
+                        <li>Memimpin seluruh proses logistik ekspor, termasuk stuffing, booking kontainer, dan manajemen dokumen krusial (BL, COO, PEB).</li>
+                        <li>Membangun dan menerapkan Standard Operating Procedures (SOP) untuk kontrol kualitas, memastikan produk memenuhi standar mutu kontrak ekspor.</li>
+                        <li>Melakukan analisis biaya operasional secara berkala untuk menjaga efisiensi dan mengoptimalkan proses produksi dan tenaga kerja.</li>
+                        <li>Menyusun laporan kinerja operasional mingguan dan bulanan untuk CEO, memberikan rekomendasi perbaikan proses berbasis data.</li>
                     </ul>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="job-title">IoT Project Developer</div>
-                    <div class="job-details">CEP-CCIT FTUI | Jun 2024 - Agustus 2024</div>
-                    <ul>
-                        <li>Merancang model 3D untuk casing dispenser tisu pintar menggunakan Tinkercad.</li>
-                        <li>Melakukan kalibrasi komponen elektronik untuk memastikan akurasi dan kinerja produk.</li>
-                    </ul>
+            </section>
+            
+            <section class="projects">
+                 <h3 class="main-section-title"><span class="icon">🚀</span> Proyek & Pencapaian Kunci</h3>
+                 <div class="project">
+                    <h4 class="project-title">Optimalisasi Proses Logistik Ekspor</h4>
+                    <p class="project-desc">
+                        Berhasil mencapai <strong>tingkat pengiriman tepat waktu (on-time delivery) >95%</strong> dan memastikan <strong>zero-penalty</strong> dari bea cukai dengan manajemen dokumentasi yang teliti.
+                    </p>
+                 </div>
+                 <div class="project">
+                    <h4 class="project-title">Implementasi Sistem Kontrol Kualitas</h4>
+                    <p class="project-desc">
+                        Menekan tingkat komplain dan penolakan produk dari pembeli hingga <strong>di bawah 3%</strong> melalui implementasi SOP kualitas yang ketat.
+                    </p>
+                 </div>
+                 <div class="project">
+                    <h4 class="project-title">Inisiatif Efisiensi Biaya Operasional</h4>
+                    <p class="project-desc">
+                        Mencapai <strong>penghematan biaya operasional tahunan >5%</strong> dengan mengoptimalkan alur kerja dan negosiasi dengan supplier.
+                    </p>
+                 </div>
+            </section>
+
+            <section class="education">
+                <h3 class="main-section-title"><span class="icon">🎓</span> Pendidikan</h3>
+                <div class="education-item">
+                     <h4 class="degree">Sarjana Teknik Industri (Contoh)</h4>
+                     <p class="university">Universitas Indonesia (Contoh)</p>
+                     <p class="job-date">2021 – 2025</p>
                 </div>
-            </div>
-        </div>
-    </main>
-</div>
+                 </section>
+
+        </main>
+    </div>
+
 </body>
 </html>
