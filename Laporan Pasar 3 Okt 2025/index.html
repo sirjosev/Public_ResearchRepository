@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Pasar Interaktif - 3 Oktober 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* slate-900 */
+            color: #f1f5f9; /* slate-100 */
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .bar-chart-bar {
+            transform-origin: bottom;
+            transform: scaleY(0);
+            transition: transform 1s ease-in-out;
+        }
+        .bar-chart-bar.visible {
+            transform: scaleY(1);
+        }
+        /* Custom scrollbar for a better look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b; /* slate-800 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #475569; /* slate-600 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b; /* slate-500 */
+        }
+        /* Custom styles for audio player */
+        input[type='range'] {
+            -webkit-appearance: none;
+            appearance: none;
+            background: transparent;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type='range']::-webkit-slider-runnable-track {
+            background: #334155; /* slate-700 */
+            height: 4px;
+            border-radius: 2px;
+        }
+        input[type='range']::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            margin-top: -6px;
+            background-color: #cbd5e1; /* slate-300 */
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+        }
+        input[type='range']:focus::-webkit-slider-thumb {
+            outline: 3px solid #64748b; /* slate-500 */
+            outline-offset: 0.125rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Container Utama -->
+    <div class="container mx-auto p-4 md:p-8 max-w-5xl">
+
+        <!-- Header -->
+        <header class="text-center mb-12 animate-on-scroll">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400 mb-2">
+                Analisis Pasar & Saham
+            </h1>
+            <p class="text-lg text-slate-400 font-semibold">Jumat, 3 Oktober 2025</p>
+            <p class="mt-4 text-xl md:text-2xl font-bold text-slate-200">
+                Pasar Dua Kecepatan: Optimisme Domestik Melawan Kekhawatiran Global
+            </p>
+        </header>
+
+        <!-- Ringkasan Kunci -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-200 mb-6 border-l-4 border-emerald-400 pl-4 animate-on-scroll">Kinerja Indeks & Aliran Dana</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- IHSG Card -->
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 shadow-lg animate-on-scroll" style="transition-delay: 100ms;">
+                    <h3 class="font-semibold text-slate-400 mb-2">IHSG</h3>
+                    <p class="text-3xl font-bold text-emerald-400">7,455.25</p>
+                    <p class="font-semibold text-emerald-400 flex items-center mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd" /></svg>
+                        +55.45 (+0.75%)
+                    </p>
+                </div>
+                <!-- LQ45 & IDX30 Card -->
+                 <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 shadow-lg animate-on-scroll" style="transition-delay: 200ms;">
+                    <h3 class="font-semibold text-slate-400 mb-2">Indeks Blue-Chip</h3>
+                    <div class="space-y-2">
+                         <p class="text-xl font-bold text-emerald-400">LQ45: +1.10%</p>
+                         <p class="text-xl font-bold text-emerald-400">IDX30: +1.25%</p>
+                    </div>
+                </div>
+                <!-- Aliran Dana Asing Card -->
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 shadow-lg animate-on-scroll" style="transition-delay: 300ms;">
+                    <h3 class="font-semibold text-slate-400 mb-2">Aliran Dana Asing</h3>
+                    <p class="text-3xl font-bold text-red-400">-450 M</p>
+                    <p class="font-semibold text-red-400 flex items-center mt-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-.707-4.293l3-3a1 1 0 00-1.414-1.414L10 10.586 8.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0z" clip-rule="evenodd" /></svg>
+                        Net Sell
+                    </p>
+                </div>
+                <!-- Nilai Transaksi Card -->
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 shadow-lg animate-on-scroll" style="transition-delay: 400ms;">
+                    <h3 class="font-semibold text-slate-400 mb-2">Nilai Transaksi</h3>
+                    <p class="text-3xl font-bold text-cyan-400">12.5 T</p>
+                    <p class="font-semibold text-slate-400 mt-1">Level Moderat</p>
+                </div>
+            </div>
+             <p class="mt-6 text-slate-400 text-center animate-on-scroll italic">Kenaikan indeks ditopang sepenuhnya oleh modal domestik di tengah aksi jual investor asing.</p>
+        </section>
+
+        <!-- Dinamika Sektoral -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-200 mb-6 border-l-4 border-cyan-400 pl-4 animate-on-scroll">Peta Kekuatan Sektoral</h2>
+            <div id="sektoral-chart" class="bg-slate-800 p-6 rounded-2xl border border-slate-700 shadow-lg animate-on-scroll">
+                <div class="space-y-4">
+                    <!-- Chart will be dynamically generated here -->
+                </div>
+            </div>
+            <p class="mt-6 text-slate-400 text-center animate-on-scroll italic">Terjadi struktur pasar "Barbell": investor fokus pada sektor domestik yang aman dan sektor dengan katalis spesifik, sambil menghindari sektor yang terekspos risiko global.</p>
+        </section>
+
+        <!-- Penggerak Pasar -->
+        <section class="mb-16">
+             <h2 class="text-2xl font-bold text-slate-200 mb-6 border-l-4 border-emerald-400 pl-4 animate-on-scroll">Saham Penggerak Pasar</h2>
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Top Gainers -->
+                <div class="animate-on-scroll" style="transition-delay: 100ms;">
+                    <h3 class="text-xl font-bold text-emerald-400 mb-4 text-center">Top Gainers</h3>
+                    <div class="space-y-4">
+                         <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                             <div class="flex justify-between items-center">
+                                 <span class="font-bold text-lg text-slate-200">IMAS</span>
+                                 <span class="font-bold text-lg text-emerald-400">+5.8%</span>
+                             </div>
+                             <p class="text-sm text-slate-400 mt-1">Katalis: Detail baru subsidi kendaraan listrik (EV).</p>
+                         </div>
+                         <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                             <div class="flex justify-between items-center">
+                                 <span class="font-bold text-lg text-slate-200">ASII</span>
+                                 <span class="font-bold text-lg text-emerald-400">+3.5%</span>
+                             </div>
+                             <p class="text-sm text-slate-400 mt-1">Katalis: Respon positif pasar terhadap insentif EV.</p>
+                         </div>
+                         <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                             <div class="flex justify-between items-center">
+                                 <span class="font-bold text-lg text-slate-200">LSIP</span>
+                                 <span class="font-bold text-lg text-emerald-400">+3.1%</span>
+                             </div>
+                             <p class="text-sm text-slate-400 mt-1">Katalis: Kenaikan harga CPO global.</p>
+                         </div>
+                    </div>
+                </div>
+                <!-- Top Losers -->
+                <div class="animate-on-scroll" style="transition-delay: 200ms;">
+                    <h3 class="text-xl font-bold text-red-400 mb-4 text-center">Top Losers</h3>
+                    <div class="space-y-4">
+                        <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                             <div class="flex justify-between items-center">
+                                 <span class="font-bold text-lg text-slate-200">GOTO</span>
+                                 <span class="font-bold text-lg text-red-400">-4.5%</span>
+                             </div>
+                             <p class="text-sm text-slate-400 mt-1">Katalis: Foreign outflow & kekhawatiran kenaikan suku bunga.</p>
+                         </div>
+                         <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                             <div class="flex justify-between items-center">
+                                 <span class="font-bold text-lg text-slate-200">ADRO</span>
+                                 <span class="font-bold text-lg text-red-400">-2.5%</span>
+                             </div>
+                             <p class="text-sm text-slate-400 mt-1">Katalis: Penurunan harga batu bara global.</p>
+                         </div>
+                         <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                             <div class="flex justify-between items-center">
+                                 <span class="font-bold text-lg text-slate-200">INCO</span>
+                                 <span class="font-bold text-lg text-red-400">-1.9%</span>
+                             </div>
+                             <p class="text-sm text-slate-400 mt-1">Katalis: Pelemahan harga nikel global.</p>
+                         </div>
+                    </div>
+                </div>
+             </div>
+        </section>
+        
+        <!-- Faktor Pendorong -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-200 mb-6 border-l-4 border-cyan-400 pl-4 animate-on-scroll">Faktor Pendorong Utama</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Domestik -->
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 animate-on-scroll" style="transition-delay: 100ms;">
+                    <h3 class="font-bold text-lg text-center text-cyan-400 mb-4">Domestik: Pedang Bermata Dua</h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-start"><span class="text-emerald-400 mr-2">▲</span> <div><strong>Positif:</strong> Surplus neraca dagang USD 4.2 M & Rupiah menguat ke 15,150/USD.</div></li>
+                        <li class="flex items-start"><span class="text-red-400 mr-2">▼</span> <div><strong>Negatif:</strong> Inflasi 3.6% (yoy), di atas ekspektasi, memicu kekhawatiran kenaikan suku bunga BI.</div></li>
+                    </ul>
+                </div>
+                <!-- Komoditas -->
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 animate-on-scroll" style="transition-delay: 200ms;">
+                    <h3 class="font-bold text-lg text-center text-cyan-400 mb-4">Komoditas: Terbelah</h3>
+                    <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-center"><span class="text-emerald-400 mr-2">▲</span> <strong>CPO:</strong> Harga naik 2.5% karena isu pasokan.</li>
+                        <li class="flex items-center"><span class="text-red-400 mr-2">▼</span> <strong>Batu Bara:</strong> Harga anjlok 3% karena kekhawatiran permintaan.</li>
+                        <li class="flex items-center"><span class="text-red-400 mr-2">▼</span> <strong>Nikel:</strong> Harga turun 2.2% karena perlambatan ekonomi global.</li>
+                    </ul>
+                </div>
+                <!-- Global -->
+                <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700 animate-on-scroll" style="transition-delay: 300ms;">
+                    <h3 class="font-bold text-lg text-center text-cyan-400 mb-4">Global & Regional</h3>
+                     <ul class="space-y-3 text-slate-300">
+                        <li class="flex items-center"><span class="text-yellow-400 mr-2">●</span> Bursa Wall Street bervariasi (mixed).</li>
+                        <li class="flex items-center"><span class="text-red-400 mr-2">▼</span> Bursa utama Asia (Nikkei, Hang Seng) bergerak negatif.</li>
+                        <li class="flex items-center"><span class="text-slate-400 mr-2">→</span> Sentimen global cenderung hati-hati (risk-off).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Laporan & Audio -->
+        <section class="mb-12">
+            <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 grid grid-cols-1 md:grid-cols-2 gap-8 items-center animate-on-scroll">
+                <!-- Tombol Download -->
+                <div>
+                     <h3 class="text-xl font-bold text-slate-200">Dapatkan Analisis Lengkap</h3>
+                     <p class="text-slate-400 mt-1 mb-4">Unduh laporan mendalam dalam format PDF untuk analisis yang lebih detail.</p>
+                     <a href="https://docs.google.com/document/d/1exampledrive/preview" target="_blank" rel="noopener noreferrer" class="inline-block bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
+                        Download Laporan (PDF)
+                     </a>
+                </div>
+                <!-- Audio Player -->
+                <div>
+                     <h3 class="text-xl font-bold text-slate-200">Dengarkan Ringkasan Audio</h3>
+                     <p class="text-slate-400 mt-1 mb-4">Putar ringkasan pasar harian. <em class="text-xs">(Memerlukan URL stream audio langsung)</em></p>
+                     <div id="audio-player-container" class="bg-slate-700 p-4 rounded-lg">
+                        <audio id="audio-player" src=""></audio> <!-- Ganti src dengan URL audio Anda -->
+                        <div class="flex items-center space-x-4">
+                            <button id="play-pause-btn" class="w-12 h-12 flex items-center justify-center rounded-full bg-emerald-500 text-white focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-opacity-75">
+                                <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </button>
+                            <div class="flex-grow">
+                                <div class="flex justify-between text-xs text-slate-400">
+                                    <span id="current-time">0:00</span>
+                                    <span id="duration">0:00</span>
+                                </div>
+                                <input type="range" id="seek-slider" max="100" value="0" class="w-full mt-1">
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-slate-500 text-sm py-4">
+            <p>&copy; 2025 Analisis Pasar Harian. Dibuat untuk tujuan demonstrasi.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // ----------------------------------------
+            // Animasi saat Scroll
+            // ----------------------------------------
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        // Hentikan observing setelah animasi berjalan untuk performa
+                        if(entry.target.id !== 'sektoral-chart'){
+                             observer.unobserve(entry.target);
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.1 // Picu animasi saat elemen 10% terlihat
+            });
+
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+
+            // ----------------------------------------
+            // Data dan Render Chart Sektoral
+            // ----------------------------------------
+            const sectoralData = [
+                { name: 'Otomotif & Komponen', change: 3.2, color: 'bg-emerald-500' },
+                { name: 'Keuangan', change: 1.6, color: 'bg-emerald-500' },
+                { name: 'Infrastruktur', change: 1.1, color: 'bg-emerald-500' },
+                { name: 'Barang Kons. Non-Primer', change: 0.8, color: 'bg-emerald-500' },
+                { name: 'Properti & Real Estate', change: -0.1, color: 'bg-red-500' },
+                { name: 'Perindustrian', change: -0.5, color: 'bg-red-500' },
+                { name: 'Kesehatan', change: -0.9, color: 'bg-red-500' },
+                { name: 'Energi', change: -2.1, color: 'bg-red-500' },
+                { name: 'Teknologi', change: -4.1, color: 'bg-red-500' },
+            ];
+
+            const chartContainer = document.querySelector('#sektoral-chart .space-y-4');
+            const maxChange = Math.max(...sectoralData.map(s => Math.abs(s.change)));
+
+            sectoralData.forEach(sector => {
+                const widthPercentage = (Math.abs(sector.change) / maxChange) * 100;
+                const barHtml = `
+                    <div class="flex items-center">
+                        <div class="w-1/3 text-sm text-slate-300 pr-2 text-right">${sector.name}</div>
+                        <div class="w-2/3">
+                            <div class="flex items-center ${sector.change < 0 ? 'flex-row-reverse' : ''}">
+                                <div class="${sector.color} rounded-sm bar-chart-bar" style="width: ${widthPercentage}%; height: 24px;"></div>
+                                <div class="px-2 text-sm font-semibold">${sector.change > 0 ? '+' : ''}${sector.change}%</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                chartContainer.innerHTML += barHtml;
+            });
+            
+            // Observer khusus untuk chart agar animasi berjalan setiap kali masuk viewport
+            const chartObserver = new IntersectionObserver((entries) => {
+                 entries.forEach(entry => {
+                    const bars = entry.target.querySelectorAll('.bar-chart-bar');
+                    if (entry.isIntersecting) {
+                        bars.forEach((bar, index) => {
+                            setTimeout(() => bar.classList.add('visible'), index * 100);
+                        });
+                    } else {
+                        bars.forEach(bar => bar.classList.remove('visible'));
+                    }
+                 });
+            }, { threshold: 0.5 });
+            
+            chartObserver.observe(document.getElementById('sektoral-chart'));
+            
+
+            // ----------------------------------------
+            // Logika Audio Player
+            // ----------------------------------------
+            const audioPlayerContainer = document.getElementById('audio-player-container');
+            const audio = document.getElementById('audio-player');
+            const playPauseBtn = document.getElementById('play-pause-btn');
+            const playIcon = document.getElementById('play-icon');
+            const pauseIcon = document.getElementById('pause-icon');
+            const seekSlider = document.getElementById('seek-slider');
+            const currentTimeEl = document.getElementById('current-time');
+            const durationEl = document.getElementById('duration');
+            let isPlaying = false;
+
+            function togglePlay() {
+                if (audio.src === "" || audio.src === window.location.href) {
+                     alert("URL stream audio belum diatur. Silakan atur di kode HTML.");
+                     return;
+                }
+                isPlaying ? audio.pause() : audio.play();
+            }
+
+            audio.addEventListener('play', () => {
+                isPlaying = true;
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+            });
+
+            audio.addEventListener('pause', () => {
+                isPlaying = false;
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+            });
+            
+            const formatTime = (time) => {
+                const minutes = Math.floor(time / 60);
+                const seconds = Math.floor(time % 60);
+                return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            }
+
+            audio.addEventListener('loadedmetadata', () => {
+                durationEl.textContent = formatTime(audio.duration);
+                seekSlider.max = audio.duration;
+            });
+
+            audio.addEventListener('timeupdate', () => {
+                currentTimeEl.textContent = formatTime(audio.currentTime);
+                seekSlider.value = audio.currentTime;
+            });
+
+-
+            seekSlider.addEventListener('input', () => {
+                audio.currentTime = seekSlider.value;
+            });
+
+            playPauseBtn.addEventListener('click', togglePlay);
+        });
+    </script>
+</body>
+</html>
+
