@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Yusuf Al-Rahman (Pastel)</title>
+    <title>CV - Yusuf Al-Rahman</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap');
 
         :root {
-            /* --- PALET WARNA PASTEL --- */
-            --primary-color: #b2c8df; /* Pastel Blue */
-            --secondary-color: #fdfaf6; /* Soft Cream */
-            --accent-color: #d8b4a0; /* Dusty Rose */
-            --text-dark: #5c5470; /* Muted Purple/Gray */
-            --text-light: #ffffff;
+            --primary-color: #004d40; /* Dark Teal */
+            --secondary-color: #f5f5f5; /* Light Gray Background */
+            --accent-color: #ffab40;  /* Amber/Gold */
+            --text-dark: #212121;
+            --text-light: #fafafa;
             --border-color: #e0e0e0;
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--secondary-color);
@@ -28,80 +27,49 @@
 
         .container {
             max-width: 900px;
+            min-height: 1272px; /* A4 aspect ratio approximation */
             margin: 20px auto;
             background-color: var(--text-light);
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            grid-template-columns: 0.8fr 2fr;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.1);
             position: relative;
             overflow: hidden;
         }
 
-        /* --- Bentuk Dekoratif --- */
-        .container::before {
+        /* --- Decorative Shapes --- */
+        .left-column::before {
             content: '';
             position: absolute;
-            top: -150px;
-            left: -150px;
-            width: 350px;
-            height: 350px;
-            background-color: var(--primary-color);
-            opacity: 0.8;
-            border-radius: 50%;
-            z-index: 0;
-        }
-        
-        .container::after {
-            content: '';
-            position: absolute;
-            bottom: -80px;
-            right: -80px;
-            width: 200px;
-            height: 200px;
-            background-color: var(--accent-color);
-            opacity: 0.8;
-            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-            z-index: 0;
-        }
-
-        /* --- Kolom Kiri --- */
-        .left-column {
-            background-color: var(--primary-color);
-            color: var(--text-dark); /* Diubah agar teks terbaca di background pastel */
-            padding: 40px 25px;
-            position: relative;
+            top: 0;
+            right: -50px;
+            width: 100px;
+            height: 100%;
+            background: var(--primary-color);
+            transform: skewX(15deg);
             z-index: 1;
         }
 
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid var(--accent-color);
-            margin: 20px auto 30px;
-            background-color: #ccc;
-            background-image: url('https://via.placeholder.com/150'); /* Ganti dengan URL foto Anda */
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .contact-info {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .contact-info li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            font-size: 0.9rem;
+        /* --- Left Column --- */
+        .left-column {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 40px 25px;
+            position: relative;
+            z-index: 2;
         }
 
-        .contact-info .icon {
-            width: 20px;
-            margin-right: 15px;
+        .profile-pic-container {
             text-align: center;
-            color: #fff;
+            margin-bottom: 30px;
+        }
+        
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 5px solid var(--accent-color);
+            object-fit: cover;
         }
 
         .section {
@@ -109,59 +77,45 @@
         }
 
         .section-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.3rem;
-            color: var(--text-light);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            color: var(--accent-color);
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border-bottom: 2px solid var(--text-light);
+            border-bottom: 2px solid var(--accent-color);
             padding-bottom: 8px;
         }
         
-        .skills-list {
+        .contact-info, .skills-list {
             list-style-type: none;
             padding: 0;
-        }
-
-        .skills-list li {
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .skill-name {
-            font-weight: 500;
-            margin-bottom: 5px;
-            width: 100%;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background-color: rgba(255,255,255,0.4);
-            border-radius: 4px;
-        }
-
-        .progress {
-            height: 100%;
-            background-color: var(--accent-color);
-            border-radius: 4px;
+            font-size: 0.9rem;
         }
         
-        .digital-tools .tool {
-            display: inline-block;
-            background-color: rgba(82, 75, 96, 0.1);
-            border: 1px solid var(--accent-color);
-            color: var(--text-dark);
-            border-radius: 15px;
-            padding: 5px 12px;
-            margin: 3px;
-            font-size: 0.85rem;
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            word-break: break-all;
         }
 
-        /* --- Kolom Kanan --- */
+        .contact-info .icon {
+            width: 20px;
+            margin-right: 15px;
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+        
+        .skills-list li {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 5px;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+        }
+
+        /* --- Right Column --- */
         .right-column {
             padding: 50px 40px;
             position: relative;
@@ -169,36 +123,37 @@
         }
 
         .header {
-            margin-bottom: 40px;
+            text-align: left;
+            margin-bottom: 30px;
+            border-bottom: 4px solid var(--primary-color);
+            padding-bottom: 20px;
         }
 
         .header h1 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 2.8rem;
             margin: 0;
-            color: var(--text-dark);
+            color: var(--primary-color);
+            line-height: 1.1;
         }
 
         .header h2 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 1.2rem;
             font-weight: 400;
-            color: var(--accent-color);
+            color: var(--text-dark);
             margin: 5px 0 0;
         }
         
-        .summary p {
-            line-height: 1.6;
-            text-align: justify;
+        .main-section {
+            margin-bottom: 30px;
         }
-
+        
         .main-section-title {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-size: 1.5rem;
-            color: var(--text-dark);
+            color: var(--primary-color);
             margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid var(--primary-color);
             display: flex;
             align-items: center;
         }
@@ -209,20 +164,26 @@
             font-size: 1.8rem;
         }
 
-        .job {
+        .summary p, .job-description, .project-desc {
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .job, .education-item {
             margin-bottom: 25px;
         }
 
-        .job-title {
-            font-family: 'Montserrat', sans-serif;
+        .job-title, .degree {
+            font-family: 'Poppins', sans-serif;
             font-size: 1.2rem;
             font-weight: 600;
             margin: 0;
         }
         
-        .job-company {
-            font-weight: 500;
+        .job-company, .university {
+            font-weight: 700;
             color: var(--accent-color);
+            margin-bottom: 3px;
         }
 
         .job-date {
@@ -233,73 +194,58 @@
         }
 
         .job-description {
+            list-style-type: '✓';
             padding-left: 20px;
-            line-height: 1.5;
-            border-left: 2px solid var(--accent-color);
         }
         
         .job-description li {
             margin-bottom: 8px;
+            padding-left: 10px;
         }
         
         .project {
-            padding: 15px;
+            padding-bottom: 15px;
             margin-bottom: 15px;
-            background-color: #fdf6f0;
-            border-left: 5px solid var(--accent-color);
-            border-radius: 0 8px 8px 0;
-            transition: transform 0.2s, box-shadow 0.2s;
+            border-bottom: 1px dashed var(--border-color);
         }
         
-        .project:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        .project:last-child {
+            border-bottom: none;
         }
         
         .project-title {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
             font-weight: 600;
+            font-size: 1.1rem;
             margin: 0 0 5px 0;
+            display: flex;
+            align-items: center;
         }
         
+        .project-title .icon {
+            font-size: 0.8rem;
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
         .project-desc {
             font-size: 0.95rem;
             margin: 0;
         }
-
-        .education-item {
-            margin-bottom: 15px;
-        }
         
-        .degree {
-            font-family: 'Montserrat', sans-serif;
+        .project-tags {
+            margin-top: 8px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: #e0e0e0;
+            border-radius: 15px;
+            padding: 3px 10px;
+            margin: 2px;
+            font-size: 0.8rem;
             font-weight: 600;
-            margin: 0;
-        }
-        
-        .university {
-            font-weight: 500;
-            margin: 0;
-        }
-
-        @media screen and (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            .container::before, .container::after {
-                display: none;
-            }
-        }
-        
-        @media print {
-            .container {
-                margin: 0;
-                box-shadow: none;
-            }
-            .project:hover {
-                transform: none;
-                box-shadow: none;
-            }
+            color: var(--text-dark);
         }
     </style>
 </head>
@@ -308,51 +254,41 @@
     <div class="container">
         <aside class="left-column">
             
-            <div class="profile-pic"></div>
+            <div class="profile-pic-container">
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQFJycJgumVOMA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1691390038406?e=1758153600&v=beta&t=H-q_QZPXwpU_Of3wU2_7YXNpRN-u27oX96EUp_bZ0bg" alt="Foto Profil Yusuf Al-Rahman" class="profile-pic">
+            </div>
             
             <section class="section">
                 <h2 class="section-title">Kontak</h2>
                 <ul class="contact-info">
-                    <li><span class="icon">📞</span> +62 800-0000-0000</li>
+                    <li><span class="icon">📞</span> +62 8XX-XXXX-XXXX</li>
                     <li><span class="icon">✉️</span> yusuf.rahman@email.com</li>
-                    <li><span class="icon">📍</span> Kota Bogor, Indonesia</li>
-                    <li><span class="icon">🔗</span> linkedin.com/in/yusufalrahman</li>
+                    <li><span class="icon">📍</span> Depok, Indonesia</li>
+                    <li><span class="icon">🔗</span> linkedin.com/in/yusuf-al-rahman-8049a21b3/</li>
+                    <li><span class="icon">🌐</span> github.com/sirjosev</li>
                 </ul>
             </section>
 
             <section class="section">
-                <h2 class="section-title">Keahlian Inti</h2>
+                <h2 class="section-title">Kompetensi Inti</h2>
                 <ul class="skills-list">
-                    <li>
-                        <span class="skill-name">Supply Chain Management</span>
-                        <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
-                    </li>
-                    <li>
-                        <span class="skill-name">Manajemen Logistik & Ekspor</span>
-                        <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
-                    </li>
-                    <li>
-                        <span class="skill-name">Kontrol Kualitas (QA/QC)</span>
-                        <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
-                    </li>
-                     <li>
-                        <span class="skill-name">Analisis Biaya & Efisiensi</span>
-                        <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
-                    </li>
-                    <li>
-                        <span class="skill-name">Manajemen Supplier</span>
-                        <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-                    </li>
+                    <li>Supply Chain Management</li>
+                    <li>Manajemen Logistik & Ekspor</li>
+                    <li>Manajemen Inventaris</li>
+                    <li>Kontrol Kualitas (QA/QC)</li>
+                    <li>Analisis Biaya & Efisiensi</li>
+                    <li>Manajemen Supplier</li>
                 </ul>
             </section>
             
-            <section class="section digital-tools">
-                <h2 class="section-title">Digital Tools</h2>
-                <span class="tool">Microsoft Excel (Advanced)</span>
-                <span class="tool">Power BI (Intermediate)</span>
-                <span class="tool">Pivot Tables & Power Query</span>
-                <span class="tool">Sistem ERP (Familiar)</span>
-                <span class="tool">Google Workspace</span>
+            <section class="section">
+                <h2 class="section-title">Keahlian Teknis</h2>
+                <ul class="skills-list">
+                    <li><b>Bahasa:</b> Python, SQL, Java</li>
+                    <li><b>Data Science:</b> Pandas, Numpy, Scikit-learn, Matplotlib, LightGBM</li>
+                    <li><b>Keahlian:</b> Analisis Data, Model Prediktif, Visualisasi Data, ETL</li>
+                    <li><b>Database:</b> Firebase/Firestore, SQLite</li>
+                </ul>
             </section>
 
         </aside>
@@ -360,65 +296,75 @@
         <main class="right-column">
             <header class="header">
                 <h1>Yusuf Al-Rahman</h1>
-                <h2>Operations & Supply Chain Specialist</h2>
+                <h2>Data & Operations Analyst</h2>
             </header>
 
-            <section class="summary">
-                <h3 class="main-section-title"><span class="icon">👤</span> Profil</h3>
-                <p>
-                    Seorang profesional operasional yang terbukti berhasil dalam mengelola seluruh siklus rantai pasok end-to-end, khususnya dalam lingkungan ekspor yang dinamis. Berpengalaman dalam manajemen logistik, kontrol kualitas, dan optimisasi proses untuk mendorong efisiensi biaya dan kepuasan pelanggan. Memiliki kemampuan analisis data yang kuat untuk memberikan rekomendasi strategis dan bersemangat untuk menerapkan keahlian ini dalam skala yang lebih besar.
-                </p>
-            </section>
-
-            <section class="experience">
-                <h3 class="main-section-title"><span class="icon">💼</span> Pengalaman Kerja</h3>
-                <div class="job">
-                    <h4 class="job-title">Chief Operating Officer (COO)</h4>
-                    <p class="job-company">PT. Suka Bumi Resources</p>
-                    <p class="job-date">Agustus 2025 – Saat Ini</p>
-                    <ul class="job-description">
-                        <li>Mengelola dan mengawasi keseluruhan operasi harian, dari pengadaan barang dari supplier hingga pengiriman ke pembeli internasional.</li>
-                        <li>Memimpin seluruh proses logistik ekspor, termasuk stuffing, booking kontainer, dan manajemen dokumen krusial (BL, COO, PEB).</li>
-                        <li>Membangun dan menerapkan Standard Operating Procedures (SOP) untuk kontrol kualitas, memastikan produk memenuhi standar mutu kontrak ekspor.</li>
-                        <li>Melakukan analisis biaya operasional secara berkala untuk menjaga efisiensi dan mengoptimalkan proses produksi dan tenaga kerja.</li>
-                        <li>Menyusun laporan kinerja operasional mingguan dan bulanan untuk CEO, memberikan rekomendasi perbaikan proses berbasis data.</li>
-                    </ul>
+            <section class="main-section">
+                <h3 class="main-section-title"><span class="icon">👤</span> Ringkasan Profesional</h3>
+                <div class="summary">
+                    <p>
+                        Seorang profesional analitis dengan pengalaman praktis dalam operasi end-to-end dan manajemen rantai pasok. Memiliki keahlian kuat dalam analisis data, machine learning, dan pengembangan model prediktif menggunakan Python untuk mengubah data kompleks menjadi insight bisnis yang dapat ditindaklanjuti. Bersemangat untuk menerapkan kemampuan problem-solving berbasis data guna mengoptimalkan efisiensi, mengurangi biaya, dan mendorong inovasi dalam lingkungan supply chain yang dinamis.
+                    </p>
                 </div>
             </section>
             
-            <section class="projects">
-                 <h3 class="main-section-title"><span class="icon">🚀</span> Proyek & Pencapaian Kunci</h3>
-                 <div class="project">
-                    <h4 class="project-title">Optimalisasi Proses Logistik Ekspor</h4>
+            <section class="main-section">
+                <h3 class="main-section-title"><span class="icon">🚀</span> Proyek Analitik Unggulan</h3>
+                <div class="project">
+                    <h4 class="project-title"><span class="icon">✈️</span>Analisis & Prediksi Keterlambatan Penerbangan</h4>
                     <p class="project-desc">
-                        Berhasil mencapai <strong>tingkat pengiriman tepat waktu (on-time delivery) >95%</strong> dan memastikan <strong>zero-penalty</strong> dari bea cukai dengan manajemen dokumentasi yang teliti.
+                        Menganalisis dataset penerbangan besar untuk mengidentifikasi faktor-faktor utama penyebab keterlambatan. Mengembangkan model Machine Learning (Random Forest) yang berhasil memprediksi keterlambatan dengan akurasi 85%.
                     </p>
-                 </div>
-                 <div class="project">
-                    <h4 class="project-title">Implementasi Sistem Kontrol Kualitas</h4>
+                    <div class="project-tags">
+                        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">Analisis Prediktif</span>
+                    </div>
+                </div>
+                <div class="project">
+                    <h4 class="project-title"><span class="icon">📈</span>Sistem Manajemen Inventaris & Transaksi</h4>
                     <p class="project-desc">
-                        Menekan tingkat komplain dan penolakan produk dari pembeli hingga <strong>di bawah 3%</strong> melalui implementasi SOP kualitas yang ketat.
+                        Merancang dan membangun prototipe sistem untuk manajemen toko yang mengelola stok barang, mencatat transaksi penjualan, dan memvalidasi ketersediaan inventaris secara real-time menggunakan Python dan database cloud.
                     </p>
-                 </div>
-                 <div class="project">
-                    <h4 class="project-title">Inisiatif Efisiensi Biaya Operasional</h4>
+                     <div class="project-tags">
+                        <span class="tag">Python</span><span class="tag">Firebase</span><span class="tag">Manajemen Inventaris</span><span class="tag">Logika Bisnis</span>
+                    </div>
+                </div>
+                <div class="project">
+                    <h4 class="project-title"><span class="icon">💡</span>Demand Forecasting untuk Energi Terbarukan</h4>
                     <p class="project-desc">
-                        Mencapai <strong>penghematan biaya operasional tahunan >5%</strong> dengan mengoptimalkan alur kerja dan negosiasi dengan supplier.
+                        Membangun model prediksi (LightGBM) untuk meramalkan tren produksi energi terbarukan berdasarkan data time-series. Melakukan rekayasa fitur ekstensif untuk meningkatkan akurasi model.
                     </p>
-                 </div>
+                     <div class="project-tags">
+                        <span class="tag">Machine Learning</span><span class="tag">LightGBM</span><span class="tag">Forecasting</span><span class="tag">Time-Series</span>
+                    </div>
+                </div>
             </section>
 
-            <section class="education">
+            <section class="main-section">
+                <h3 class="main-section-title"><span class="icon">💼</span> Pengalaman Kerja</h3>
+                <div class="job">
+                    <h4 class="job-title">Chief Operating Officer</h4>
+                    <p class="job-company">PT. Suka Bumi Resources</p>
+                    <p class="job-date">Saat Ini</p>
+                    <ul class="job-description">
+                        <li>Mengelola operasi logistik ekspor end-to-end, memastikan pengiriman tepat waktu (>95% OTD) dan kelengkapan dokumen (BL, COO, PEB).</li>
+                        <li>Mengimplementasikan SOP Kontrol Kualitas yang berhasil menekan tingkat komplain pelanggan hingga di bawah 3%.</li>
+                        <li>Melakukan analisis biaya operasional, menghasilkan inisiatif yang memberikan penghematan tahunan lebih dari 5%.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="main-section">
                 <h3 class="main-section-title"><span class="icon">🎓</span> Pendidikan</h3>
                 <div class="education-item">
-                     <h4 class="degree">Sarjana Teknik Industri (Contoh)</h4>
-                     <p class="university">Universitas Indonesia (Contoh)</p>
-                     <p class="job-date">2021 – 2025</p>
+                     <h4 class="degree">SARJANA ILMU KOMPUTER (Contoh)</h4>
+                     <p class="university">Universitas Contoh</p>
+                     <p class="job-date">Lulus 2025</p>
                 </div>
-                 </section>
+            </section>
 
         </main>
     </div>
 
 </body>
 </html>
+
