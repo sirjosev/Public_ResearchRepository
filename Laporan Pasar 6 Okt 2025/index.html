@@ -395,13 +395,13 @@
                 if (currentLang === 'id') {
                     elementsId.forEach(el => el.classList.add('hidden'));
                     elementsEn.forEach(el => el.classList.remove('hidden'));
-                    langSwitcher.textContent = '🇮🇩';
-                    currentLang = 'id';
+                    langSwitcher.textContent = '🇬🇧';
+                    currentLang = 'en';
                 } else {
                     elementsEn.forEach(el => el.classList.add('hidden'));
                     elementsId.forEach(el => el.classList.remove('hidden'));
-                    langSwitcher.textContent = '🇬🇧';
-                    currentLang = 'en';
+                    langSwitcher.textContent = '🇮🇩';
+                    currentLang = 'id';
                 }
             });
         });
