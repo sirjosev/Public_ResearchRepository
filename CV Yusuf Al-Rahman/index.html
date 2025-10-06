@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Yusuf Al-Rahman (Vertical Layout)</title>
+    <title>CV - Yusuf Al-Rahman (Bilingual)</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap');
 
@@ -26,21 +26,47 @@
         }
 
         .container {
-            max-width: 850px; /* Lebar dokumen A4 */
+            max-width: 850px;
             min-height: 1100px; 
             margin: 20px auto;
             background-color: var(--text-light);
             padding: 50px 60px;
             box-shadow: 0 10px 35px rgba(0,0,0,0.1);
             border-top: 10px solid var(--primary-color);
+            position: relative;
+        }
+        
+        /* --- Language Switcher Button --- */
+        #lang-switcher {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            background-color: #fff;
+            border: 2px solid var(--primary-color);
+            font-size: 1.5rem;
+            width: 60px;
+            height: 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        #lang-switcher:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .hidden {
+            display: none !important;
         }
 
-        /* --- Header Utama --- */
+        /* --- Main Header --- */
         .main-header {
             text-align: center;
             margin-bottom: 40px;
         }
-
         .main-header h1 {
             font-family: 'Poppins', sans-serif;
             font-size: 3rem;
@@ -48,7 +74,6 @@
             color: var(--primary-color);
             line-height: 1.1;
         }
-
         .main-header h2 {
             font-family: 'Poppins', sans-serif;
             font-size: 1.3rem;
@@ -59,7 +84,6 @@
             display: inline-block;
             padding-bottom: 8px;
         }
-
         .contact-info {
             display: flex;
             flex-wrap: wrap;
@@ -67,33 +91,28 @@
             gap: 10px 25px;
             font-size: 0.9rem;
         }
-
         .contact-info a {
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 600;
             transition: color 0.2s;
         }
-        
         .contact-info a:hover {
             color: var(--accent-color);
         }
-
         .contact-info span {
             display: flex;
             align-items: center;
         }
-        
         .contact-info .icon {
             margin-right: 8px;
             color: var(--primary-color);
         }
 
-        /* --- Struktur Section --- */
+        /* --- Section Structure --- */
         .section {
             margin-bottom: 35px;
         }
-
         .section-title {
             font-family: 'Poppins', sans-serif;
             font-size: 1.5rem;
@@ -104,25 +123,22 @@
             display: flex;
             align-items: center;
         }
-
         .section-title .icon {
             margin-right: 15px;
             color: var(--accent-color);
             font-size: 1.8rem;
         }
-
         p, ul {
             text-align: justify;
             line-height: 1.6;
         }
 
-        /* --- Keahlian --- */
+        /* --- Skills --- */
         .skills-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
         }
-        
         .skills-category h4 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
@@ -130,13 +146,11 @@
             margin: 0 0 15px 0;
             color: var(--text-dark);
         }
-
         .skills-category ul {
             margin: 0;
             padding: 0;
             list-style-type: none;
         }
-
         .skills-category li {
             background-color: #e0e0e0;
             border-radius: 15px;
@@ -146,60 +160,50 @@
             font-weight: 600;
             display: inline-block;
         }
-        
         .skills-category li.highlight {
             background-color: var(--accent-color);
             color: var(--text-light);
         }
         
-        /* --- Proyek & Pengalaman --- */
+        /* --- Projects & Experience --- */
         .item {
             margin-bottom: 25px;
         }
-        
         .item:last-child {
             margin-bottom: 0;
         }
-        
         .item-header {
             margin-bottom: 8px;
         }
-        
         .item-title {
             font-family: 'Poppins', sans-serif;
             font-size: 1.2rem;
             font-weight: 600;
             margin: 0;
         }
-
         .item-subtitle {
             font-weight: 700;
             color: var(--accent-color);
             margin-bottom: 3px;
             font-size: 1rem;
         }
-
         .item-date {
             font-style: italic;
             color: #777;
             font-size: 0.9rem;
         }
-        
         .item-description ul {
-            list-style-type: '✓';
+            list-style-type: '';
             padding-left: 20px;
             margin-top: 10px;
         }
-
         .item-description li {
             margin-bottom: 8px;
             padding-left: 10px;
         }
-        
         .project-tags {
             margin-top: 10px;
         }
-
         .tag {
             display: inline-block;
             background-color: var(--primary-color);
@@ -211,13 +215,15 @@
             font-weight: 600;
         }
 
+        @media print {
+            #lang-switcher { display: none; }
+            .container { margin: 0; box-shadow: none; }
+        }
+
         @media screen and (max-width: 768px) {
-            .container {
-                padding: 30px 25px;
-            }
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
+            .container { padding: 30px 25px; }
+            .skills-container { grid-template-columns: 1fr; }
+            #lang-switcher { top: 10px; right: 15px; }
         }
     </style>
 </head>
@@ -225,48 +231,67 @@
 
     <div class="container">
         
+        <button id="lang-switcher"></button>
+
         <header class="main-header">
             <h1>Yusuf Al-Rahman</h1>
-            <h2>Data & Operations Analyst</h2>
+            <h2 class="lang-id">Analis Data & Operasi</h2>
+            <h2 class="lang-en hidden">Data & Operations Analyst</h2>
             <div class="contact-info">
-                <span><span class="icon">📞</span>+62 821-2272-9841</span>
-                <span><span class="icon">✉️</span><a href="mailto:sirjosephholmes@gmail.com">sirjosephholmes@gmail.com </a></span>
-                <span><span class="icon">📍</span>Depok, Indonesia</span>
-                <span><span class="icon">🔗</span><a href="https://linkedin.com/in/yusuf-al-rahman-8049a21b3/" target="_blank">LinkedIn</a></span>
-                <span><span class="icon">🌐</span><a href="https://github.com/sirjosev" target="_blank">GitHub</a></span>
+                <span><span class="icon"></span>+62 8XX-XXXX-XXXX</span>
+                <span><span class="icon"></span><a href="mailto:yusuf.rahman@email.com">yusuf.rahman@email.com</a></span>
+                <span class="lang-id"><span class="icon"></span>Depok, Indonesia</span>
+                <span class="lang-en hidden"><span class="icon"></span>Depok, Indonesia</span>
+                <span><span class="icon"></span><a href="https://linkedin.com/in/yusuf-al-rahman-8049a21b3/" target="_blank">LinkedIn</a></span>
+                <span><span class="icon"></span><a href="https://github.com/sirjosev" target="_blank">GitHub</a></span>
             </div>
         </header>
 
         <section class="section">
-            <h3 class="section-title"><span class="icon">👤</span> Ringkasan Profesional</h3>
-            <p>
+            <h3 class="section-title">
+                <span class="icon"></span>
+                <span class="lang-id">Ringkasan Profesional</span>
+                <span class="lang-en hidden">Professional Summary</span>
+            </h3>
+            <p class="lang-id">
                 Seorang profesional analitis dengan pengalaman praktis dalam operasi end-to-end dan manajemen rantai pasok. Memiliki keahlian kuat dalam analisis data, machine learning, dan pengembangan model prediktif menggunakan Python untuk mengubah data kompleks menjadi insight bisnis yang dapat ditindaklanjuti. Bersemangat untuk menerapkan kemampuan problem-solving berbasis data guna mengoptimalkan efisiensi, mengurangi biaya, dan mendorong inovasi dalam lingkungan supply chain yang dinamis.
+            </p>
+            <p class="lang-en hidden">
+                An analytical professional with hands-on experience in end-to-end operations and supply chain management. Possesses strong expertise in data analysis, machine learning, and developing predictive models using Python to transform complex data into actionable business insights. Passionate about applying data-driven problem-solving skills to optimize efficiency, reduce costs, and drive innovation in a dynamic supply chain environment.
             </p>
         </section>
 
         <section class="section">
-            <h3 class="section-title"><span class="icon">🛠️</span> Keahlian</h3>
+            <h3 class="section-title">
+                <span class="icon"></span>
+                <span class="lang-id">Keahlian</span>
+                <span class="lang-en hidden">Skills</span>
+            </h3>
             <div class="skills-container">
                 <div class="skills-category">
-                    <h4>Kompetensi Inti (Supply Chain)</h4>
+                    <h4 class="lang-id">Kompetensi Inti (Supply Chain)</h4>
+                    <h4 class="lang-en hidden">Core Competencies (Supply Chain)</h4>
                     <ul>
                         <li>Supply Chain Management</li>
-                        <li>Manajemen Logistik & Ekspor</li>
-                        <li>Manajemen Inventaris</li>
-                        <li>Kontrol Kualitas (QA/QC)</li>
-                        <li>Analisis Biaya & Efisiensi</li>
-                        <li>Manajemen Supplier</li>
+                        <li>Logistics & Export Management</li>
+                        <li>Inventory Management</li>
+                        <li>Quality Control (QA/QC)</li>
+                        <li>Cost & Efficiency Analysis</li>
+                        <li>Supplier Management</li>
                     </ul>
                 </div>
                 <div class="skills-category">
-                    <h4>Keahlian Teknis (Data & AI)</h4>
+                    <h4 class="lang-id">Keahlian Teknis (Data & AI)</h4>
+                    <h4 class="lang-en hidden">Technical Skills (Data & AI)</h4>
                     <ul>
                         <li class="highlight">Python</li>
                         <li class="highlight">SQL</li>
                         <li class="highlight">Pandas</li>
                         <li class="highlight">Scikit-learn</li>
-                        <li>Analisis Prediktif</li>
-                        <li>Data Visualization</li>
+                        <li class="lang-id">Analisis Prediktif</li>
+                        <li class="lang-en hidden">Predictive Analysis</li>
+                        <li class="lang-id">Visualisasi Data</li>
+                        <li class="lang-en hidden">Data Visualization</li>
                         <li>LightGBM</li>
                         <li>Firebase/Firestore</li>
                         <li>Java</li>
@@ -276,35 +301,51 @@
         </section>
 
         <section class="section">
-            <h3 class="section-title"><span class="icon">🚀</span> Proyek Analitik Unggulan</h3>
+            <h3 class="section-title">
+                <span class="icon"></span>
+                <span class="lang-id">Proyek Analitik Unggulan</span>
+                <span class="lang-en hidden">Featured Analytics Projects</span>
+            </h3>
             <div class="item">
                 <div class="item-header">
-                    <h4 class="item-title">Analisis & Prediksi Keterlambatan Penerbangan</h4>
+                    <h4 class="item-title lang-id">Analisis & Prediksi Keterlambatan Penerbangan</h4>
+                    <h4 class="item-title lang-en hidden">Flight Delay Analysis & Prediction</h4>
                 </div>
                 <div class="item-description">
-                    <p>Menganalisis dataset penerbangan besar untuk mengidentifikasi faktor-faktor utama penyebab keterlambatan. Mengembangkan model Machine Learning (Random Forest) yang berhasil memprediksi keterlambatan dengan akurasi 85%.</p>
+                    <p class="lang-id">Menganalisis dataset penerbangan besar untuk mengidentifikasi faktor-faktor utama penyebab keterlambatan. Mengembangkan model Machine Learning (Random Forest) yang berhasil memprediksi keterlambatan dengan akurasi 85%.</p>
+                    <p class="lang-en hidden">Analyzed a large flight dataset to identify key drivers of delays. Developed a Machine Learning model (Random Forest) that successfully predicted delays with 85% accuracy.</p>
                     <div class="project-tags">
-                        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">Analisis Prediktif</span>
+                        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span>
+                        <span class="tag lang-id">Analisis Prediktif</span>
+                        <span class="tag lang-en hidden">Predictive Analysis</span>
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="item-header">
-                    <h4 class="item-title">Sistem Manajemen Inventaris & Transaksi</h4>
+                    <h4 class="item-title lang-id">Sistem Manajemen Inventaris & Transaksi</h4>
+                    <h4 class="item-title lang-en hidden">Inventory & Transaction Management System</h4>
                 </div>
                 <div class="item-description">
-                    <p>Merancang dan membangun prototipe sistem untuk manajemen toko yang mengelola stok barang, mencatat transaksi penjualan, dan memvalidasi ketersediaan inventaris secara real-time menggunakan Python dan database cloud.</p>
+                    <p class="lang-id">Merancang dan membangun prototipe sistem untuk manajemen toko yang mengelola stok barang, mencatat transaksi penjualan, dan memvalidasi ketersediaan inventaris secara real-time menggunakan Python dan database cloud.</p>
+                    <p class="lang-en hidden">Designed and built a prototype system for retail management that handles product stock, records sales transactions, and validates inventory availability in real-time using Python and a cloud database.</p>
                     <div class="project-tags">
-                        <span class="tag">Python</span><span class="tag">Firebase</span><span class="tag">Manajemen Inventaris</span><span class="tag">Logika Bisnis</span>
+                        <span class="tag">Python</span><span class="tag">Firebase</span>
+                        <span class="tag lang-id">Manajemen Inventaris</span>
+                        <span class="tag lang-en hidden">Inventory Management</span>
+                        <span class="tag lang-id">Logika Bisnis</span>
+                        <span class="tag lang-en hidden">Business Logic</span>
                     </div>
                 </div>
             </div>
              <div class="item">
                 <div class="item-header">
-                    <h4 class="item-title">Demand Forecasting untuk Energi Terbarukan</h4>
+                    <h4 class="item-title lang-id">Demand Forecasting untuk Energi Terbarukan</h4>
+                    <h4 class="item-title lang-en hidden">Demand Forecasting for Renewable Energy</h4>
                 </div>
                 <div class="item-description">
-                    <p>Membangun model prediksi (LightGBM) untuk meramalkan tren produksi energi terbarukan berdasarkan data time-series. Melakukan rekayasa fitur ekstensif untuk meningkatkan akurasi model.</p>
+                    <p class="lang-id">Membangun model prediksi (LightGBM) untuk meramalkan tren produksi energi terbarukan berdasarkan data time-series. Melakukan rekayasa fitur ekstensif untuk meningkatkan akurasi model.</p>
+                    <p class="lang-en hidden">Built a predictive model (LightGBM) to forecast renewable energy production trends based on time-series data. Performed extensive feature engineering to improve model accuracy.</p>
                     <div class="project-tags">
                         <span class="tag">Machine Learning</span><span class="tag">LightGBM</span><span class="tag">Forecasting</span><span class="tag">Time-Series</span>
                     </div>
@@ -313,14 +354,76 @@
         </section>
 
         <section class="section">
-            <h3 class="section-title"><span class="icon">💼</span> Pengalaman Kerja</h3>
+            <h3 class="section-title">
+                <span class="icon"></span>
+                <span class="lang-id">Pengalaman Kerja</span>
+                <span class="lang-en hidden">Work Experience</span>
+            </h3>
             <div class="item">
                 <div class="item-header">
                     <h4 class="item-title">Chief Operating Officer</h4>
                     <p class="item-subtitle">PT. Suka Bumi Resources</p>
-                    <p class="item-date">Januari 2025 – Saat Ini</p>
+                    <p class="item-date lang-id">Agustus 2025 � Saat Ini</p>
+                    <p class="item-date lang-en hidden">August 2025 � Present</p>
                 </div>
                 <div class="item-description">
-                    <ul>
+                    <ul class="lang-id">
                         <li>Mengelola operasi logistik ekspor end-to-end, memastikan pengiriman tepat waktu (>95% OTD) dan kelengkapan dokumen (BL, COO, PEB).</li>
-                        <li>Mengimplementasikan SOP Kontrol Kualitas
+                        <li>Mengimplementasikan SOP Kontrol Kualitas yang berhasil menekan tingkat komplain pelanggan hingga di bawah 3%.</li>
+                        <li>Melakukan analisis biaya operasional, menghasilkan inisiatif yang memberikan penghematan tahunan lebih dari 5%.</li>
+                    </ul>
+                    <ul class="lang-en hidden">
+                        <li>Managed end-to-end export logistics operations, ensuring on-time delivery (>95% OTD) and complete documentation (BL, COO, PEB).</li>
+                        <li>Implemented Quality Control SOPs that successfully reduced customer complaint rates to below 3%.</li>
+                        <li>Conducted operational cost analysis, leading to initiatives that yielded annual savings of over 5%.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3 class="section-title">
+                <span class="icon"></span>
+                <span class="lang-id">Pendidikan</span>
+                <span class="lang-en hidden">Education</span>
+            </h3>
+            <div class="item">
+                 <h4 class="item-title lang-id">SARJANA ILMU KOMPUTER (Contoh)</h4>
+                 <h4 class="item-title lang-en hidden">BACHELOR OF COMPUTER SCIENCE (Example)</h4>
+                 <p class="item-subtitle lang-id">Universitas Contoh</p>
+                 <p class="item-subtitle lang-en hidden">Example University</p>
+                 <p class="item-date lang-id">Lulus 2025</p>
+                 <p class="item-date lang-en hidden">Graduated 2025</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const langSwitcher = document.getElementById('lang-switcher');
+            const elementsId = document.querySelectorAll('.lang-id');
+            const elementsEn = document.querySelectorAll('.lang-en');
+            
+            let currentLang = 'id';
+
+            langSwitcher.addEventListener('click', function() {
+                if (currentLang === 'id') {
+                    // Switch to English
+                    elementsId.forEach(el => el.classList.add('hidden'));
+                    elementsEn.forEach(el => el.classList.remove('hidden'));
+                    langSwitcher.textContent = '';
+                    currentLang = 'en';
+                } else {
+                    // Switch to Indonesian
+                    elementsEn.forEach(el => el.classList.add('hidden'));
+                    elementsId.forEach(el => el.classList.remove('hidden'));
+                    langSwitcher.textContent = '';
+                    currentLang = 'id';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
