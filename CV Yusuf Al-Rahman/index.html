@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Yusuf Al-Rahman (Final Cleaned)</title>
+    <title>CV - Yusuf Al-Rahman (New Toggle Logic)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap');
 
@@ -42,19 +43,25 @@
             right: 25px;
             background-color: #fff;
             border: 2px solid var(--primary-color);
-            font-size: 1.5rem;
             width: 60px;
             height: 40px;
             border-radius: 20px;
             cursor: pointer;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             transition: transform 0.2s, box-shadow 0.2s;
+            overflow: hidden;
         }
         #lang-switcher:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        #lang-switcher img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         
         .hidden { display: none !important; }
@@ -94,7 +101,12 @@
         }
         .contact-info a:hover { color: var(--accent-color); }
         .contact-info span { display: flex; align-items: center; }
-        .contact-info .icon { margin-right: 8px; color: var(--primary-color); }
+        .contact-info .icon { 
+            margin-right: 8px; 
+            color: var(--primary-color);
+            width: 16px; 
+            text-align: center;
+        }
 
         .section { margin-bottom: 35px; }
         .section-title {
@@ -110,7 +122,9 @@
         .section-title .icon {
             margin-right: 15px;
             color: var(--accent-color);
-            font-size: 1.8rem;
+            font-size: 1.6rem;
+            width: 30px;
+            text-align: center;
         }
         p, ul {
             text-align: justify;
@@ -169,7 +183,7 @@
             font-size: 0.9rem;
         }
         .item-description ul {
-            list-style-type: '✓';
+            list-style-type: '';
             padding-left: 20px;
             margin-top: 10px;
         }
@@ -189,12 +203,17 @@
             font-weight: 600;
         }
         .cert-list {
-            list-style-type: '✓';
-            padding-left: 20px;
+            list-style-type: none;
+            padding-left: 0;
         }
         .cert-list li {
             margin-bottom: 8px;
-            padding-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .cert-list .icon {
+            margin-right: 12px;
+            color: var(--accent-color);
         }
 
         @media print {
@@ -212,25 +231,27 @@
 
     <div class="container">
         
-        <button id="lang-switcher">🇮🇩</button>
+        <button id="lang-switcher">
+            <img id="flag-icon" src="https://flagcdn.com/id.svg" alt="Switch Language">
+        </button>
 
         <header class="main-header">
             <h1>Yusuf Al-Rahman</h1>
             <h2 class="lang-id">Analis Data & Operasi</h2>
             <h2 class="lang-en hidden">Data & Operations Analyst</h2>
             <div class="contact-info">
-                <span><span class="icon">📞</span>+62 821-2272-9841</span>
-                <span><span class="icon">✉️</span><a href="mailto:sirjosephholmes@gmail.com">sirjosephholmes@gmail.com</a></span>
-                <span class="lang-id"><span class="icon">📍</span>Jakarta, Indonesia</span>
-                <span class="lang-en hidden"><span class="icon">📍</span>Jakarta, Indonesia</span>
-                <span><span class="icon">🔗</span><a href="https://linkedin.com/in/yusuf-al-rahman-8049a21b3/" target="_blank">LinkedIn</a></span>
-                <span><span class="icon">🌐</span><a href="https://github.com/sirjosev" target="_blank">GitHub</a></span>
+                <span><i class="icon fa-solid fa-phone"></i>+62 821-2272-9841</span>
+                <span><i class="icon fa-solid fa-envelope"></i><a href="mailto:sirjosephholmes@gmail.com">sirjosephholmes@gmail.com</a></span>
+                <span class="lang-id"><i class="icon fa-solid fa-location-dot"></i>Jakarta, Indonesia</span>
+                <span class="lang-en hidden"><i class="icon fa-solid fa-location-dot"></i>Jakarta, Indonesia</span>
+                <span><i class="icon fa-brands fa-linkedin"></i><a href="https://linkedin.com/in/yusuf-al-rahman-8049a21b3/" target="_blank">LinkedIn</a></span>
+                <span><i class="icon fa-brands fa-github"></i><a href="https://github.com/sirjosev" target="_blank">GitHub</a></span>
             </div>
         </header>
 
         <section class="section">
             <h3 class="section-title">
-                <span class="icon">👤</span>
+                <i class="icon fa-solid fa-user-tie"></i>
                 <span class="lang-id">Ringkasan Profesional</span>
                 <span class="lang-en hidden">Professional Summary</span>
             </h3>
@@ -244,7 +265,7 @@
 
         <section class="section">
             <h3 class="section-title">
-                <span class="icon">🛠️</span>
+                <i class="icon fa-solid fa-cogs"></i>
                 <span class="lang-id">Keahlian</span>
                 <span class="lang-en hidden">Skills</span>
             </h3>
@@ -285,7 +306,7 @@
         
         <section class="section">
             <h3 class="section-title">
-                <span class="icon">💼</span>
+                <i class="icon fa-solid fa-briefcase"></i>
                 <span class="lang-id">Pengalaman Kerja</span>
                 <span class="lang-en hidden">Work Experience</span>
             </h3>
@@ -293,8 +314,8 @@
                 <div class="item-header">
                     <h4 class="item-title">Chief Operating Officer</h4>
                     <p class="item-subtitle">PT. Suka Bumi Resources</p>
-                    <p class="item-date lang-id">Agustus 2025 – Saat Ini</p>
-                    <p class="item-date lang-en hidden">August 2025 – Present</p>
+                    <p class="item-date lang-id">Agustus 2025 � Saat Ini</p>
+                    <p class="item-date lang-en hidden">August 2025 � Present</p>
                 </div>
                 <div class="item-description">
                     <ul class="lang-id">
@@ -313,8 +334,8 @@
                 <div class="item-header">
                     <h4 class="item-title">Researcher Staff</h4>
                     <p class="item-subtitle">Universitas Trilogi</p>
-                    <p class="item-date lang-id">April 2024 – September 2024</p>
-                    <p class="item-date lang-en hidden">April 2024 – September 2024</p>
+                    <p class="item-date lang-id">April 2024 � September 2024</p>
+                    <p class="item-date lang-en hidden">April 2024 � September 2024</p>
                 </div>
                 <div class="item-description">
                     <ul class="lang-id">
@@ -333,7 +354,7 @@
 
         <section class="section">
             <h3 class="section-title">
-                <span class="icon">🤝</span>
+                <i class="icon fa-solid fa-hands-helping"></i>
                 <span class="lang-id">Pengalaman Volunteer & Kepemimpinan</span>
                 <span class="lang-en hidden">Volunteering & Leadership Experience</span>
             </h3>
@@ -359,20 +380,20 @@
 
         <section class="section">
             <h3 class="section-title">
-                <span class="icon">📜</span>
+                <i class="icon fa-solid fa-certificate"></i>
                 <span class="lang-id">Sertifikasi</span>
                 <span class="lang-en hidden">Certifications</span>
             </h3>
             <ul class="cert-list">
-                <li><b class="lang-id">Programmer (Skema Sertifikasi)</b><b class="lang-en hidden">Programmer (Certification Scheme)</b> - BNSP</li>
-                <li><b>Cisco Certified Network Associate (CCNA)</b> - Cisco</li>
-                <li><b>Android Engineering</b> - Binar Academy</li>
+                <li><i class="icon fa-solid fa-award"></i><div><b class="lang-id">Programmer (Skema Sertifikasi)</b><b class="lang-en hidden">Programmer (Certification Scheme)</b> - BNSP</div></li>
+                <li><i class="icon fa-solid fa-award"></i><div><b>Cisco Certified Network Associate (CCNA)</b> - Cisco</div></li>
+                <li><i class="icon fa-solid fa-award"></i><div><b>Android Engineering</b> - Binar Academy</div></li>
             </ul>
         </section>
 
         <section class="section">
             <h3 class="section-title">
-                <span class="icon">🎓</span>
+                <i class="icon fa-solid fa-graduation-cap"></i>
                 <span class="lang-id">Pendidikan</span>
                 <span class="lang-en hidden">Education</span>
             </h3>
@@ -380,7 +401,7 @@
                  <h4 class="item-title lang-id">Sertifikasi TI - Otomasi Sistem Berbasis Internet</h4>
                  <h4 class="item-title lang-en hidden">Certified in IT - Internet Based System Automation</h4>
                  <p class="item-subtitle">CEP-CCIT FTUI, Indonesia</p>
-                 <p class="item-date">2022 – 2024</p>
+                 <p class="item-date">2022 � 2024</p>
             </div>
         </section>
     </div>
@@ -388,19 +409,29 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const langSwitcher = document.getElementById('lang-switcher');
+            const flagIcon = document.getElementById('flag-icon');
             const elementsId = document.querySelectorAll('.lang-id');
             const elementsEn = document.querySelectorAll('.lang-en');
+            
+            const flagUrls = {
+                id: 'https://flagcdn.com/id.svg',
+                en: 'https://flagcdn.com/gb.svg',
+            };
+
             let currentLang = 'id';
+
             langSwitcher.addEventListener('click', function() {
                 if (currentLang === 'id') {
+                    // Switch to English
                     elementsId.forEach(el => el.classList.add('hidden'));
                     elementsEn.forEach(el => el.classList.remove('hidden'));
-                    langSwitcher.textContent = '🇬🇧';
+                    flagIcon.src = flagUrls.en; // NEW LOGIC: Show English flag when English is active
                     currentLang = 'en';
                 } else {
+                    // Switch to Indonesian
                     elementsEn.forEach(el => el.classList.add('hidden'));
                     elementsId.forEach(el => el.classList.remove('hidden'));
-                    langSwitcher.textContent = '🇮🇩';
+                    flagIcon.src = flagUrls.id; // NEW LOGIC: Show Indonesian flag when Indonesian is active
                     currentLang = 'id';
                 }
             });
