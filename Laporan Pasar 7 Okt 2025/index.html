@@ -24,17 +24,36 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #64748b;
         }
-        /* Simple transition for interactive elements */
-        .tab-content, .card-content {
-            transition: opacity 0.3s ease-in-out, max-height 0.5s ease-in-out;
+
+        /* --- CSS FIXES START --- */
+        /* Hiding content by default */
+        .tab-content {
+            display: none;
+            transition: opacity 0.5s ease;
+        }
+        /* Showing active tab content */
+        .tab-content.active {
+            display: block;
+        }
+
+        .card-content {
             max-height: 0;
             opacity: 0;
             overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.3s ease-in-out;
         }
-        .tab-content.active, .card-content.active {
-            max-height: 2000px; /* Adjust as needed */
+        .card-content.active {
+            max-height: 1000px; /* Large enough to fit content */
             opacity: 1;
         }
+        .arrow-icon {
+            transition: transform 0.3s ease-in-out;
+        }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+        /* --- CSS FIXES END --- */
+
     </style>
 </head>
 <body class="bg-slate-900 text-gray-200 antialiased">
@@ -85,7 +104,7 @@
                         <div class="interactive-card bg-slate-800 p-6 rounded-xl border border-red-500/50 cursor-pointer hover:bg-slate-700/50">
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl font-bold text-red-400">The Fed (AS)</h3>
-                                <div class="arrow-icon transition-transform duration-300">
+                                <div class="arrow-icon">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
                             </div>
@@ -98,7 +117,7 @@
                         <div class="interactive-card bg-slate-800 p-6 rounded-xl border border-green-500/50 cursor-pointer hover:bg-slate-700/50">
                              <div class="flex justify-between items-center">
                                 <h3 class="text-xl font-bold text-green-400">ECB (Eropa)</h3>
-                                <div class="arrow-icon transition-transform duration-300">
+                                <div class="arrow-icon">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
                             </div>
@@ -111,7 +130,7 @@
                         <div class="interactive-card bg-slate-800 p-6 rounded-xl border border-sky-500/50 cursor-pointer hover:bg-slate-700/50">
                              <div class="flex justify-between items-center">
                                 <h3 class="text-xl font-bold text-sky-400">PBoC (Tiongkok)</h3>
-                                <div class="arrow-icon transition-transform duration-300">
+                                <div class="arrow-icon">
                                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </div>
                             </div>
@@ -124,7 +143,7 @@
                 </div>
 
                 <!-- Stock Recommendations Content -->
-                <div id="recommendations" class="tab-content space-y-4">
+                <div id="recommendations" class="tab-content">
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <!-- ICBP -->
                         <div class="bg-slate-800 p-5 rounded-lg border border-slate-700">
@@ -288,4 +307,86 @@
                 <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 text-center">
                     <h3 class="text-xl font-bold text-white mb-3">Dapatkan Laporan Lengkap</h3>
                     <p class="text-slate-400 mb-5">Unduh analisis mendalam dalam format PDF untuk dipelajari lebih lanjut.</p>
-                    <!-- PENTING: Ganti '#' dengan link Google Drive 
+                    <!-- PENTING: Ganti '#' dengan link Google Drive Anda yang sebenarnya -->
+                    <a href="#" target="_blank" class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                        Unduh Paper
+                    </a>
+                </div>
+
+                <!-- Audio Player -->
+                <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700">
+                    <h3 class="text-xl font-bold text-white mb-3 text-center">Dengarkan Ringkasan Audio</h3>
+                     <p class="text-slate-400 mb-5 text-center text-sm">Putar ringkasan pasar dalam format audio dari YouTube.</p>
+                    <div class="aspect-w-16 aspect-h-9">
+                         <!-- PENTING: Ganti URL YouTube di bawah dengan video Anda -->
+                        <iframe class="rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-12 py-6 border-t border-slate-800">
+            <p class="text-sm text-slate-500">&copy; 2025 Analisis Pasar. Informasi ini disajikan untuk tujuan edukasi dan bukan merupakan nasihat keuangan.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const interactiveCards = document.querySelectorAll('.interactive-card');
+
+            // --- JAVASCRIPT FIX START ---
+
+            // Tab functionality
+            tabs.forEach(clickedTab => {
+                clickedTab.addEventListener('click', () => {
+                    // Remove active styles from all buttons
+                    tabs.forEach(tab => {
+                        tab.classList.remove('active', 'bg-sky-600', 'text-white');
+                        tab.classList.add('bg-slate-700', 'text-slate-300', 'hover:bg-slate-600');
+                    });
+
+                    // Add active styles to the clicked button
+                    clickedTab.classList.add('active', 'bg-sky-600', 'text-white');
+                    clickedTab.classList.remove('bg-slate-700', 'text-slate-300', 'hover:bg-slate-600');
+
+                    // Hide all tab contents
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Show the content corresponding to the clicked tab
+                    const targetContentId = clickedTab.dataset.tab;
+                    const targetContent = document.getElementById(targetContentId);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+
+            // Interactive card (dropdown) functionality
+            interactiveCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const content = card.querySelector('.card-content');
+                    const arrow = card.querySelector('.arrow-icon');
+                    
+                    // Toggle the 'active' class to show/hide content with animation
+                    content.classList.toggle('active');
+                    
+                    // Toggle the 'rotate-180' class for the arrow icon
+                    arrow.classList.toggle('rotate-180');
+                });
+            });
+
+            // --- JAVASCRIPT FIX END ---
+        });
+    </script>
+</body>
+</html>
+
+
