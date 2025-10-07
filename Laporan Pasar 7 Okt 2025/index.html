@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis Interaktif: Rangkuman Pasar Saham 7 Oktober 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+        /* Simple transition for interactive elements */
+        .tab-content, .card-content {
+            transition: opacity 0.3s ease-in-out, max-height 0.5s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .tab-content.active, .card-content.active {
+            max-height: 2000px; /* Adjust as needed */
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-gray-200 antialiased">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+
+        <!-- Header Section -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-5xl font-bold text-sky-400 mb-2">Laporan Intelijen Pasar Keuangan</h1>
+            <p class="text-lg text-slate-400">Analisis Mendalam per 7 Oktober 2025</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="space-y-8">
+
+            <!-- Executive Summary Card -->
+            <section class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700">
+                <h2 class="text-2xl font-bold text-white mb-4">Ringkasan Eksekutif: Narasi Pasar Hari Ini</h2>
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <div class="flex-shrink-0">
+                        <svg class="w-24 h-24 text-sky-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-3.976 5.393m-2.458-1.586l-1.493 2.021M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-slate-300 leading-relaxed">
+                            Pasar global saat ini didominasi oleh <strong class="text-sky-400">divergensi kebijakan moneter</strong> yang tajam. The Fed AS tetap <strong class="text-red-400">hawkish</strong> karena inflasi, sementara ECB Eropa <strong class="text-green-400">dovish</strong> di tengah ancaman resesi, dan PBoC Tiongkok aktif melonggarkan kebijakan. Dinamika ini memperkuat Dolar AS, menekan Rupiah, dan mendorong sentimen <strong class="text-amber-400">risk-off</strong>, di mana investor memprioritaskan keamanan aset daripada pertumbuhan spekulatif.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Tabs Navigation -->
+            <div class="bg-slate-800 rounded-lg p-2 flex flex-wrap justify-center gap-2 md:gap-4 border border-slate-700">
+                <button class="tab-btn active w-full sm:w-auto text-sm md:text-base font-semibold py-2 px-4 rounded-md bg-sky-600 text-white" data-tab="central-banks">Sikap Bank Sentral</button>
+                <button class="tab-btn w-full sm:w-auto text-sm md:text-base font-semibold py-2 px-4 rounded-md bg-slate-700 text-slate-300 hover:bg-slate-600" data-tab="recommendations">Rekomendasi Saham</button>
+                <button class="tab-btn w-full sm:w-auto text-sm md:text-base font-semibold py-2 px-4 rounded-md bg-slate-700 text-slate-300 hover:bg-slate-600" data-tab="sectors">Kinerja Sektor</button>
+                <button class="tab-btn w-full sm:w-auto text-sm md:text-base font-semibold py-2 px-4 rounded-md bg-slate-700 text-slate-300 hover:bg-slate-600" data-tab="economy">Dasbor Ekonomi</button>
+            </div>
+
+            <!-- Tab Content Area -->
+            <div id="tab-content-container">
+                <!-- Central Banks Content -->
+                <div id="central-banks" class="tab-content active space-y-6">
+                    <p class="text-center text-slate-400">Klik pada setiap kartu untuk melihat analisis mendalam.</p>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Federal Reserve -->
+                        <div class="interactive-card bg-slate-800 p-6 rounded-xl border border-red-500/50 cursor-pointer hover:bg-slate-700/50">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-xl font-bold text-red-400">The Fed (AS)</h3>
+                                <div class="arrow-icon transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                            </div>
+                            <p class="text-lg font-semibold text-slate-300 mt-1">Sikap: Hawkish</p>
+                            <div class="card-content mt-4 text-slate-400">
+                                <p>Didorong oleh inflasi inti yang persisten, The Fed mempertahankan narasi suku bunga "higher for longer". Pasar memperkirakan setidaknya satu kenaikan suku bunga lagi tahun ini untuk menekan inflasi kembali ke target 2%.</p>
+                            </div>
+                        </div>
+                        <!-- ECB -->
+                        <div class="interactive-card bg-slate-800 p-6 rounded-xl border border-green-500/50 cursor-pointer hover:bg-slate-700/50">
+                             <div class="flex justify-between items-center">
+                                <h3 class="text-xl font-bold text-green-400">ECB (Eropa)</h3>
+                                <div class="arrow-icon transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                            </div>
+                            <p class="text-lg font-semibold text-slate-300 mt-1">Sikap: Dovish</p>
+                            <div class="card-content mt-4 text-slate-400">
+                                <p>Menghadapi potensi resesi dan kontraksi manufaktur, ECB memprioritaskan stabilitas ekonomi. Sikap ini memperlebar perbedaan suku bunga dengan AS, menekan nilai tukar Euro.</p>
+                            </div>
+                        </div>
+                        <!-- PBoC -->
+                        <div class="interactive-card bg-slate-800 p-6 rounded-xl border border-sky-500/50 cursor-pointer hover:bg-slate-700/50">
+                             <div class="flex justify-between items-center">
+                                <h3 class="text-xl font-bold text-sky-400">PBoC (Tiongkok)</h3>
+                                <div class="arrow-icon transition-transform duration-300">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                            </div>
+                            <p class="text-lg font-semibold text-slate-300 mt-1">Sikap: Melonggarkan</p>
+                            <div class="card-content mt-4 text-slate-400">
+                                <p>PBoC secara agresif menyuntikkan likuiditas untuk menopang sektor properti yang krisis. Fokus utamanya adalah mencegah keruntuhan sistemik domestik, bahkan dengan risiko pelemahan Yuan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stock Recommendations Content -->
+                <div id="recommendations" class="tab-content space-y-4">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <!-- ICBP -->
+                        <div class="bg-slate-800 p-5 rounded-lg border border-slate-700">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">ICBP</h4>
+                                    <p class="text-sm text-slate-400">Indofood CBP</p>
+                                </div>
+                                <span class="text-sm font-bold py-1 px-3 rounded-full bg-green-500 text-white">BELI</span>
+                            </div>
+                            <p class="mt-3 text-sm text-slate-300">Benteng defensif dengan kekuatan harga terbukti, ideal sebagai tempat berlindung di tengah inflasi.</p>
+                            <p class="mt-2 text-lg font-semibold text-sky-400">Target Harga: IDR 13.500</p>
+                        </div>
+                        <!-- BBCA -->
+                        <div class="bg-slate-800 p-5 rounded-lg border border-slate-700">
+                             <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">BBCA</h4>
+                                    <p class="text-sm text-slate-400">Bank Central Asia</p>
+                                </div>
+                                <span class="text-sm font-bold py-1 px-3 rounded-full bg-amber-500 text-slate-900">TAHAN</span>
+                            </div>
+                            <p class="mt-3 text-sm text-slate-300">Jangkar defensif berkualitas tinggi, namun valuasi saat ini sudah penuh (fully valued).</p>
+                             <p class="mt-2 text-lg font-semibold text-sky-400">Target Harga: IDR 10.200</p>
+                        </div>
+                        <!-- TLKM -->
+                        <div class="bg-slate-800 p-5 rounded-lg border border-slate-700">
+                             <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">TLKM</h4>
+                                    <p class="text-sm text-slate-400">Telkom Indonesia</p>
+                                </div>
+                                <span class="text-sm font-bold py-1 px-3 rounded-full bg-amber-500 text-slate-900">TAHAN</span>
+                            </div>
+                            <p class="mt-3 text-sm text-slate-300">Utilitas dividen yang stabil, tetapi tidak memiliki katalis pertumbuhan yang signifikan.</p>
+                            <p class="mt-2 text-lg font-semibold text-sky-400">Target Harga: IDR 4.100</p>
+                        </div>
+                        <!-- ADRO -->
+                        <div class="bg-slate-800 p-5 rounded-lg border border-slate-700">
+                             <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">ADRO</h4>
+                                    <p class="text-sm text-slate-400">Adaro Energy</p>
+                                </div>
+                                <span class="text-sm font-bold py-1 px-3 rounded-full bg-red-500 text-white">JUAL</span>
+                            </div>
+                            <p class="mt-3 text-sm text-slate-300">Potensi jebakan nilai (value trap) di tengah penurunan harga batu bara dan tantangan ESG.</p>
+                            <p class="mt-2 text-lg font-semibold text-sky-400">Target Harga: IDR 2.500</p>
+                        </div>
+                        <!-- GOTO -->
+                        <div class="bg-slate-800 p-5 rounded-lg border border-slate-700">
+                             <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white">GOTO</h4>
+                                    <p class="text-sm text-slate-400">GoTo Gojek Tokopedia</p>
+                                </div>
+                                <span class="text-sm font-bold py-1 px-3 rounded-full bg-red-500 text-white">JUAL</span>
+                            </div>
+                            <p class="mt-3 text-sm text-slate-300">Lingkungan makro tidak mendukung bagi perusahaan yang membakar kas (cash-burning).</p>
+                             <p class="mt-2 text-lg font-semibold text-sky-400">Target Harga: IDR 50</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sector Performance Content -->
+                <div id="sectors" class="tab-content">
+                    <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                        <h3 class="text-xl font-bold mb-4">Analisis Rotasi Sektor</h3>
+                        <div class="space-y-4">
+                            <!-- Outperforming -->
+                            <div>
+                                <h4 class="font-semibold text-green-400 mb-2">Sektor Unggulan (Outperform)</h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-center gap-4">
+                                        <span class="font-bold text-sm w-40">Keuangan</span>
+                                        <div class="w-full bg-slate-700 rounded-full h-4">
+                                            <div class="bg-green-500 h-4 rounded-full" style="width: 85%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <span class="font-bold text-sm w-40">Barang Konsumen Non-Primer</span>
+                                        <div class="w-full bg-slate-700 rounded-full h-4">
+                                            <div class="bg-green-500 h-4 rounded-full" style="width: 70%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Underperforming -->
+                            <div>
+                                <h4 class="font-semibold text-red-400 mb-2">Sektor Tertinggal (Underperform)</h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-center gap-4">
+                                        <span class="font-bold text-sm w-40">Bahan Baku</span>
+                                        <div class="w-full bg-slate-700 rounded-full h-4">
+                                            <div class="bg-red-500 h-4 rounded-full" style="width: 40%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <span class="font-bold text-sm w-40">Teknologi</span>
+                                        <div class="w-full bg-slate-700 rounded-full h-4">
+                                            <div class="bg-red-500 h-4 rounded-full" style="width: 25%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Economy Dashboard Content -->
+                <div id="economy" class="tab-content">
+                    <div class="bg-slate-800 p-4 md:p-6 rounded-lg border border-slate-700 overflow-x-auto">
+                        <table class="w-full text-left text-sm md:text-base">
+                            <thead>
+                                <tr class="border-b border-slate-600">
+                                    <th class="py-3 px-2 md:px-4">Wilayah</th>
+                                    <th class="py-3 px-2 md:px-4">PDB (QoQ)</th>
+                                    <th class="py-3 px-2 md:px-4">IHK Inti (YoY)</th>
+                                    <th class="py-3 px-2 md:px-4">Suku Bunga</th>
+                                    <th class="py-3 px-2 md:px-4">Tren</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-700">
+                                <tr>
+                                    <td class="py-3 px-2 md:px-4 font-semibold text-white">Amerika Serikat</td>
+                                    <td class="py-3 px-2 md:px-4">0.6%</td>
+                                    <td class="py-3 px-2 md:px-4">3.8%</td>
+                                    <td class="py-3 px-2 md:px-4">5.75%</td>
+                                    <td class="py-3 px-2 md:px-4"><span class="font-semibold text-red-400">Hawkish</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-2 md:px-4 font-semibold text-white">Zona Euro</td>
+                                    <td class="py-3 px-2 md:px-4">-0.1%</td>
+                                    <td class="py-3 px-2 md:px-4">3.5%</td>
+                                    <td class="py-3 px-2 md:px-4">3.50%</td>
+                                    <td class="py-3 px-2 md:px-4"><span class="font-semibold text-green-400">Dovish</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-2 md:px-4 font-semibold text-white">Tiongkok</td>
+                                    <td class="py-3 px-2 md:px-4">0.8%</td>
+                                    <td class="py-3 px-2 md:px-4">0.7%</td>
+                                    <td class="py-3 px-2 md:px-4">2.50%</td>
+                                    <td class="py-3 px-2 md:px-4"><span class="font-semibold text-sky-400">Melonggarkan</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-2 md:px-4 font-semibold text-white">Indonesia</td>
+                                    <td class="py-3 px-2 md:px-4">1.1%</td>
+                                    <td class="py-3 px-2 md:px-4">3.1%</td>
+                                    <td class="py-3 px-2 md:px-4">6.25%</td>
+                                    <td class="py-3 px-2 md:px-4"><span class="font-semibold text-red-400">Hawkish</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action & Audio Player -->
+            <section class="mt-12 grid md:grid-cols-2 gap-8">
+                <!-- Download Button -->
+                <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 text-center">
+                    <h3 class="text-xl font-bold text-white mb-3">Dapatkan Laporan Lengkap</h3>
+                    <p class="text-slate-400 mb-5">Unduh analisis mendalam dalam format PDF untuk dipelajari lebih lanjut.</p>
+                    <!-- PENTING: Ganti '#' dengan link Google Drive 
