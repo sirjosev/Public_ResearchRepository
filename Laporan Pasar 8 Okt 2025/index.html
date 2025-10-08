@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis Riset Pasar - Oktober 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a202c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096;
+        }
+        /* Animation for elements fading in on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Custom styles for language toggles */
+        .lang-toggle {
+            width: 48px;
+            height: 32px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .lang-toggle.active {
+            border-color: #4ade80; /* Green-400 */
+            box-shadow: 0 0 15px rgba(74, 222, 128, 0.5);
+            transform: scale(1.1);
+        }
+        .lang-toggle#id-flag { background-image: url('https://flagcdn.com/id.svg'); }
+        .lang-toggle#en-flag { background-image: url('https://flagcdn.com/gb.svg'); }
+        .lang-toggle#zh-flag { background-image: url('https://flagcdn.com/cn.svg'); }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <!-- Header Section -->
+        <header class="mb-10 text-center fade-in-section">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2" data-key="title">Riset Pasar & Rekomendasi Saham</h1>
+            <p class="text-lg text-gray-400" data-key="subtitle">Analisis Mendalam Pasar Indonesia - Oktober 2025</p>
+            <div class="flex justify-center items-center gap-4 mt-6">
+                <!-- Language Toggles -->
+                <div id="id-flag" class="lang-toggle active" data-lang="id" title="Bahasa Indonesia"></div>
+                <div id="en-flag" class="lang-toggle" data-lang="en" title="English"></div>
+                <div id="zh-flag" class="lang-toggle" data-lang="zh" title="中文"></div>
+            </div>
+        </header>
+
+        <!-- Main Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Executive Summary & Outlook Card -->
+            <div class="md:col-span-2 lg:col-span-3 bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-700 fade-in-section">
+                <h2 class="text-2xl font-bold text-green-400 mb-4" data-key="summaryTitle">Ringkasan Eksekutif & Outlook</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <h3 class="font-semibold text-white" data-key="summaryNarrativeTitle">Narasi Pasar Dominan</h3>
+                        <p class="text-gray-300 mt-1" data-key="summaryNarrative">Katalis domestik yang kuat, terutama kebijakan energi hijau dan restrukturisasi BUMN, mengimbangi sentimen global yang lesu. Fokus investor bersifat sangat lokal.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-white" data-key="summaryThesisTitle">Tesis Inti</h3>
+                        <p class="text-gray-300 mt-1" data-key="summaryThesis">Outlook tetap <span class="font-bold text-green-400">BULLISH</span>, didorong oleh revolusi 'Waste-to-Energy' (WtE), keberhasilan rekapitalisasi GIAA, dan fundamental makroekonomi yang tangguh.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-white" data-key="summaryProjectionTitle">Proyeksi Utama</h3>
+                        <p class="text-gray-300 mt-1" data-key="summaryProjection">IHSG diproyeksikan akan menguji level <span class="text-2xl font-bold text-yellow-400">8.300</span> dalam jangka pendek. Sektor energi terbarukan menjadi rekomendasi <span class="font-bold text-green-400">overweight</span>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Macroeconomic Deep Dive -->
+            <div class="lg:col-span-2 bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-700 fade-in-section">
+                <h2 class="text-2xl font-bold text-blue-400 mb-4" data-key="macroTitle">Tinjauan Makroekonomi</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-blue-500/20 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+                        <div>
+                            <p class="font-semibold" data-key="macroGDPTitle">Pertumbuhan PDB 2025 (Proyeksi Bank Dunia)</p>
+                            <p class="text-2xl font-bold text-white">4.8%</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-blue-500/20 p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-400"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"></path></svg></div>
+                        <div>
+                            <p class="font-semibold" data-key="macroForexTitle">Cadangan Devisa (Sep 2025)</p>
+                            <p class="text-xl font-bold text-white">US$148.7 Miliar <span class="text-sm text-red-400 font-medium">(Turun US$2 M)</span></p>
+                             <p class="text-xs text-gray-400" data-key="macroForexDesc">Pasar bereaksi positif, melihatnya sebagai "biaya stabilitas" yang dapat diterima.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audio Player Card -->
+            <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-700 flex flex-col justify-between fade-in-section">
+                <h2 class="text-2xl font-bold text-purple-400 mb-4" data-key="audioTitle">Audio Ringkasan Pasar</h2>
+                <p class="text-gray-300 mb-4 text-sm" data-key="audioDesc">Dengarkan analisis pasar terkini sambil Anda menjelajahi data.</p>
+                <div class="aspect-w-16 aspect-h-9">
+                    <!-- Placeholder YouTube video link. Replace 'VIDEO_ID' with a relevant one -->
+                    <iframe class="rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=bJ_e-h_k-L_R-c_J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <!-- Policy Catalyst: Waste-to-Energy -->
+            <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-700 fade-in-section">
+                <h3 class="text-xl font-bold text-yellow-400 mb-3" data-key="wteTitle">Katalis Kebijakan: Revolusi Waste-to-Energy (WtE)</h3>
+                <p class="text-gray-300 mb-4" data-key="wteDesc">Perpres baru akan meningkatkan kelayakan komersial proyek WtE secara dramatis.</p>
+                <div class="bg-yellow-500/10 p-4 rounded-lg">
+                    <p class="font-semibold" data-key="wteTariffTitle">Tarif Beli Listrik WtE oleh PLN</p>
+                    <p class="text-3xl font-extrabold text-yellow-300">22 sen US$/kWh</p>
+                    <p class="text-green-400 font-semibold" data-key="wteTariffHike">(+69% dari tarif sebelumnya)</p>
+                </div>
+                 <div class="mt-4">
+                    <p class="font-semibold" data-key="wteStocks">Saham Penerima Manfaat Utama:</p>
+                    <div class="flex gap-2 mt-2">
+                        <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-semibold">TOBA</span>
+                        <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-semibold">OASA</span>
+                        <span class="bg-gray-700 text-white px-3 py-1 rounded-full text-sm font-semibold">MHKI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Policy Catalyst: Free Float -->
+            <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-700 fade-in-section">
+                <h3 class="text-xl font-bold text-yellow-400 mb-3" data-key="freeFloatTitle">Katalis Kebijakan: Peningkatan Free Float</h3>
+                <p class="text-gray-300 mb-4" data-key="freeFloatDesc">OJK mengkaji peningkatan syarat minimum saham publik untuk meningkatkan likuiditas pasar.</p>
+                <div class="bg-yellow-500/10 p-4 rounded-lg">
+                    <p class="font-semibold" data-key="freeFloatTargetTitle">Usulan Target dari DPR</p>
+                    <p class="text-3xl font-extrabold text-yellow-300">30% - 40%</p>
+                    <p class="text-gray-300 font-semibold" data-key="freeFloatCurrent">(dari 7.5% saat ini)</p>
+                </div>
+                <div class="mt-4">
+                     <p class="text-xs text-gray-400" data-key="freeFloatImpact">Dampak: "Katalis paksa" untuk aksi korporasi (penawaran sekunder, M&A) pada saham dengan free float rendah.</p>
+                </div>
+            </div>
+
+            <!-- Investment Theme: GIAA -->
+            <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-700 fade-in-section">
+                <h3 class="text-xl font-bold text-teal-400 mb-3" data-key="giaaTitle">Tema Investasi: Turnaround BUMN (GIAA)</h3>
+                <p class="text-gray-300 mb-4" data-key="giaaDesc">Rekapitalisasi masif PT Garuda Indonesia (GIAA) oleh Danantara senilai <span class="font-bold text-white">US$1,85 Miliar</span> memulihkan kesehatan finansial.</p>
+                 <div class="flex items-center gap-4 bg-teal-500/10 p-4 rounded-lg">
+                    <div>
+                        <p class="font-semibold" data-key="giaaEquityTitle">Total Ekuitas (Proforma)</p>
+                        <p class="text-2xl font-bold text-teal-300">+US$350 Juta</p>
+                        <p class="text-xs text-red-400" data-key="giaaEquityBefore">(Sebelumnya: -US$1,5 Miliar)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commodity Outlook -->
+            <div class="md:col-span-2 lg:col-span-3 bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-700 fade-in-section">
+                <h2 class="text-2xl font-bold text-orange-400 mb-4" data-key="commodityTitle">Outlook Komoditas Q4 2025</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-center">
+                    <div class="bg-gray-700/50 p-4 rounded-lg">
+                        <p class="font-bold">Emas</p>
+                        <p class="text-2xl mt-1">🥇</p>
+                        <p class="font-semibold text-green-400 mt-2" data-key="commodityBullish">Bullish</p>
+                    </div>
+                    <div class="bg-gray-700/50 p-4 rounded-lg">
+                        <p class="font-bold">Minyak Mentah</p>
+                        <p class="text-2xl mt-1">🛢️</p>
+                        <p class="font-semibold text-red-400 mt-2" data-key="commodityBearish">Bearish</p>
+                    </div>
+                    <div class="bg-gray-700/50 p-4 rounded-lg">
+                        <p class="font-bold">Batu Bara</p>
+                        <p class="text-2xl mt-1">⚫</p>
+                        <p class="font-semibold text-yellow-400 mt-2" data-key="commodityStable">Stabil</p>
+                    </div>
+                    <div class="bg-gray-700/50 p-4 rounded-lg">
+                        <p class="font-bold">Nikel</p>
+                        <p class="text-2xl mt-1">🔩</p>
+                        <p class="font-semibold text-red-400 mt-2" data-key="commodityBearish">Bearish</p>
+                    </div>
+                     <div class="bg-gray-700/50 p-4 rounded-lg col-span-2 md:col-span-1 lg:col-span-1">
+                        <p class="font-bold">CPO</p>
+                        <p class="text-2xl mt-1">🌴</p>
+                        <p class="font-semibold text-yellow-400 mt-2" data-key="commodityStable">Stabil</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Strategic Allocation -->
+             <div class="md:col-span-2 lg:col-span-3 bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-gray-700 fade-in-section">
+                <h2 class="text-2xl font-bold text-indigo-400 mb-4" data-key="allocationTitle">Alokasi Portofolio Strategis</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-green-500/10 p-4 rounded-lg border-l-4 border-green-400">
+                        <h3 class="font-bold text-green-400 text-lg" data-key="allocationOverweight">Overweight</h3>
+                        <ul class="list-disc list-inside mt-2 text-gray-300">
+                            <li data-key="allocationOverweight1">Energi Terbarukan/WtE</li>
+                            <li data-key="allocationOverweight2">Keuangan</li>
+                            <li data-key="allocationOverweight3">Infrastruktur & Konstruksi</li>
+                        </ul>
+                    </div>
+                    <div class="bg-yellow-500/10 p-4 rounded-lg border-l-4 border-yellow-400">
+                        <h3 class="font-bold text-yellow-400 text-lg" data-key="allocationMarketweight">Market Weight</h3>
+                        <ul class="list-disc list-inside mt-2 text-gray-300">
+                            <li data-key="allocationMarketweight1">Barang Konsumsi</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-500/10 p-4 rounded-lg border-l-4 border-red-400">
+                        <h3 class="font-bold text-red-400 text-lg" data-key="allocationUnderweight">Underweight</h3>
+                         <ul class="list-disc list-inside mt-2 text-gray-300">
+                            <li data-key="allocationUnderweight1">Eksportir Komoditas (Nikel, Batu Bara)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action / Download Button -->
+        <footer class="text-center mt-12 fade-in-section">
+            <h3 class="text-xl font-semibold mb-3" data-key="downloadTitle">Dapatkan Laporan Lengkapnya</h3>
+            <p class="text-gray-400 mb-6 max-w-2xl mx-auto" data-key="downloadDesc">Akses analisis mendalam, data lengkap, dan detail metodologi dengan mengunduh laporan riset pasar lengkap kami.</p>
+            <a href="https://docs.google.com/document/d/1a2b3c4d5e6f7g8h9i0j/edit?usp=sharing" target="_blank" rel="noopener noreferrer" 
+               class="inline-block bg-green-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-green-700 transition-transform transform hover:scale-105 shadow-lg">
+                <span data-key="downloadButton">Unduh Laporan (.pdf)</span>
+            </a>
+        </footer>
+    </div>
+
+<script>
+    // 1. DATA STORE FOR LANGUAGES
+    const translations = {
+        id: {
+            title: "Riset Pasar & Rekomendasi Saham",
+            subtitle: "Analisis Mendalam Pasar Indonesia - Oktober 2025",
+            summaryTitle: "Ringkasan Eksekutif & Outlook",
+            summaryNarrativeTitle: "Narasi Pasar Dominan",
+            summaryNarrative: "Katalis domestik yang kuat, terutama kebijakan energi hijau dan restrukturisasi BUMN, mengimbangi sentimen global yang lesu. Fokus investor bersifat sangat lokal.",
+            summaryThesisTitle: "Tesis Inti",
+            summaryThesis: "Outlook tetap <span class='font-bold text-green-400'>BULLISH</span>, didorong oleh revolusi 'Waste-to-Energy' (WtE), keberhasilan rekapitalisasi GIAA, dan fundamental makroekonomi yang tangguh.",
+            summaryProjectionTitle: "Proyeksi Utama",
+            summaryProjection: "IHSG diproyeksikan akan menguji level <span class='text-2xl font-bold text-yellow-400'>8.300</span> dalam jangka pendek. Sektor energi terbarukan menjadi rekomendasi <span class='font-bold text-green-400'>overweight</span>.",
+            macroTitle: "Tinjauan Makroekonomi",
+            macroGDPTitle: "Pertumbuhan PDB 2025 (Proyeksi Bank Dunia)",
+            macroForexTitle: "Cadangan Devisa (Sep 2025)",
+            macroForexDesc: "Pasar bereaksi positif, melihatnya sebagai 'biaya stabilitas' yang dapat diterima.",
+            audioTitle: "Audio Ringkasan Pasar",
+            audioDesc: "Dengarkan analisis pasar terkini sambil Anda menjelajahi data.",
+            wteTitle: "Katalis Kebijakan: Revolusi Waste-to-Energy (WtE)",
+            wteDesc: "Perpres baru akan meningkatkan kelayakan komersial proyek WtE secara dramatis.",
+            wteTariffTitle: "Tarif Beli Listrik WtE oleh PLN",
+            wteTariffHike: "(+69% dari tarif sebelumnya)",
+            wteStocks: "Saham Penerima Manfaat Utama:",
+            freeFloatTitle: "Katalis Kebijakan: Peningkatan Free Float",
+            freeFloatDesc: "OJK mengkaji peningkatan syarat minimum saham publik untuk meningkatkan likuiditas pasar.",
+            freeFloatTargetTitle: "Usulan Target dari DPR",
+            freeFloatCurrent: "(dari 7.5% saat ini)",
+            freeFloatImpact: "Dampak: 'Katalis paksa' untuk aksi korporasi (penawaran sekunder, M&A) pada saham dengan free float rendah.",
+            giaaTitle: "Tema Investasi: Turnaround BUMN (GIAA)",
+            giaaDesc: "Rekapitalisasi masif PT Garuda Indonesia (GIAA) oleh Danantara senilai <span class='font-bold text-white'>US$1,85 Miliar</span> memulihkan kesehatan finansial.",
+            giaaEquityTitle: "Total Ekuitas (Proforma)",
+            giaaEquityBefore: "(Sebelumnya: -US$1,5 Miliar)",
+            commodityTitle: "Outlook Komoditas Q4 2025",
+            commodityBullish: "Bullish",
+            commodityBearish: "Bearish",
+            commodityStable: "Stabil",
+            allocationTitle: "Alokasi Portofolio Strategis",
+            allocationOverweight: "Overweight",
+            allocationOverweight1: "Energi Terbarukan/WtE",
+            allocationOverweight2: "Keuangan",
+            allocationOverweight3: "Infrastruktur & Konstruksi",
+            allocationMarketweight: "Market Weight",
+            allocationMarketweight1: "Barang Konsumsi",
+            allocationUnderweight: "Underweight",
+            allocationUnderweight1: "Eksportir Komoditas (Nikel, Batu Bara)",
+            downloadTitle: "Dapatkan Laporan Lengkapnya",
+            downloadDesc: "Akses analisis mendalam, data lengkap, dan detail metodologi dengan mengunduh laporan riset pasar lengkap kami.",
+            downloadButton: "Unduh Laporan (.pdf)",
+        },
+        en: {
+            title: "Market Research & Stock Recommendations",
+            subtitle: "In-depth Analysis of the Indonesian Market - October 2025",
+            summaryTitle: "Executive Summary & Outlook",
+            summaryNarrativeTitle: "Dominant Market Narrative",
+            summaryNarrative: "Strong domestic catalysts, especially green energy policies and SOE restructuring, are offsetting sluggish global sentiment. Investor focus is highly local.",
+            summaryThesisTitle: "Core Thesis",
+            summaryThesis: "The outlook remains <span class='font-bold text-green-400'>BULLISH</span>, driven by the 'Waste-to-Energy' (WtE) revolution, GIAA's successful recapitalization, and resilient macroeconomic fundamentals.",
+            summaryProjectionTitle: "Key Projection",
+            summaryProjection: "The JCI is projected to test the <span class='text-2xl font-bold text-yellow-400'>8,300</span> level in the short term. The renewable energy sector is a key <span class='font-bold text-green-400'>overweight</span> recommendation.",
+            macroTitle: "Macroeconomic Overview",
+            macroGDPTitle: "2025 GDP Growth (World Bank Projection)",
+            macroForexTitle: "Forex Reserves (Sep 2025)",
+            macroForexDesc: "The market reacted positively, viewing it as an acceptable 'cost of stability'.",
+            audioTitle: "Market Summary Audio",
+            audioDesc: "Listen to the latest market analysis as you explore the data.",
+            wteTitle: "Policy Catalyst: Waste-to-Energy (WtE) Revolution",
+            wteDesc: "A new presidential regulation will dramatically improve the commercial viability of WtE projects.",
+            wteTariffTitle: "PLN's WtE Electricity Purchase Tariff",
+            wteTariffHike: "(+69% from previous tariff)",
+            wteStocks: "Key Beneficiary Stocks:",
+            freeFloatTitle: "Policy Catalyst: Increased Free Float",
+            freeFloatDesc: "OJK is reviewing an increase in the minimum public share ownership to boost market liquidity.",
+            freeFloatTargetTitle: "Proposed Target by Parliament",
+            freeFloatCurrent: "(from 7.5% currently)",
+            freeFloatImpact: "Impact: A 'forced catalyst' for corporate actions (secondary offerings, M&A) in low free-float stocks.",
+            giaaTitle: "Investment Theme: SOE Turnaround (GIAA)",
+            giaaDesc: "A massive recapitalization of PT Garuda Indonesia (GIAA) by Danantara worth <span class='font-bold text-white'>US$1.85 Billion</span> restores financial health.",
+            giaaEquityTitle: "Total Equity (Proforma)",
+            giaaEquityBefore: "(Previously: -US$1.5 Billion)",
+            commodityTitle: "Q4 2025 Commodity Outlook",
+            commodityBullish: "Bullish",
+            commodityBearish: "Bearish",
+            commodityStable: "Stable",
+            allocationTitle: "Strategic Portfolio Allocation",
+            allocationOverweight: "Overweight",
+            allocationOverweight1: "Renewable Energy/WtE",
+            allocationOverweight2: "Financials",
+            allocationOverweight3: "Infrastructure & Construction",
+            allocationMarketweight: "Market Weight",
+            allocationMarketweight1: "Consumer Goods",
+            allocationUnderweight: "Underweight",
+            allocationUnderweight1: "Commodity Exporters (Nickel, Coal)",
+            downloadTitle: "Get The Full Report",
+            downloadDesc: "Access in-depth analysis, complete data, and methodology details by downloading our full market research report.",
+            downloadButton: "Download Report (.pdf)",
+        },
+        zh: {
+            title: "市场研究与股票推荐",
+            subtitle: "印度尼西亚市场深度分析 - 2025年10月",
+            summaryTitle: "执行摘要与展望",
+            summaryNarrativeTitle: "主导市场叙事",
+            summaryNarrative: "强大的国内催化剂，特别是绿色能源政策和国企重组，正在抵消疲软的全球情绪。投资者的焦点高度本地化。",
+            summaryThesisTitle: "核心论点",
+            summaryThesis: "前景保持<span class='font-bold text-green-400'>看涨</span>，受“废物转化能源”（WtE）革命、GIAA成功资本重组和有弹性的宏观经济基本面驱动。",
+            summaryProjectionTitle: "主要预测",
+            summaryProjection: "JCI指数预计短期内将测试<span class='text-2xl font-bold text-yellow-400'>8,300</span>水平。可再生能源行业是关键的<span class='font-bold text-green-400'>增持</span>建议。",
+            macroTitle: "宏观经济概览",
+            macroGDPTitle: "2025年GDP增长（世界银行预测）",
+            macroForexTitle: "外汇储备（2025年9月）",
+            macroForexDesc: "市场反应积极，认为这是可接受的“稳定成本”。",
+            audioTitle: "市场摘要音频",
+            audioDesc: "在浏览数据的同时，收听最新的市场分析。",
+            wteTitle: "政策催化剂：废物转化能源（WtE）革命",
+            wteDesc: "新的总统条例将极大地提高WtE项目的商业可行性。",
+            wteTariffTitle: "PLN的WtE电力购买电价",
+            wteTariffHike: "（比之前电价+69%）",
+            wteStocks: "主要受益股：",
+            freeFloatTitle: "政策催化剂：增加自由流通股",
+            freeFloatDesc: "OJK正在审查提高最低公众持股比例以增加市场流动性。",
+            freeFloatTargetTitle: "议会提议的目标",
+            freeFloatCurrent: "（目前为7.5%）",
+            freeFloatImpact: "影响：对低自由流通股的“强制催化剂”，促进公司行动（二次发行，并购）。",
+            giaaTitle: "投资主题：国企转型（GIAA）",
+            giaaDesc: "Danantara对印尼鹰航（GIAA）进行的大规模资本重组，价值<span class='font-bold text-white'>18.5亿美元</span>，恢复了其财务健康。",
+            giaaEquityTitle: "总股本（预计）",
+            giaaEquityBefore: "（之前：-15亿美元）",
+            commodityTitle: "2025年第四季度商品展望",
+            commodityBullish: "看涨",
+            commodityBearish: "看跌",
+            commodityStable: "稳定",
+            allocationTitle: "战略投资组合配置",
+            allocationOverweight: "增持",
+            allocationOverweight1: "可再生能源/WtE",
+            allocationOverweight2: "金融",
+            allocationOverweight3: "基础设施与建筑",
+            allocationMarketweight: "市场权重",
+            allocationMarketweight1: "消费品",
+            allocationUnderweight: "减持",
+            allocationUnderweight1: "商品出口商（镍，煤）",
+            downloadTitle: "获取完整报告",
+            downloadDesc: "通过下载我们的完整市场研究报告，获取深入分析、完整数据和方法论详情。",
+            downloadButton: "下载报告（.pdf）",
+        }
+    };
+
+    // 2. LANGUAGE SWITCHING LOGIC
+    const languageToggles = document.querySelectorAll('.lang-toggle');
+    const translatableElements = document.querySelectorAll('[data-key]');
+    let currentLang = 'id';
+
+    function setLanguage(lang) {
+        if (!translations[lang]) return;
+        currentLang = lang;
+        
+        // Update text content
+        translatableElements.forEach(el => {
+            const key = el.getAttribute('data-key');
+            if (translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+        
+        // Update active flag style
+        languageToggles.forEach(toggle => {
+            if (toggle.getAttribute('data-lang') === lang) {
+                toggle.classList.add('active');
+            } else {
+                toggle.classList.remove('active');
+            }
+        });
+
+        // Set html lang attribute
+        document.documentElement.lang = lang;
+    }
+
+    languageToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const lang = toggle.getAttribute('data-lang');
+            setLanguage(lang);
+        });
+    });
+    
+    // 3. SCROLL-BASED FADE-IN ANIMATION LOGIC
+    const sections = document.querySelectorAll('.fade-in-section');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            }
+        });
+    }, {
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    // Initialize with default language on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        setLanguage('id');
+    });
+
+</script>
+
+</body>
+</html>
+
