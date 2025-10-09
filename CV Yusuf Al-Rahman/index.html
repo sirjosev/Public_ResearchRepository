@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Yusuf Al-Rahman (New Toggle Logic)</title>
+    <title>CV - Yusuf Al-Rahman (Multi-Language)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap');
@@ -53,6 +53,7 @@
             align-items: center;
             transition: transform 0.2s, box-shadow 0.2s;
             overflow: hidden;
+            z-index: 10; /* Ensure it's above other elements */
         }
         #lang-switcher:hover {
             transform: scale(1.05);
@@ -69,6 +70,7 @@
         .main-header {
             text-align: center;
             margin-bottom: 40px;
+            position: relative; /* For profile image positioning */
         }
         .main-header h1 {
             font-family: 'Poppins', sans-serif;
@@ -107,6 +109,24 @@
             width: 16px; 
             text-align: center;
         }
+
+        /* Profile Image Styling */
+        .profile-img-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--primary-color);
+            margin: -10px auto 20px auto; /* Adjust margin to position it nicely */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
 
         .section { margin-bottom: 35px; }
         .section-title {
@@ -183,7 +203,7 @@
             font-size: 0.9rem;
         }
         .item-description ul {
-            list-style-type: '';
+            list-style-type: ' ';
             padding-left: 20px;
             margin-top: 10px;
         }
@@ -219,11 +239,20 @@
         @media print {
             #lang-switcher { display: none; }
             .container { margin: 0; box-shadow: none; }
+            /* Hide border-top on print if it causes issues with content */
+            .container { border-top: none; } 
+            /* Ensure profile image prints correctly */
+            .profile-img-container { margin-top: 0; }
         }
         @media screen and (max-width: 768px) {
             .container { padding: 30px 25px; }
             .skills-container { grid-template-columns: 1fr; }
             #lang-switcher { top: 10px; right: 15px; }
+            .profile-img-container {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 15px;
+            }
         }
     </style>
 </head>
@@ -236,14 +265,22 @@
         </button>
 
         <header class="main-header">
+            <div class="profile-img-container">
+                <img src="https://lh3.googleusercontent.com/pw/AP1GczPH_R2nO0jK0U_1X7q38e2D1K6-lI6z-7zN4L_2o3V6k1oN8K_0B1L9Q7Q6e1E5y5yY8pY8w=w1920-h1080-rw" alt="Profile Picture">
+            </div>
+
             <h1>Yusuf Al-Rahman</h1>
             <h2 class="lang-id">Analis Data & Operasi</h2>
             <h2 class="lang-en hidden">Data & Operations Analyst</h2>
+            <h2 class="lang-zh hidden">數據與運營分析師</h2>
+            <h2 class="lang-nl hidden">Data- & Operationeel Analist</h2>
             <div class="contact-info">
                 <span><i class="icon fa-solid fa-phone"></i>+62 821-2272-9841</span>
                 <span><i class="icon fa-solid fa-envelope"></i><a href="mailto:sirjosephholmes@gmail.com">sirjosephholmes@gmail.com</a></span>
                 <span class="lang-id"><i class="icon fa-solid fa-location-dot"></i>Jakarta, Indonesia</span>
                 <span class="lang-en hidden"><i class="icon fa-solid fa-location-dot"></i>Jakarta, Indonesia</span>
+                <span class="lang-zh hidden"><i class="icon fa-solid fa-location-dot"></i>雅加達, 印度尼西亞</span>
+                <span class="lang-nl hidden"><i class="icon fa-solid fa-location-dot"></i>Jakarta, Indonesië</span>
                 <span><i class="icon fa-brands fa-linkedin"></i><a href="https://linkedin.com/in/yusuf-al-rahman-8049a21b3/" target="_blank">LinkedIn</a></span>
                 <span><i class="icon fa-brands fa-github"></i><a href="https://github.com/sirjosev" target="_blank">GitHub</a></span>
             </div>
@@ -254,12 +291,20 @@
                 <i class="icon fa-solid fa-user-tie"></i>
                 <span class="lang-id">Ringkasan Profesional</span>
                 <span class="lang-en hidden">Professional Summary</span>
+                <span class="lang-zh hidden">專業概覽</span>
+                <span class="lang-nl hidden">Professioneel Profiel</span>
             </h3>
             <p class="lang-id">
                 Bersemangat dalam mengembangkan solusi IoT dan ML yang inovatif. Memiliki pengalaman langsung dalam membangun sistem embedded, jaringan sensor, dan mengimplementasikan algoritma machine learning untuk analisis data real-time. Digerakkan oleh keinginan untuk menerapkan keahlian analitis dan operasional guna mengoptimalkan efisiensi dan mendorong inovasi dalam lingkungan supply chain yang dinamis.
             </p>
             <p class="lang-en hidden">
                 Passionate about developing innovative IoT and ML solutions. Have hands-on experience in building embedded systems, sensor networks, and implementing machine learning algorithms for real-time data analysis. Driven by a desire to apply analytical and operational skills to optimize efficiency and drive innovation in a dynamic supply chain environment.
+            </p>
+            <p class="lang-zh hidden">
+                熱衷於開發創新的物聯網和機器學習解決方案。在構建嵌入式系統、傳感器網絡以及實施用於實時數據分析的機器學習算法方面擁有實踐經驗。致力於運用分析和運營技能，在動態的供應鏈環境中優化效率並推動創新。
+            </p>
+            <p class="lang-nl hidden">
+                Gepassioneerd door het ontwikkelen van innovatieve IoT- en ML-oplossingen. Heeft praktische ervaring met het bouwen van embedded systemen, sensornetwerken en het implementeren van machine learning-algoritmes voor real-time data-analyse. Gedreven door de wens om analytische en operationele vaardigheden toe te passen om de efficiëntie te optimaliseren en innovatie te stimuleren in een dynamische supply chain-omgeving.
             </p>
         </section>
 
@@ -268,11 +313,15 @@
                 <i class="icon fa-solid fa-cogs"></i>
                 <span class="lang-id">Keahlian</span>
                 <span class="lang-en hidden">Skills</span>
+                <span class="lang-zh hidden">專業技能</span>
+                <span class="lang-nl hidden">Vaardigheden</span>
             </h3>
             <div class="skills-container">
                 <div class="skills-category">
                     <h4 class="lang-id">Keahlian Teknis</h4>
                     <h4 class="lang-en hidden">Technical Expertise</h4>
+                    <h4 class="lang-zh hidden">技術專長</h4>
+                    <h4 class="lang-nl hidden">Technische Expertise</h4>
                     <ul>
                         <li class="highlight">Python</li>
                         <li class="highlight">JavaScript</li>
@@ -283,22 +332,34 @@
                         <li>MQTT</li>
                         <li class="lang-id">Jaringan Sensor</li>
                         <li class="lang-en hidden">Sensor Networks</li>
+                        <li class="lang-zh hidden">傳感器網絡</li>
+                        <li class="lang-nl hidden">Sensornetwerken</li>
                         <li class="lang-id">Sistem Embedded</li>
                         <li class="lang-en hidden">Embedded Systems</li>
+                        <li class="lang-zh hidden">嵌入式系統</li>
+                        <li class="lang-nl hidden">Ingebedde Systemen</li>
                     </ul>
                 </div>
                 <div class="skills-category">
                     <h4 class="lang-id">Kompetensi Inti</h4>
                     <h4 class="lang-en hidden">Core Competencies</h4>
+                    <h4 class="lang-zh hidden">核心競爭力</h4>
+                    <h4 class="lang-nl hidden">Kerncompetenties</h4>
                     <ul>
                         <li>Machine Learning</li>
                         <li>Internet of Things (IoT)</li>
                         <li class="lang-id">Analisis Data Real-time</li>
                         <li class="lang-en hidden">Real-time Data Analysis</li>
+                        <li class="lang-zh hidden">實時數據分析</li>
+                        <li class="lang-nl hidden">Real-time Data-analyse</li>
                         <li class="lang-id">Manajemen Proyek Teknis</li>
                         <li class="lang-en hidden">Technical Project Management</li>
+                        <li class="lang-zh hidden">技術項目管理</li>
+                        <li class="lang-nl hidden">Technisch Projectmanagement</li>
                         <li class="lang-id">Fasilitasi Workshop Teknis</li>
                         <li class="lang-en hidden">Technical Workshop Facilitation</li>
+                        <li class="lang-zh hidden">技術工作坊引導</li>
+                        <li class="lang-nl hidden">Facilitatie van Technische Workshops</li>
                     </ul>
                 </div>
             </div>
@@ -309,13 +370,17 @@
                 <i class="icon fa-solid fa-briefcase"></i>
                 <span class="lang-id">Pengalaman Kerja</span>
                 <span class="lang-en hidden">Work Experience</span>
+                <span class="lang-zh hidden">工作經歷</span>
+                <span class="lang-nl hidden">Werkervaring</span>
             </h3>
              <div class="item">
                 <div class="item-header">
                     <h4 class="item-title">Chief Operating Officer</h4>
                     <p class="item-subtitle">PT. Suka Bumi Resources</p>
-                    <p class="item-date lang-id">Agustus 2025 � Saat Ini</p>
-                    <p class="item-date lang-en hidden">August 2025 � Present</p>
+                    <p class="item-date lang-id">Agustus 2025 – Saat Ini</p>
+                    <p class="item-date lang-en hidden">August 2025 – Present</p>
+                    <p class="item-date lang-zh hidden">2025年8月 – 至今</p>
+                    <p class="item-date lang-nl hidden">Augustus 2025 – Heden</p>
                 </div>
                 <div class="item-description">
                     <ul class="lang-id">
@@ -328,14 +393,26 @@
                         <li>Implement Quality Control SOPs to reduce customer complaint rates.</li>
                         <li>Conduct operational cost analysis, leading to annual savings initiatives.</li>
                     </ul>
+                    <ul class="lang-zh hidden">
+                        <li>管理端到端的出口物流運營，確保準時交貨和文件齊全。</li>
+                        <li>實施質量控制標準作業程序以降低客戶投訴率。</li>
+                        <li>進行運營成本分析，提出年度節省計劃。</li>
+                    </ul>
+                    <ul class="lang-nl hidden">
+                        <li>Beheer van end-to-end exportlogistiek, waarbij tijdige levering en volledige documentatie worden gegarandeerd.</li>
+                        <li>Implementeren van Kwaliteitscontrole SOP's om het aantal klachten van klanten te verminderen.</li>
+                        <li>Uitvoeren van operationele kostenanalyses, wat leidt tot jaarlijkse besparingsinitiatieven.</li>
+                    </ul>
                 </div>
             </div>
             <div class="item">
                 <div class="item-header">
                     <h4 class="item-title">Researcher Staff</h4>
                     <p class="item-subtitle">Universitas Trilogi</p>
-                    <p class="item-date lang-id">April 2024 � September 2024</p>
-                    <p class="item-date lang-en hidden">April 2024 � September 2024</p>
+                    <p class="item-date lang-id">April 2024 – September 2024</p>
+                    <p class="item-date lang-en hidden">April 2024 – September 2024</p>
+                    <p class="item-date lang-zh hidden">2024年4月 – 2024年9月</p>
+                    <p class="item-date lang-nl hidden">April 2024 – September 2024</p>
                 </div>
                 <div class="item-description">
                     <ul class="lang-id">
@@ -348,6 +425,16 @@
                         <li>Designed and implemented a comprehensive sensor integration system with a real-time data processing pipeline for environmental monitoring.</li>
                         <li>Successfully demonstrated the working prototype at multiple technology exhibitions.</li>
                     </ul>
+                    <ul class="lang-zh hidden">
+                        <li>參與開發智能HVAC控制系統原型，利用物聯網傳感器和機器學習優化空調閥門控制。</li>
+                        <li>設計並實施了一個全面的傳感器集成系統，帶有實時數據處理管道，用於環境監測。</li>
+                        <li>在多個技術展覽會上成功展示了可行的原型。</li>
+                    </ul>
+                    <ul class="lang-nl hidden">
+                        <li>Deelgenomen aan de ontwikkeling van een prototype voor een slim HVAC-regelsysteem dat gebruikmaakt van IoT-sensoren en machine learning om de regeling van AC-kleppen te optimaliseren.</li>
+                        <li>Ontworpen en geïmplementeerd een uitgebreid sensorintegratiesysteem met een real-time dataverwerkingspijplijn voor milieumonitoring.</li>
+                        <li>Het werkende prototype met succes gedemonstreerd op meerdere technologiebeurzen.</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -357,11 +444,15 @@
                 <i class="icon fa-solid fa-hands-helping"></i>
                 <span class="lang-id">Pengalaman Volunteer & Kepemimpinan</span>
                 <span class="lang-en hidden">Volunteering & Leadership Experience</span>
+                <span class="lang-zh hidden">志願服務與領導經驗</span>
+                <span class="lang-nl hidden">Vrijwilligerswerk & Leiderschapservaring</span>
             </h3>
             <div class="item">
                 <div class="item-header">
                     <h4 class="item-title lang-id">Fasilitator Workshop Teknis</h4>
                     <h4 class="item-title lang-en hidden">Technical Workshop Facilitator</h4>
+                    <h4 class="item-title lang-zh hidden">技術工作坊引導者</h4>
+                    <h4 class="item-title lang-nl hidden">Facilitator Technische Workshop</h4>
                     <p class="item-subtitle">CEP-CCIT FTUI</p>
                     <p class="item-date">April 2024</p>
                 </div>
@@ -374,6 +465,14 @@
                         <li>Led a technical workshop on "Microcontroller Programming & Sensors for IoT-Based Hardware Systems" with a >90% participant comprehension rate.</li>
                         <li>Developed structured practical modules, resulting in a 40% improvement in participants' technical understanding from pre-test to post-test assessments.</li>
                     </ul>
+                    <ul class="lang-zh hidden">
+                        <li>主講關於“物聯網硬件系統的微控制器編程與傳感器”的技術工作坊，參與者理解率超過90%。</li>
+                        <li>開發了結構化的實踐模塊，使參與者的技術理解能力從前測到後測提高了40%。</li>
+                    </ul>
+                    <ul class="lang-nl hidden">
+                        <li>Een technische workshop geleid over "Microcontrollerprogrammering & Sensoren voor op IoT gebaseerde hardwaresystemen" met een begripspercentage van >90% onder de deelnemers.</li>
+                        <li>Gestructureerde praktische modules ontwikkeld, resulterend in een verbetering van 40% in het technische begrip van de deelnemers van pre-test naar post-test.</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -383,9 +482,16 @@
                 <i class="icon fa-solid fa-certificate"></i>
                 <span class="lang-id">Sertifikasi</span>
                 <span class="lang-en hidden">Certifications</span>
+                <span class="lang-zh hidden">證書</span>
+                <span class="lang-nl hidden">Certificeringen</span>
             </h3>
             <ul class="cert-list">
-                <li><i class="icon fa-solid fa-award"></i><div><b class="lang-id">Programmer (Skema Sertifikasi)</b><b class="lang-en hidden">Programmer (Certification Scheme)</b> - BNSP</div></li>
+                <li><i class="icon fa-solid fa-award"></i><div>
+                    <b class="lang-id">Programmer (Skema Sertifikasi)</b>
+                    <b class="lang-en hidden">Programmer (Certification Scheme)</b>
+                    <b class="lang-zh hidden">程序員（認證方案）</b>
+                    <b class="lang-nl hidden">Programmeur (Certificeringsschema)</b>
+                     - BNSP</div></li>
                 <li><i class="icon fa-solid fa-award"></i><div><b>Cisco Certified Network Associate (CCNA)</b> - Cisco</div></li>
                 <li><i class="icon fa-solid fa-award"></i><div><b>Android Engineering</b> - Binar Academy</div></li>
             </ul>
@@ -396,12 +502,16 @@
                 <i class="icon fa-solid fa-graduation-cap"></i>
                 <span class="lang-id">Pendidikan</span>
                 <span class="lang-en hidden">Education</span>
+                <span class="lang-zh hidden">教育背景</span>
+                <span class="lang-nl hidden">Opleiding</span>
             </h3>
             <div class="item">
                  <h4 class="item-title lang-id">Sertifikasi TI - Otomasi Sistem Berbasis Internet</h4>
                  <h4 class="item-title lang-en hidden">Certified in IT - Internet Based System Automation</h4>
+                 <h4 class="item-title lang-zh hidden">資訊科技認證 - 基於互聯網的系統自動化</h4>
+                 <h4 class="item-title lang-nl hidden">Gecertificeerd in IT - Internetgebaseerde Systeemautomatisering</h4>
                  <p class="item-subtitle">CEP-CCIT FTUI, Indonesia</p>
-                 <p class="item-date">2022 � 2024</p>
+                 <p class="item-date">2022 – 2024</p>
             </div>
         </section>
     </div>
@@ -410,30 +520,33 @@
         document.addEventListener('DOMContentLoaded', function () {
             const langSwitcher = document.getElementById('lang-switcher');
             const flagIcon = document.getElementById('flag-icon');
-            const elementsId = document.querySelectorAll('.lang-id');
-            const elementsEn = document.querySelectorAll('.lang-en');
             
+            const languages = ['id', 'en', 'zh', 'nl'];
             const flagUrls = {
                 id: 'https://flagcdn.com/id.svg',
-                en: 'https://flagcdn.com/gb.svg',
+                en: 'https://flagcdn.com/us.svg', 
+                zh: 'https://flagcdn.com/cn.svg',
+                nl: 'https://flagcdn.com/nl.svg'
             };
 
-            let currentLang = 'id';
+            let currentLangIndex = 0;
 
             langSwitcher.addEventListener('click', function() {
-                if (currentLang === 'id') {
-                    // Switch to English
-                    elementsId.forEach(el => el.classList.add('hidden'));
-                    elementsEn.forEach(el => el.classList.remove('hidden'));
-                    flagIcon.src = flagUrls.en; // NEW LOGIC: Show English flag when English is active
-                    currentLang = 'en';
-                } else {
-                    // Switch to Indonesian
-                    elementsEn.forEach(el => el.classList.add('hidden'));
-                    elementsId.forEach(el => el.classList.remove('hidden'));
-                    flagIcon.src = flagUrls.id; // NEW LOGIC: Show Indonesian flag when Indonesian is active
-                    currentLang = 'id';
-                }
+                // Move to the next language, looping back to the start
+                currentLangIndex = (currentLangIndex + 1) % languages.length;
+                const nextLang = languages[currentLangIndex];
+
+                // Hide all language-specific elements
+                languages.forEach(lang => {
+                    document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.add('hidden'));
+                });
+
+                // Show elements for the new language
+                document.querySelectorAll('.lang-' + nextLang).forEach(el => el.classList.remove('hidden'));
+                
+                // Update the flag icon
+                flagIcon.src = flagUrls[nextLang];
+                flagIcon.alt = `Switch to ${nextLang}`;
             });
         });
     </script>
