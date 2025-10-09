@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="page_title">Infografis: Analisis Pasar & Rekomendasi Saham</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+        .card-glow {
+            transition: all 0.3s ease-in-out;
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+            transform: translateY(-5px);
+        }
+        .lang-flag {
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            transition: all 0.2s ease-in-out;
+        }
+        .lang-flag.active {
+            border-color: #3b82f6; /* Blue-500 */
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-gray-200 antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-sm border-b border-slate-700">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 id="main_title" class="text-xl md:text-2xl font-bold text-white" data-translate="main_title">
+                Analisis Pasar & Rekomendasi Saham Q4 2025
+            </h1>
+            <!-- Language Switcher -->
+            <div id="language-switcher" class="flex items-center space-x-2">
+                <img id="flag-id" src="https://flagcdn.com/w40/id.png" alt="Indonesia Flag" class="lang-flag active" onclick="changeLanguage('id')">
+                <img id="flag-en" src="https://flagcdn.com/w40/gb.png" alt="UK Flag" class="lang-flag" onclick="changeLanguage('en')">
+                <img id="flag-cn" src="https://flagcdn.com/w40/cn.png" alt="China Flag" class="lang-flag" onclick="changeLanguage('cn')">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <!-- Executive Summary -->
+        <section id="summary" class="mb-12">
+            <h2 class="text-3xl font-extrabold text-blue-400 mb-4" data-translate="summary_title">Ringkasan Eksekutif</h2>
+            <p class="text-lg text-gray-300 leading-relaxed" data-translate="summary_content">
+                Pasar Indonesia Q4 2025 menunjukkan lanskap investasi yang kompleks, dihadapkan pada kebijakan moneter domestik yang mendukung dan latar belakang ekonomi global yang rapuh. Strategi 'barbell' direkomendasikan: menyeimbangkan saham defensif berkualitas yang sedang 'oversold' (seperti bank besar) dengan saham produsen komoditas berorientasi pertumbuhan yang memiliki katalis jelas, terutama di sektor logam mulia dan hilirisasi industri.
+            </p>
+        </section>
+
+        <!-- Key Themes Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Global Macro -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg card-glow">
+                <div class="flex items-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1.945M12 4.5v-1.5m0 18v-1.5m-6.364-12.364L4.5 3.5m15 15l-1.136-1.136M21.945 11H20a2 2 0 00-2 2v1a2 2 0 01-2 2h-1a2 2 0 01-2-2v-1a2 2 0 00-2-2H8.055"/></svg>
+                    <h3 class="text-xl font-bold text-white" data-translate="global_macro_title">Makro Global</h3>
+                </div>
+                <p class="text-gray-300" data-translate="global_macro_content">
+                    The Fed memulai siklus penurunan suku bunga karena risiko pelemahan ekonomi, kontras dengan euforia AI di pasar AS. Ketegangan ini memicu arus keluar modal asing dari saham 'blue-chip' Indonesia, menciptakan peluang beli selektif.
+                </p>
+            </div>
+
+            <!-- Indonesia Economy -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg card-glow">
+                <div class="flex items-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6H8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/></svg>
+                    <h3 class="text-xl font-bold text-white" data-translate="indo_economy_title">Ekonomi Indonesia</h3>
+                </div>
+                <p class="text-gray-300" data-translate="indo_economy_content">
+                    Bank Indonesia mempertahankan kebijakan moneter akomodatif dengan suku bunga rendah (target 4.50% akhir tahun) ditopang inflasi domestik yang jinak (1.60% YoY Mei 2025). Tantangan utama adalah permintaan domestik yang lesu.
+                </p>
+            </div>
+
+            <!-- Commodity Supercycle -->
+            <div class="bg-slate-800 p-6 rounded-xl shadow-lg card-glow">
+                <div class="flex items-center mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+                    <h3 class="text-xl font-bold text-white" data-translate="commodity_title">Supercycle Komoditas</h3>
+                </div>
+                <p class="text-gray-300" data-translate="commodity_content">
+                    Bull market struktural pada Emas didorong oleh pelonggaran moneter global. Nikel berada di titik balik karena pemerintah Indonesia mulai mengelola pasokan untuk menopang harga, menciptakan katalis bullish jangka panjang.
+                </p>
+            </div>
+        </div>
+
+        <!-- Commodity Forecast Table -->
+        <section id="forecast" class="mb-12">
+            <h2 class="text-3xl font-extrabold text-blue-400 mb-6" data-translate="forecast_title">Proyeksi Harga Komoditas Utama (Q4 2025 - 2026)</h2>
+            <div class="overflow-x-auto bg-slate-800 rounded-lg p-1">
+                <table class="w-full text-left">
+                    <thead class="bg-slate-700 text-sm uppercase text-gray-300">
+                        <tr>
+                            <th class="p-4" data-translate="table_commodity">Komoditas</th>
+                            <th class="p-4" data-translate="table_forecast_q4">Proyeksi Q4 2025</th>
+                            <th class="p-4" data-translate="table_forecast_2026">Rata-rata 2026</th>
+                            <th class="p-4" data-translate="table_drivers">Pendorong Utama</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-700">
+                        <tr class="hover:bg-slate-700/50 transition-colors duration-200">
+                            <td class="p-4 font-medium text-yellow-300">Gold (USD/oz)</td>
+                            <td class="p-4">$3,675</td>
+                            <td class="p-4">~$4,000</td>
+                            <td class="p-4" data-translate="gold_drivers">Pelonggaran Moneter, Permintaan Safe-Haven</td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/50 transition-colors duration-200">
+                            <td class="p-4 font-medium text-gray-300">Nickel (USD/t)</td>
+                            <td class="p-4">$15,000 - $15,600</td>
+                            <td class="p-4" data-translate="nickel_price">Potensi Lebih Tinggi</td>
+                            <td class="p-4" data-translate="nickel_drivers">Manajemen Pasokan Indonesia</td>
+                        </tr>
+                         <tr class="hover:bg-slate-700/50 transition-colors duration-200">
+                            <td class="p-4 font-medium text-cyan-300">Brent Crude (USD/bbl)</td>
+                            <td class="p-4">$59 - $62</td>
+                            <td class="p-4">$52</td>
+                            <td class="p-4" data-translate="oil_drivers">Lonjakan Pasokan Non-OPEC+</td>
+                        </tr>
+                        <tr class="hover:bg-slate-700/50 transition-colors duration-200">
+                            <td class="p-4 font-medium text-orange-300">CPO (MYR/t)</td>
+                            <td class="p-4">$4,200 - $4,600</td>
+                            <td class="p-4" data-translate="cpo_price">Stabil</td>
+                            <td class="p-4" data-translate="cpo_drivers">Permintaan Kuat dari India</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Stock Recommendations -->
+        <section id="recommendations" class="mb-12">
+            <h2 class="text-3xl font-extrabold text-blue-400 mb-6" data-translate="recommendation_title">Rekomendasi & Keranjang Saham Tematik</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Basket 1 -->
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                    <h3 class="font-bold text-lg text-green-400 mb-2" data-translate="basket1_title">1. Juara Hilirisasi & Diversifikasi</h3>
+                    <p class="text-gray-300 mb-3" data-translate="basket1_desc">Perusahaan yang menjadi proksi langsung kebijakan industrialisasi Indonesia dan diversifikasi dari komoditas tradisional.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-green-900/50 text-green-300 text-sm font-medium px-3 py-1 rounded-full">ADMR</span>
+                        <span class="bg-green-900/50 text-green-300 text-sm font-medium px-3 py-1 rounded-full">INCO</span>
+                        <span class="bg-green-900/50 text-green-300 text-sm font-medium px-3 py-1 rounded-full">NCKL</span>
+                         <span class="bg-green-900/50 text-green-300 text-sm font-medium px-3 py-1 rounded-full">BUMI</span>
+                    </div>
+                </div>
+                 <!-- Basket 2 -->
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                    <h3 class="font-bold text-lg text-yellow-400 mb-2" data-translate="basket2_title">2. Eksposur Emas</h3>
+                    <p class="text-gray-300 mb-3" data-translate="basket2_desc">Penerima manfaat langsung dari outlook makroekonomi global yang bullish untuk emas, dengan katalis pertumbuhan produksi internal.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-yellow-900/50 text-yellow-300 text-sm font-medium px-3 py-1 rounded-full">MDKA</span>
+                        <span class="bg-yellow-900/50 text-yellow-300 text-sm font-medium px-3 py-1 rounded-full">BRMS</span>
+                    </div>
+                </div>
+                 <!-- Basket 3 -->
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                    <h3 class="font-bold text-lg text-blue-400 mb-2" data-translate="basket3_title">3. Blue-Chip Defensif (Value)</h3>
+                    <p class="text-gray-300 mb-3" data-translate="basket3_desc">Franchise berkualitas tinggi yang harganya tertekan akibat arus keluar modal asing, menawarkan peluang nilai untuk jangka panjang.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-900/50 text-blue-300 text-sm font-medium px-3 py-1 rounded-full">BBCA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Audio Player & Download Button -->
+        <section class="mb-12 bg-slate-800 rounded-xl p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Audio Player -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-4" data-translate="audio_title">Dengarkan Ringkasan Audio</h3>
+                    <p class="text-gray-400 mb-4" data-translate="audio_desc">
+                        Putar ringkasan analisis pasar ini dari kanal berita finansial untuk pemahaman yang lebih mendalam saat Anda beraktivitas.
+                    </p>
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                        <!-- Ganti 'VIDEO_ID' dengan ID video YouTube yang relevan (misalnya, dari video berita finansial) -->
+                        <iframe src="https://www.youtube.com/embed/5nAR3fI_i3k?si=vXzYg_N2W2nJ8s8L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                
+                <!-- Download Paper -->
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-white mb-4" data-translate="download_title">Unduh Laporan Lengkap</h3>
+                    <p class="text-gray-400 mb-6" data-translate="download_desc">
+                        Dapatkan analisis mendalam, data lengkap, dan detail metodologi dalam dokumen riset asli.
+                    </p>
+                    <!-- Ganti '#' dengan link Google Drive Anda yang sebenarnya -->
+                    <a href="https://docs.google.com/document/d/1-EXAMPLE-ID-REPLACE-THIS-WITH-YOUR-OWN/export?format=pdf" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="inline-block bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <span data-translate="download_button">Unduh PDF</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="text-center py-6 border-t border-slate-700">
+        <p class="text-gray-500" data-translate="footer_text">
+            Infografis ini dibuat untuk tujuan informasi dan bukan merupakan nasihat investasi.
+        </p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set initial language based on browser preference or default to 'id'
+            const userLang = navigator.language.split('-')[0];
+            const defaultLang = ['id', 'en', 'cn'].includes(userLang) ? userLang : 'id';
+            changeLanguage(defaultLang);
+        });
+
+        const translations = {
+            'id': {
+                page_title: 'Infografis: Analisis Pasar & Rekomendasi Saham',
+                main_title: 'Analisis Pasar & Rekomendasi Saham Q4 2025',
+                summary_title: 'Ringkasan Eksekutif',
+                summary_content: "Pasar Indonesia Q4 2025 menunjukkan lanskap investasi yang kompleks, dihadapkan pada kebijakan moneter domestik yang mendukung dan latar belakang ekonomi global yang rapuh. Strategi 'barbell' direkomendasikan: menyeimbangkan saham defensif berkualitas yang sedang 'oversold' (seperti bank besar) dengan saham produsen komoditas berorientasi pertumbuhan yang memiliki katalis jelas, terutama di sektor logam mulia dan hilirisasi industri.",
+                global_macro_title: 'Makro Global',
+                global_macro_content: 'The Fed memulai siklus penurunan suku bunga karena risiko pelemahan ekonomi, kontras dengan euforia AI di pasar AS. Ketegangan ini memicu arus keluar modal asing dari saham \'blue-chip\' Indonesia, menciptakan peluang beli selektif.',
+                indo_economy_title: 'Ekonomi Indonesia',
+                indo_economy_content: 'Bank Indonesia mempertahankan kebijakan moneter akomodatif dengan suku bunga rendah (target 4.50% akhir tahun) ditopang inflasi domestik yang jinak (1.60% YoY Mei 2025). Tantangan utama adalah permintaan domestik yang lesu.',
+                commodity_title: 'Supercycle Komoditas',
+                commodity_content: 'Bull market struktural pada Emas didorong oleh pelonggaran moneter global. Nikel berada di titik balik karena pemerintah Indonesia mulai mengelola pasokan untuk menopang harga, menciptakan katalis bullish jangka panjang.',
+                forecast_title: 'Proyeksi Harga Komoditas Utama (Q4 2025 - 2026)',
+                table_commodity: 'Komoditas',
+                table_forecast_q4: 'Proyeksi Q4 2025',
+                table_forecast_2026: 'Rata-rata 2026',
+                table_drivers: 'Pendorong Utama',
+                gold_drivers: 'Pelonggaran Moneter, Permintaan Safe-Haven',
+                nickel_price: 'Potensi Lebih Tinggi',
+                nickel_drivers: 'Manajemen Pasokan Indonesia',
+                oil_drivers: 'Lonjakan Pasokan Non-OPEC+',
+                cpo_price: 'Stabil',
+                cpo_drivers: 'Permintaan Kuat dari India',
+                recommendation_title: 'Rekomendasi & Keranjang Saham Tematik',
+                basket1_title: '1. Juara Hilirisasi & Diversifikasi',
+                basket1_desc: 'Perusahaan yang menjadi proksi langsung kebijakan industrialisasi Indonesia dan diversifikasi dari komoditas tradisional.',
+                basket2_title: '2. Eksposur Emas',
+                basket2_desc: 'Penerima manfaat langsung dari outlook makroekonomi global yang bullish untuk emas, dengan katalis pertumbuhan produksi internal.',
+                basket3_title: '3. Blue-Chip Defensif (Value)',
+                basket3_desc: 'Franchise berkualitas tinggi yang harganya tertekan akibat arus keluar modal asing, menawarkan peluang nilai untuk jangka panjang.',
+                audio_title: 'Dengarkan Ringkasan Audio',
+                audio_desc: 'Putar ringkasan analisis pasar ini dari kanal berita finansial untuk pemahaman yang lebih mendalam saat Anda beraktivitas.',
+                download_title: 'Unduh Laporan Lengkap',
+                download_desc: 'Dapatkan analisis mendalam, data lengkap, dan detail metodologi dalam dokumen riset asli.',
+                download_button: 'Unduh PDF',
+                footer_text: 'Infografis ini dibuat untuk tujuan informasi dan bukan merupakan nasihat investasi.'
+            },
+            'en': {
+                page_title: 'Infographic: Market Analysis & Stock Recommendations',
+                main_title: 'Market Analysis & Stock Recommendations Q4 2025',
+                summary_title: 'Executive Summary',
+                summary_content: "The Indonesian market in Q4 2025 presents a complex investment landscape, facing supportive domestic monetary policy and a fragile global economic backdrop. A 'barbell' strategy is recommended: balancing high-quality, oversold defensive stocks (like major banks) with growth-oriented commodity producers that have clear catalysts, especially in precious metals and industrial downstreaming.",
+                global_macro_title: 'Global Macro',
+                global_macro_content: "The Fed is starting an interest rate-cutting cycle due to economic weakness risks, contrasting with AI euphoria in the US market. This tension has triggered foreign capital outflows from Indonesian blue-chips, creating selective buying opportunities.",
+                indo_economy_title: 'Indonesian Economy',
+                indo_economy_content: 'Bank Indonesia maintains an accommodative monetary policy with low interest rates (targeting 4.50% year-end) supported by benign domestic inflation (1.60% YoY May 2025). The main challenge is sluggish domestic demand.',
+                commodity_title: 'Commodity Supercycle',
+                commodity_content: 'A structural bull market in Gold is driven by global monetary easing. Nickel is at an inflection point as the Indonesian government begins to manage supply to support prices, creating a long-term bullish catalyst.',
+                forecast_title: 'Key Commodity Price Forecast (Q4 2025 - 2026)',
+                table_commodity: 'Commodity',
+                table_forecast_q4: 'Q4 2025 Forecast',
+                table_forecast_2026: '2026 Average',
+                table_drivers: 'Key Drivers',
+                gold_drivers: 'Monetary Easing, Safe-Haven Demand',
+                nickel_price: 'Potentially Higher',
+                nickel_drivers: 'Indonesian Supply Management',
+                oil_drivers: 'Surging Non-OPEC+ Supply',
+                cpo_price: 'Stable',
+                cpo_drivers: 'Strong Demand from India',
+                recommendation_title: 'Recommendations & Thematic Stock Baskets',
+                basket1_title: '1. Downstreaming & Diversification Champions',
+                basket1_desc: 'Companies that are direct proxies for Indonesia\'s industrialization policy and diversification from traditional commodities.',
+                basket2_title: '2. Gold Exposure',
+                basket2_desc: 'Direct beneficiaries of the bullish global macroeconomic outlook for gold, with internal production growth catalysts.',
+                basket3_title: '3. Defensive Blue-Chips (Value)',
+                basket3_desc: 'High-quality franchises whose prices are depressed by foreign outflows, offering long-term value opportunities.',
+                audio_title: 'Listen to the Audio Summary',
+                audio_desc: 'Play this market analysis summary from a financial news channel for deeper understanding while you multitask.',
+                download_title: 'Download Full Report',
+                download_desc: 'Get the in-depth analysis, complete data, and methodology details in the original research document.',
+                download_button: 'Download PDF',
+                footer_text: 'This infographic is for informational purposes only and does not constitute investment advice.'
+            },
+            'cn': {
+                page_title: '信息图表：市场分析与股票推荐',
+                main_title: '2025年第四季度市场分析与股票推荐',
+                summary_title: '执行摘要',
+                summary_content: '2025年第四季度的印尼市场呈现出复杂的投资格局，面临着支持性的国内货币政策和脆弱的全球经济背景。推荐采用“杠铃”策略：平衡高质量、超卖的防御性股票（如主要银行）与具有明确催化剂的增长型大宗商品生产商，尤其是在贵金属和工业下游领域。',
+                global_macro_title: '全球宏观',
+                global_macro_content: '由于经济疲软风险，美联储开始降息周期，与美国市场的人工智能狂热形成对比。这种紧张局势引发了外国资本从印尼蓝筹股流出，创造了选择性购买机会。',
+                indo_economy_title: '印尼经济',
+                indo_economy_content: '印尼央行维持宽松的货币政策，利率较低（目标为年底4.50%），并受到温和的国内通胀（2025年5月同比1.60%）的支持。主要挑战是国内需求疲软。',
+                commodity_title: '大宗商品超级周期',
+                commodity_content: '黄金的结构性牛市受到全球货币宽松政策的推动。随着印尼政府开始管理供应以支撑价格，镍正处于一个转折点，这创造了一个长期的看涨催化剂。',
+                forecast_title: '主要大宗商品价格预测（2025年第四季度 - 2026年）',
+                table_commodity: '商品',
+                table_forecast_q4: '2025年第四季度预测',
+                table_forecast_2026: '2026年平均',
+                table_drivers: '主要驱动因素',
+                gold_drivers: '货币宽松，避险需求',
+                nickel_price: '可能更高',
+                nickel_drivers: '印尼供应管理',
+                oil_drivers: '非欧佩克+供应激增',
+                cpo_price: '稳定',
+                cpo_drivers: '印度强劲需求',
+                recommendation_title: '推荐与主题股票篮子',
+                basket1_title: '1. 下游与多元化冠军',
+                basket1_desc: '直接代表印尼工业化政策以及从传统商品中多元化的公司。',
+                basket2_title: '2. 黄金敞口',
+                basket2_desc: '全球宏观经济对黄金看涨前景的直接受益者，具有内部产量增长催化剂。',
+                basket3_title: '3. 防御性蓝筹股（价值）',
+                basket3_desc: '因外国资本外流而价格受压的高质量特许经营权，提供长期价值机会。',
+                audio_title: '收听音频摘要',
+                audio_desc: '播放来自财经新闻频道的市场分析摘要，以便您在处理多项任务时更深入地了解。',
+                download_title: '下载完整报告',
+                download_desc: '在原始研究文档中获取深入分析、完整数据和方法论细节。',
+                download_button: '下载PDF',
+                footer_text: '此信息图表仅供参考，不构成投资建议。'
+            }
+        };
+
+        function changeLanguage(lang) {
+            // Update all elements with data-translate attribute
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+            
+            // Update document language and title
+            document.documentElement.lang = lang;
+            document.title = translations[lang].page_title || 'Infographic';
+
+            // Update active flag style
+            const flags = document.querySelectorAll('.lang-flag');
+            flags.forEach(flag => {
+                flag.classList.remove('active');
+            });
+            document.getElementById(`flag-${lang}`).classList.add('active');
+        }
+
+    </script>
+</body>
+</html>
+
