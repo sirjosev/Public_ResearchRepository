@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografis Interaktif: Analisis Pasar Saham</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font dan style tambahan */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .flag-btn {
+            width: 40px;
+            height: 40px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .flag-btn.active {
+            border-color: #3b82f6; /* blue-500 */
+            transform: scale(1.1);
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md p-4 sticky top-0 z-50 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-600" data-key="header_title">Analisis Pasar & Rekomendasi</h1>
+        <div class="flex items-center space-x-3">
+            <button id="lang-id" class="flag-btn active" style="background-image: url('https://flagcdn.com/w40/id.png');"></button>
+            <button id="lang-en" class="flag-btn" style="background-image: url('https://flagcdn.com/w40/gb.png');"></button>
+            <button id="lang-cn" class="flag-btn" style="background-image: url('https://flagcdn.com/w40/cn.png');"></button>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6">
+        
+        <section class="mb-12">
+            <div class="card">
+                <h2 class="text-3xl font-bold mb-4 text-gray-900" data-key="purbaya_effect_title">"Efek Purbaya": Pergeseran Paradigma Pasar</h2>
+                <p class="mb-4" data-key="purbaya_effect_desc">
+                    Sentimen investor domestik berubah secara dramatis setelah Menteri Keuangan Purbaya Yudhi Sadewa mengaitkan insentif pemerintah dengan pemberantasan manipulasi saham. [span_0](start_span)Hal ini memicu rotasi modal besar-besaran dari aset spekulatif ke saham-saham unggulan (*blue-chip*), terutama di sektor perbankan, dan mendorong IHSG menembus rekor tertinggi baru.[span_0](end_span)
+                </p>
+                <div class="grid md:grid-cols-2 gap-6 text-center">
+                    <div class="bg-green-100 p-4 rounded-lg">
+                        <h3 class="font-bold text-xl text-green-800" data-key="ihsg_record">Rekor IHSG</h3>
+                        <p class="text-3xl font-bold text-green-600">8.250 <span class="text-sm">(+1%)</span></p>
+                        [span_1](start_span)<p class="text-sm text-gray-600" data-key="closing_date">Penutupan 9 Oktober 2025[span_1](end_span)</p>
+                    </div>
+                    <div class="bg-blue-100 p-4 rounded-lg">
+                        <h3 class="font-bold text-xl text-blue-800" data-key="transaction_value">Nilai Transaksi</h3>
+                        <p class="text-3xl font-bold text-blue-600">Rp 30,2 Triliun</p>
+                        [span_2](start_span)<p class="text-sm text-gray-600" data-key="market_participation">Indikasi partisipasi pasar yang luas[span_2](end_span)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center" data-key="corporate_actions_title">Aksi Korporasi Utama</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-2">PT Timah (TINS)</h3>
+                    <p class="text-sm text-gray-600 mb-2" data-key="tins_action">Pelimpahan Aset Sitaan Negara</p>
+                    <p class="mb-3" data-key="tins_desc">Menerima aset sitaan senilai Rp 6-7 triliun dari Kejagung, berpotensi meningkatkan kapasitas produksi secara non-dilutif. [span_3](start_span)[span_4](start_span)[span_5](start_span)Namun, ada risiko mewarisi kewajiban pemulihan lingkungan.[span_3](end_span)[span_4](end_span)[span_5](end_span)</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-2">Krakatau Steel (KRAS)</h3>
+                    <p class="text-sm text-gray-600 mb-2" data-key="kras_action">Dukungan Dana dari SWF Danantara</p>
+                    [span_6](start_span)[span_7](start_span)<p class="mb-3" data-key="kras_desc">Mengajukan permohonan dana US$ 500 juta untuk restrukturisasi keuangan dan modal kerja, yang dapat meningkatkan EBITDA secara signifikan melalui penurunan biaya bunga.[span_6](end_span)[span_7](end_span)</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-2">PIK 2 (PANI)</h3>
+                    <p class="text-sm text-gray-600 mb-2" data-key="pani_action">Konsolidasi via Rights Issue</p>
+                    [span_8](start_span)[span_9](start_span)<p class="mb-3" data-key="pani_desc">Rights issue senilai Rp 16,73 triliun untuk konsolidasi aset dalam ekosistem PIK 2, menyederhanakan struktur kepemilikan dan menciptakan saham yang lebih likuid.[span_8](end_span)[span_9](end_span)</p>
+                </div>
+                 <div class="card">
+                    <h3 class="text-xl font-bold mb-2">Bukit Uluwatu (BUVA)</h3>
+                    <p class="text-sm text-gray-600 mb-2" data-key="buva_action">Akuisisi Strategis Perhotelan</p>
+                    [span_10](start_span)<p class="mb-3" data-key="buva_desc">Mengakuisisi 55% saham anak usaha SMRA senilai Rp 175 miliar untuk ekspansi di segmen perhotelan mewah di Bali, menciptakan sinergi operasional.[span_10](end_span)</p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-2">GMF Aero Asia (GMFI)</h3>
+                    <p class="text-sm text-gray-600 mb-2" data-key="gmfi_action">Rekapitalisasi Non-Tunai</p>
+                    [span_11](start_span)[span_12](start_span)<p class="mb-3" data-key="gmfi_desc">Rights issue dan inbreng aset senilai Rp 5,56 triliun dari Angkasa Pura Indonesia untuk mengatasi masalah ekuitas negatif dan memperkuat neraca keuangan.[span_11](end_span)[span_12](end_span)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 grid md:grid-cols-2 gap-8">
+            <div class="card">
+                <h3 class="text-2xl font-bold mb-4" data-key="audio_summary_title">Ringkasan Audio</h3>
+                <p class="text-gray-600 mb-4" data-key="audio_summary_desc">Dengarkan analisis pasar dalam format audio yang disajikan secara ringkas.</p>
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg"></iframe>
+                </div>
+            </div>
+            <div class="card flex flex-col items-center justify-center text-center">
+                 <h3 class="text-2xl font-bold mb-4" data-key="download_paper_title">Unduh Laporan Lengkap</h3>
+                 <p class="text-gray-600 mb-6" data-key="download_paper_desc">Dapatkan analisis mendalam dalam format PDF dengan mengklik tombol di bawah ini.</p>
+                <a href="YOUR_GOOGLE_DRIVE_LINK_HERE" target="_blank" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition duration-300 flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    <span data-key="download_button">Unduh Paper</span>
+                </a>
+            </div>
+        </section>
+        
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const translations = {
+                id: {
+                    header_title: "Analisis Pasar & Rekomendasi",
+                    purbaya_effect_title: '"Efek Purbaya": Pergeseran Paradigma Pasar',
+                    purbaya_effect_desc: 'Sentimen investor domestik berubah secara dramatis setelah Menteri Keuangan Purbaya Yudhi Sadewa mengaitkan insentif pemerintah dengan pemberantasan manipulasi saham. [span_13](start_span)Hal ini memicu rotasi modal besar-besaran dari aset spekulatif ke saham-saham unggulan (*blue-chip*), terutama di sektor perbankan, dan mendorong IHSG menembus rekor tertinggi baru.[span_13](end_span)',
+                    ihsg_record: 'Rekor IHSG',
+                    [span_14](start_span)closing_date: 'Penutupan 9 Oktober 2025[span_14](end_span)',
+                    transaction_value: 'Nilai Transaksi',
+                    [span_15](start_span)market_participation: 'Indikasi partisipasi pasar yang luas[span_15](end_span)',
+                    corporate_actions_title: 'Aksi Korporasi Utama',
+                    tins_action: 'Pelimpahan Aset Sitaan Negara',
+                    tins_desc: 'Menerima aset sitaan senilai Rp 6-7 triliun dari Kejagung, berpotensi meningkatkan kapasitas produksi secara non-dilutif. [span_16](start_span)[span_17](start_span)[span_18](start_span)Namun, ada risiko mewarisi kewajiban pemulihan lingkungan.[span_16](end_span)[span_17](end_span)[span_18](end_span)',
+                    kras_action: 'Dukungan Dana dari SWF Danantara',
+                    [span_19](start_span)[span_20](start_span)kras_desc: 'Mengajukan permohonan dana US$ 500 juta untuk restrukturisasi keuangan dan modal kerja, yang dapat meningkatkan EBITDA secara signifikan melalui penurunan biaya bunga.[span_19](end_span)[span_20](end_span)',
+                    pani_action: 'Konsolidasi via Rights Issue',
+                    [span_21](start_span)[span_22](start_span)pani_desc: 'Rights issue senilai Rp 16,73 triliun untuk konsolidasi aset dalam ekosistem PIK 2, menyederhanakan struktur kepemilikan dan menciptakan saham yang lebih likuid.[span_21](end_span)[span_22](end_span)',
+                    buva_action: 'Akuisisi Strategis Perhotelan',
+                    [span_23](start_span)buva_desc: 'Mengakuisisi 55% saham anak usaha SMRA senilai Rp 175 miliar untuk ekspansi di segmen perhotelan mewah di Bali, menciptakan sinergi operasional.[span_23](end_span)',
+                    gmfi_action: 'Rekapitalisasi Non-Tunai',
+                    [span_24](start_span)[span_25](start_span)gmfi_desc: 'Rights issue dan inbreng aset senilai Rp 5,56 triliun dari Angkasa Pura Indonesia untuk mengatasi masalah ekuitas negatif dan memperkuat neraca keuangan.[span_24](end_span)[span_25](end_span)',
+                    audio_summary_title: 'Ringkasan Audio',
+                    audio_summary_desc: 'Dengarkan analisis pasar dalam format audio yang disajikan secara ringkas.',
+                    download_paper_title: 'Unduh Laporan Lengkap',
+                    download_paper_desc: 'Dapatkan analisis mendalam dalam format PDF dengan mengklik tombol di bawah ini.',
+                    download_button: 'Unduh Paper'
+                },
+                en: {
+                    header_title: "Market Analysis & Recommendations",
+                    purbaya_effect_title: '"The Purbaya Effect": A Market Paradigm Shift',
+                    purbaya_effect_desc: 'Domestic investor sentiment shifted dramatically after Finance Minister Purbaya Yudhi Sadewa linked government incentives to the eradication of stock manipulation. [span_26](start_span)This triggered a massive capital rotation from speculative assets to blue-chip stocks, especially in the banking sector, pushing the JCI to a new all-time high.[span_26](end_span)',
+                    ihsg_record: 'JCI Record',
+                    [span_27](start_span)closing_date: 'Closing October 9, 2025[span_27](end_span)',
+                    transaction_value: 'Transaction Value',
+                    [span_28](start_span)market_participation: 'Indication of broad market participation[span_28](end_span)',
+                    corporate_actions_title: 'Key Corporate Actions',
+                    tins_action: 'Transfer of Seized State Assets',
+                    tins_desc: 'Receives seized assets worth IDR 6-7 trillion, potentially increasing production capacity non-dilutively. [span_29](start_span)[span_30](start_span)[span_31](start_span)However, it risks inheriting environmental restoration liabilities.[span_29](end_span)[span_30](end_span)[span_31](end_span)',
+                    kras_action: 'Funding Support from SWF Danantara',
+                    [span_32](start_span)[span_33](start_span)kras_desc: 'Requests $500 million for financial restructuring and working capital, which could significantly boost EBITDA by reducing interest costs.[span_32](end_span)[span_33](end_span)',
+                    pani_action: 'Consolidation via Rights Issue',
+                    [span_34](start_span)[span_35](start_span)pani_desc: 'A rights issue of IDR 16.73 trillion to consolidate assets within the PIK 2 ecosystem, simplifying the ownership structure and creating a more liquid stock.[span_34](end_span)[span_35](end_span)',
+                    buva_action: 'Strategic Hospitality Acquisition',
+                    [span_36](start_span)buva_desc: 'Acquires a 55% stake in an SMRA subsidiary for IDR 175 billion to expand in the luxury hospitality segment in Bali, creating operational synergies.[span_36](end_span)',
+                    gmfi_action: 'Non-Cash Recapitalization',
+                    [span_37](start_span)[span_38](start_span)gmfi_desc: 'A rights issue and in-kind contribution of assets worth IDR 5.56 trillion to resolve negative equity issues and strengthen the balance sheet.[span_37](end_span)[span_38](end_span)',
+                    audio_summary_title: 'Audio Summary',
+                    audio_summary_desc: 'Listen to the market analysis in a concise audio format.',
+                    download_paper_title: 'Download Full Report',
+                    download_paper_desc: 'Get the in-depth analysis in PDF format by clicking the button below.',
+                    download_button: 'Download Paper'
+                },
+                cn: {
+                    header_title: "市场分析与建议",
+                    purbaya_effect_title: '"普尔巴亚效应": 市场范式转变',
+                    [span_39](start_span)purbaya_effect_desc: '财政部长普尔巴亚·尤迪·萨德瓦将政府激励措施与杜绝股票操纵行为联系起来后，国内投资者的情绪发生了巨大转变。这引发了资本从投机性资产大规模转向蓝筹股，尤其是银行业，推动雅加达综合指数创下历史新高。[span_39](end_span)',
+                    ihsg_record: '雅加达综合指数记录',
+                    [span_40](start_span)closing_date: '2025年10月9日收盘[span_40](end_span)',
+                    transaction_value: '交易额',
+                    [span_41](start_span)market_participation: '广泛市场参与的迹象[span_41](end_span)',
+                    corporate_actions_title: '主要企业行动',
+                    tins_action: '移交被扣押的国有资产',
+                    [span_42](start_span)[span_43](start_span)[span_44](start_span)tins_desc: '接收价值6-7万亿印尼盾的被扣押资产，可能以非稀释方式提高生产能力。但存在继承环境修复责任的风险。[span_42](end_span)[span_43](end_span)[span_44](end_span)',
+                    kras_action: '来自主权财富基金Danantara的资金支持',
+                    [span_45](start_span)[span_46](start_span)kras_desc: '申请5亿美元用于财务重组和营运资金，可通过降低利息成本显著提高EBITDA。[span_45](end_span)[span_46](end_span)',
+                    pani_action: '通过配股进行整合',
+                    [span_47](start_span)[span_48](start_span)pani_desc: '通过16.73万亿印尼盾的配股来整合PIK 2生态系统内的资产，简化所有权结构并创造更具流动性的股票。[span_47](end_span)[span_48](end_span)',
+                    buva_action: '战略性酒店收购',
+                    [span_49](start_span)buva_desc: '以1750亿印尼盾收购SMRA子公司55%的股份，以扩大在巴厘岛的豪华酒店业务，创造运营协同效应。[span_49](end_span)',
+                    gmfi_action: '非现金资本重组',
+                    [span_50](start_span)[span_51](start_span)gmfi_desc: '通过配股和价值5.56万亿印尼盾的实物资产注入，解决负资产问题并加强资产负债表。[span_50](end_span)[span_51](end_span)',
+                    audio_summary_title: '音频摘要',
+                    audio_summary_desc: '以简洁的音频格式收听市场分析。',
+                    download_paper_title: '下载完整报告',
+                    download_paper_desc: '点击下方按钮，获取PDF格式的深度分析报告。',
+                    download_button: '下载报告'
+                }
+            };
+
+            const langButtons = {
+                id: document.getElementById('lang-id'),
+                en: document.getElementById('lang-en'),
+                cn: document.getElementById('lang-cn')
+            };
+
+            function changeLanguage(lang) {
+                // Set active button style
+                Object.values(langButtons).forEach(btn => btn.classList.remove('active'));
+                langButtons[lang].classList.add('active');
+
+                // Change text content based on selected language
+                const elements = document.querySelectorAll('[data-key]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-key');
+                    if (translations[lang][key]) {
+                        el.innerHTML = translations[lang][key];
+                    }
+                });
+
+                 // Change main lang attribute
+                document.documentElement.lang = lang;
+            }
+
+            langButtons.id.addEventListener('click', () => changeLanguage('id'));
+            langButtons.en.addEventListener('click', () => changeLanguage('en'));
+            langButtons.cn.addEventListener('click', () => changeLanguage('cn'));
+
+            // Initial language setup
+            changeLanguage('id');
+        });
+    </script>
+
+</body>
+</html>
