@@ -1,174 +1,124 @@
 {
-  "session_id": "20251009_ID_Market_Analysis_01",
-  "generation_timestamp_utc": "2025-10-09T03:20:00Z",
-  "session_summary": "Analisis strategis pasar Indonesia untuk Kuartal 4 2025, berfokus pada divergensi antara kebijakan moneter domestik yang akomodatif dan tantangan makroekonomi global. Sesi ini mengidentifikasi peluang investasi dalam tema sekuler (logam mulia, hilirisasi industri) dan merumuskan strategi investasi 'barbell'.",
-  "conversation_log":,
-  "extracted_insights": {
-    "global_macroeconomic_outlook": {
-      "us_monetary_policy": {
-        "event": "FOMC Rate Cut (September 2025)",
-        "decision": "Pemangkasan suku bunga 25 bps ke rentang 4.00% - 4.25%.",
-        "rationale": "Risiko penurunan terhadap lapangan kerja telah meningkat; bukan pemotongan dari posisi kekuatan ekonomi.",
-        "consensus_level": "Terpecah; satu gubernur (Stephen Miran) mendukung pemotongan 50 bps, sementara 'beberapa' anggota lain dapat mendukung untuk mempertahankan suku bunga.",
-        "forward_guidance": "Sangat bergantung pada data, jalur kebijakan ke depan tidak pasti.",
-        "source_snippets": ["[1]", "[2]"]
-      },
-      "us_equity_market": {
-        "performance": "Mencapai rekor tertinggi pada awal Oktober 2025, mengabaikan risiko jangka pendek seperti government shutdown.",
-        "valuation": "Pasar AS diperdagangkan dengan premium 3% dari nilai wajar; saham pertumbuhan (growth stocks) diperdagangkan dengan premium 12%.",
-        "primary_driver": "Euforia seputar kecerdasan buatan (AI), didorong oleh berita korporat seperti kesepakatan AMD dengan OpenAI.",
-        "risk": "Konsentrasi pasar yang tinggi pada 10 saham mega-cap; adanya divergensi antara sentimen pasar keuangan dan realitas ekonomi yang melambat.",
-        "source_snippets": ["[3]", "[4]", "[3]", "[5]"]
-      },
-      "global_growth": {
-        "oecd_outlook": "Pertumbuhan global menunjukkan tanda-tanda melunak karena dampak penuh dari tarif perdagangan yang lebih tinggi mulai terasa.",
-        "source_snippets": ["[6]"]
+  "meta": {
+    "report_title": "Horizon Strategis 2025-2026: Divergensi Makroekonomi & Supercycle Komoditas",
+    "generated_date": "2025-11-19",
+    "focus_period": "Q4 2025 - FY 2026",
+    "version": "1.0"
+  },
+  "macro_environment": {
+    "global_context": {
+      "japan_economy": {
+        "status": "Contraction",
+        "indicator": "GDP Q3 2025 contracted 1.8% (annualized)",
+        "driver": "US Tariff Impacts, export decline (-1.2%)",
+        "implication": "Risk to Asian export volume; BoJ rate hike limitation",
+        "source_refs": [1, 2]
       }
     },
-    "indonesian_economic_landscape": {
-      "monetary_policy": {
-        "bi_rate": "4.75% per September 2025, pemotongan kelima sejak September tahun sebelumnya.",
-        "stance": "Akomodatif dan pro-pertumbuhan, didukung oleh inflasi domestik yang jinak.",
-        "inflation_cpi": "Tercatat 1.60% (yoy) pada Mei 2025, jauh di dalam koridor target BI.",
-        "future_expectation": "Diperkirakan akan ada pemotongan lebih lanjut, berpotensi ke 4.50% sebelum akhir tahun 2025.",
-        "source_snippets": ["[7]", "[7]", "[8]"]
-      },
-      "gdp_growth": {
-        "forecast_2025": "Diperkirakan sekitar 5% (Samuel Sekuritas: 4.97%; BI: 4.6-5.4%).",
-        "primary_constraint": "Permintaan domestik yang lesu dan belanja rumah tangga yang 'hati-hati' meskipun inflasi rendah.",
-        "structural_issue": "Mekanisme transmisi dari inflasi rendah ke belanja konsumen tampaknya terganggu.",
-        "source_snippets": ["[9]", "[9]"]
-      },
-      "capital_flows": {
-        "trend": "Arus keluar modal asing yang signifikan sepanjang tahun 2025 (net sell Rp 61.98 triliun per awal Agustus).",
-        "concentration": "Sangat terkonsentrasi pada saham-saham blue-chip likuid, terutama sektor perbankan.",
-        "key_example": "BBCA mengalami tekanan jual asing yang masif, menyebabkan underperformance harga sahamnya.",
-        "market_resilience": "Investor domestik secara aktif menyerap saham yang dijual oleh asing, menunjukkan bahwa penjualan lebih didorong oleh arus makro daripada fundamental.",
-        "source_snippets": ["[10]", "[10]", "[11]", "[12]", "[13]", "[14]"]
-      }
-    },
-    "commodity_supercycles_outlook": {
-      "gold": {
-        "trend": "Bull market struktural yang kuat.",
-        "price_forecast_jpmorgan": "Menuju $4,000/oz pada pertengahan 2026.",
-        "price_forecast_goldman_sachs": "Target dinaikkan menjadi $4,900/oz pada Desember 2026.",
-        "key_drivers":,
-        "source_snippets": ["[15]", "[16]"]
-      },
-      "nickel": {
-        "current_dynamic": "Surplus pasokan selama tiga tahun, didorong oleh ekspansi produksi Indonesia.",
-        "inflection_point": "Pemerintah Indonesia memberi sinyal 'manajemen pasokan yang lebih agresif'.",
-        "policy_shifts": "Pengurangan masa berlaku lisensi tambang menjadi satu tahun dan penindakan kehutanan yang lebih ketat.",
-        "expected_outcome": "Keketatan pasar yang signifikan diperkirakan terjadi pada Q1 2026, menjadi katalis bullish untuk sektor nikel Indonesia.",
-        "source_snippets": ["[17]", "[17]", "[18]"]
-      },
-      "crude_oil": {
-        "trend": "Bearish.",
-        "price_forecast_eia": "Brent diperkirakan turun ke rata-rata $52/barel pada 1H26.",
-        "key_drivers": ["Peningkatan pasokan global yang kuat (terutama dari non-OPEC+)", "Pertumbuhan permintaan global yang moderat", "Peningkatan stok persediaan."],
-        "implication_for_indonesia": "Positif bersih; mengurangi tagihan impor, meredakan tekanan pada Rupiah, dan memberikan fleksibilitas lebih bagi BI.",
-        "source_snippets": ["[19]", "[19]", "[20]"]
-      },
-      "coal_newcastle": {
-        "trend": "Cenderung melemah hingga stabil.",
-        "drivers": "Pasokan yang melimpah dari produsen utama versus permintaan jangka pendek yang kuat dari Asia Utara.",
-        "source_snippets": ["[21]", "[22]"]
-      },
-      "crude_palm_oil_cpo": {
-        "trend": "Stabil hingga bullish.",
-        "price_range_forecast": "MYR 4,200 hingga MYR 4,600 per ton.",
-        "drivers": ["Permintaan kuat dari India menjelang musim perayaan", "Pertumbuhan produksi yang stagnan di Malaysia."],
-        "source_snippets": ["[23]", "[24]"]
-      }
-    },
-    "corporate_strategy_and_equity_analysis": {
-      "BUMI": {
-        "ticker": "BUMI.JK",
-        "strategic_pivot": "Diversifikasi dari batu bara termal ke logam masa depan.",
-        "corporate_action": "Akuisisi Wolfram Limited, sebuah perusahaan eksplorasi emas dan tembaga di Australia.",
-        "deal_value": "A$63.5 juta (nilai ekuitas).",
-        "rationale": "Mengurangi risiko bisnis dari tekanan ESG dan transisi energi global dengan memasuki komoditas sunrise (emas, tembaga).",
-        "source_snippets": ["[25]", "[26]", "[27]", "[25]", "[28]", "[28]", "[29]", "[30]"]
-      },
-      "ADMR": {
-        "ticker": "ADMR.JK",
-        "strategic_pivot": "Menjadi juara hilirisasi.",
-        "key_project": "Smelter aluminium PT Kalimantan Aluminium Industry (KAI) di Kalimantan Utara.",
-        "timeline": "Operasi bertahap dimulai pada akhir 2025.",
-        "scale": "Kapasitas 500,000 ton/tahun (fase 1) dengan investasi USD 2 miliar.",
-        "rationale": "Menjadi proksi langsung untuk keberhasilan kebijakan ekonomi strategis Indonesia dalam meningkatkan nilai tambah sumber daya alam.",
-        "source_snippets": ["[31]", "[31]", "[32]", "[33]", "[34]"]
-      },
-      "PTRO": {
-        "ticker": "PTRO.JK",
-        "strategic_pivot": "Ekspansi internasional sebagai vektor pertumbuhan baru.",
-        "corporate_action": "Menandatangani kontrak awal EPC senilai US$26.2 juta dengan Reko Diq Mining Company di Pakistan.",
-        "project_scale": "Reko Diq adalah salah satu deposit tembaga-emas terbesar di dunia yang belum dikembangkan.",
-        "rationale": "Mendiversifikasi basis pendapatan dari siklus pertambangan Indonesia dan memanfaatkan proyek infrastruktur skala besar di luar negeri, meskipun dengan risiko geopolitik yang lebih tinggi.",
-        "source_snippets": ["[35]", "[36]", "[36]", "[37]", "[38]", "[37]", "[39]", "[40]", "[37]"]
-      },
-      "BBCA": {
-        "ticker": "BBCA.JK",
-        "market_situation": "Menjadi target utama dari rotasi modal asing keluar dari Indonesia, dengan harga saham turun 22.2% YTD.",
-        "fundamental_health": "Tetap sangat kuat; pertumbuhan kredit 12.9% yoy (1H25), rasio CASA dominan 82.5%.",
-        "analyst_consensus": "Sangat positif (34 'Buy' vs 3 'Hold'), dengan target harga rata-rata menunjukkan upside yang signifikan.",
-        "investment_thesis": "Kelemahan harga saham saat ini merupakan peluang strategis untuk berinvestasi dalam waralaba perbankan berkualitas tinggi dengan diskon, yang didorong oleh tekanan jual teknis, bukan penurunan fundamental.",
-        "source_snippets": ["[41]", "[13]", "[14]", "[42]", "[42]"]
-      },
-      "MDKA": {
-        "ticker": "MDKA.JK",
-        "investment_theme": "Eksposur Emas & Hilirisasi.",
-        "key_catalyst": "Proyek Emas Pani, dengan produksi pertama diharapkan pada Q1 2026.",
-        "financial_outlook": "Diperkirakan akan mencatat kerugian bersih pada 2025F, diikuti oleh pemulihan laba yang solid pada 2026F saat proyek-proyek baru mulai beroperasi.",
-        "analyst_consensus": "Strong Buy.",
-        "source_snippets": ["[43]", "[44]", "[45]", "[46]", "[47]", "[48]", "[49]", "[50]", "[51]", "[52]", "[53]"]
-      },
-      "BRMS": {
-        "ticker": "BRMS.JK",
-        "investment_theme": "Eksposur Emas.",
-        "key_catalyst": "Pabrik heap leach baru yang diharapkan akan meningkatkan produksi secara signifikan pada 2025.",
-        "financial_outlook": "Pendapatan 2025F diperkirakan tumbuh 47.8% yoy.",
-        "analyst_consensus": "Strong Buy.",
-        "source_snippets": ["[54]", "[54]", "[55]", "[56]", "[57]", "[58]", "[59]", "[60]", "[61]", "[62]"]
-      },
-      "NCKL": {
-        "ticker": "NCKL.JK",
-        "investment_theme": "Juara Hilirisasi Nikel.",
-        "key_catalyst": "Benefisiari langsung dari strategi manajemen pasokan baru pemerintah Indonesia untuk nikel.",
-        "valuation": "Dianggap memiliki valuasi yang lebih menarik (P/E lebih rendah) dibandingkan dengan INCO.",
-        "analyst_consensus": "Strong Buy.",
-        "source_snippets": ["[63]", "[64]", "[65]", "[66]", "[67]", "[68]", "[68]", "[69]", "[70]"]
-      },
-      "INCO": {
-        "ticker": "INCO.JK",
-        "investment_theme": "Juara Hilirisasi Nikel.",
-        "key_catalyst": "Benefisiari langsung dari strategi manajemen pasokan baru pemerintah Indonesia untuk nikel.",
-        "analyst_consensus": "Buy.",
-        "source_snippets": ["[71]", "[72]", "[73]", "[74]", "[73]", "[75]", "[76]", "[77]"]
-      },
-      "ISAT": {
-        "ticker": "ISAT.JK",
-        "investment_theme": "Blue-Chip Defensif.",
-        "sector_dynamics": "Beroperasi di sektor telekomunikasi yang menantang dan membutuhkan 'perbaikan pasar'.",
-        "strategy": "Fokus strategis pada pertumbuhan Average Revenue Per User (ARPU) daripada jumlah pelanggan.",
-        "financial_outlook": "Laba bersih 2025F diperkirakan tumbuh 4.1%, didukung oleh sinergi operasional.",
-        "source_snippets": ["[78]", "[79]", "[80]", "[80]", "[78]", "[81]", "[82]"]
-      }
-    },
-    "market_outlook_and_strategic_recommendations": {
-      "synthesized_jci_thesis": "IHSG diperkirakan akan mengalami pemulihan bertahap hingga akhir 2025 dan awal 2026, dipimpin oleh sektor material dan pertambangan. Reli yang lebih luas bergantung pada stabilisasi dan pembalikan arus dana asing.",
-      "key_risks": {
-        "downside":,
-        "upside":
-      },
-      "actionable_investment_strategy": {
-        "sector_allocation": {
-          "overweight": "Material dan Pertambangan (fokus pada produsen emas dan nikel).",
-          "neutral": "Keuangan (akumulasi saham berkualitas seperti BBCA saat harga lemah).",
-          "underweight": "Sektor Konsumen-Diskresioner (hingga ada tanda-tanda pemulihan permintaan domestik yang jelas)."
-        },
-        "thematic_focus": "Memprioritaskan perusahaan dengan katalis yang jelas dan dapat diidentifikasi: Produsen Emas (BRMS, MDKA), Juara Hilirisasi (ADMR, NCKL, INCO), dan Blue-Chips Berkualitas yang Terjual Habis (BBCA)."
+    "domestic_context": {
+      "fiscal_health": {
+        "indicator": "External Debt (ULN) Q3 2025",
+        "value": "USD 424.4 Billion (-0.6% YoY)",
+        "trajectory": "Deleveraging",
+        "analysis": "Strong fiscal headroom allowing for aggressive resource nationalism policies without capital flight risk",
+        "source_refs": [3, 4]
       }
     }
+  },
+  "regulatory_framework_2026": {
+    "gold_export_tax": {
+      "status": "Finalizing PMK",
+      "effective_date": "2026",
+      "mechanism": "Progressive Tariff based on HMA (Harga Mineral Acuan)",
+      "tiers":,
+      "strategic_intent": "Force domestic refining (hilirisasi) & capture windfall profits",
+      "source_refs": [5, 6]
+    },
+    "coal_export_tax": {
+      "status": "Inter-ministry Discussion (Kemenkeu & ESDM)",
+      "effective_date": "2026",
+      "mechanism": "Progressive (expected similar to gold structure)",
+      "strategic_intent": "Domestic Market Obligation (DMO) enforcement & revenue optimization",
+      "source_refs": [7, 8]
+    }
+  },
+  "commodity_supercycle": {
+    "gold": {
+      "price_forecast_2026": {
+        "consensus_target": "USD 4,200 - 5,055 / oz",
+        "institutional_targets":
+      },
+      "drivers":,
+      "source_refs": [9, 7, 10, 11]
+    }
+  },
+  "corporate_strategy_matrix": {
+    "sector": "Gold Mining",
+    "strategic_theme": "Pivot to Domestic Market (Multisourcing)",
+    "companies":
+      },
+      {
+        "ticker": "UNTR",
+        "name": "United Tractors (Agincourt)",
+        "exposure_risk": "Medium (Transitioning)",
+        "strategy": "Active Pivoting",
+        "action": "Initiating multisourcing talks with ANTM & HRTA",
+        "trajectory_2026": "Securing margin stability via domestic offtake",
+        "source_refs": [3, 14]
+      },
+      {
+        "ticker": "MDKA",
+        "name": "Merdeka Copper Gold / MGR",
+        "exposure_risk": "High (Project Timing)",
+        "strategy": "Project Acceleration",
+        "action": "Pani Project first gold pour Q1 2026; coincides with tax implementation",
+        "trajectory_2026": "Critical need for domestic buyer to maximize Pani project IRR",
+        "source_refs": [15, 16, 17]
+      },
+      {
+        "ticker": "PSAB",
+        "name": "J Resources",
+        "exposure_risk": "Severe",
+        "strategy": "Pending Pivot",
+        "action": "Current structure 83% export (Metalor Singapore); needs urgent restructuring",
+        "trajectory_2026": "Potential 15% revenue leakage if export reliance continues",
+        "source_refs": [18, 19, 20]
+      },
+      {
+        "ticker": "ARCI",
+        "name": "Archi Indonesia",
+        "exposure_risk": "Medium",
+        "strategy": "Recovery & Expansion",
+        "action": "Kopra Underground ops late 2025; targeting IDR 2T profit in 2026",
+        "trajectory_2026": "Volume recovery key to offsetting potential tax drag",
+        "source_refs": [21, 22]
+      }
+    ]
+  },
+  "infrastructure_and_expansion": {
+    "companies":
+      },
+      {
+        "ticker": "ELSA",
+        "name": "Elnusa",
+        "deal_type": "Regional Expansion",
+        "action": "Seismic survey contracts in Thailand; Domestic contracts IDR 3.8T",
+        "rationale": "Diversification beyond Pertamina dependency",
+        "source_refs": [25, 26]
+      }
+    ]
+  },
+  "consumer_and_media_divergence": {
+    "companies":
+      },
+      {
+        "ticker": "FILM",
+        "name": "MD Entertainment",
+        "trend": "Negative",
+        "status_q3_2025": "Revenue -21.95% YoY",
+        "driver": "Competition from global OTT & shifting consumption habits",
+        "source_refs": [29, 30]
+      }
+    ]
   }
 }
