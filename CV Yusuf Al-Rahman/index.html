@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<!-- Mengubah bahasa default ke 'en' (Inggris) -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Yusuf Al-Rahman (Multi-Language)</title>
-    <!-- Tautan Font Awesome untuk ikon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Impor font dari Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap');
@@ -77,6 +75,7 @@
             text-align: center;
             margin-bottom: 40px;
             position: relative;
+            padding-top: 20px; 
         }
         .main-header h1 {
             font-family: 'Poppins', sans-serif;
@@ -114,23 +113,6 @@
             color: var(--primary-color);
             width: 16px; 
             text-align: center;
-        }
-
-        /* Foto Profil */
-        .profile-img-container {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid var(--primary-color);
-            margin: -10px auto 20px auto;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .profile-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
         }
 
         /* Tata Letak Bagian */
@@ -248,7 +230,6 @@
         @media print {
             #lang-switcher { display: none; }
             .container { margin: 0; box-shadow: none; border-top: none; } 
-            .profile-img-container { margin-top: 0; }
         }
         
         /* Media Query untuk Perangkat Seluler */
@@ -256,11 +237,6 @@
             .container { padding: 30px 25px; }
             .skills-container { grid-template-columns: 1fr; }
             #lang-switcher { top: 10px; right: 15px; }
-            .profile-img-container {
-                width: 100px;
-                height: 100px;
-                margin-bottom: 15px;
-            }
         }
     </style>
 </head>
@@ -269,17 +245,11 @@
     <div class="container">
         
         <button id="lang-switcher">
-            <!-- Mengubah bendera default ke US (Inggris) -->
             <img id="flag-icon" src="https://flagcdn.com/us.svg" alt="Switch Language">
         </button>
 
         <header class="main-header">
-            <div class="profile-img-container">
-                <img src="https://lh3.googleusercontent.com/pw/AP1GczPH_R2nO0jK0U_1X7q38e2D1K6-lI6z-7zN4L_2o3V6k1oN8K_0B1L9Q7Q6e1E5y5yY8pY8w=w1920-h1080-rw" alt="Profile Picture">
-            </div>
-
             <h1>Yusuf Al-Rahman</h1>
-            <!-- Menukar 'hidden' antara 'lang-id' dan 'lang-en' -->
             <h2 class="lang-id hidden">Analis Data & Operasi</h2>
             <h2 class="lang-en">Data & Operations Analyst</h2>
             <h2 class="lang-zh hidden">數據與運營分析師</h2>
@@ -287,7 +257,6 @@
             <div class="contact-info">
                 <span><i class="icon fa-solid fa-phone"></i>+62 821-2272-9841</span>
                 <span><i class="icon fa-solid fa-envelope"></i><a href="mailto:sirjosephholmes@gmail.com">sirjosephholmes@gmail.com</a></span>
-                <!-- Menukar 'hidden' -->
                 <span class="lang-id hidden"><i class="icon fa-solid fa-location-dot"></i>Jakarta, Indonesia</span>
                 <span class="lang-en"><i class="icon fa-solid fa-location-dot"></i>Jakarta, Indonesia</span>
                 <span class="lang-zh hidden"><i class="icon fa-solid fa-location-dot"></i>雅加達, 印度尼西亞</span>
@@ -300,13 +269,11 @@
         <section class="section">
             <h3 class="section-title">
                 <i class="icon fa-solid fa-user-tie"></i>
-                <!-- Menukar 'hidden' -->
                 <span class="lang-id hidden">Ringkasan Profesional</span>
                 <span class="lang-en">Professional Summary</span>
                 <span class="lang-zh hidden">專業概覽</span>
                 <span class="lang-nl hidden">Professioneel Profiel</span>
             </h3>
-            <!-- Menukar 'hidden' -->
             <p class="lang-id hidden">
                 Bersemangat dalam mengembangkan solusi IoT dan ML yang inovatif. Memiliki pengalaman langsung dalam membangun sistem embedded, jaringan sensor, dan mengimplementasikan algoritma machine learning untuk analisis data real-time. Digerakkan oleh keinginan untuk menerapkan keahlian analitis dan operasional guna mengoptimalkan efisiensi dan mendorong inovasi dalam lingkungan supply chain yang dinamis.
             </p>
@@ -324,7 +291,6 @@
         <section class="section">
             <h3 class="section-title">
                 <i class="icon fa-solid fa-cogs"></i>
-                <!-- Menukar 'hidden' -->
                 <span class="lang-id hidden">Keahlian</span>
                 <span class="lang-en">Skills</span>
                 <span class="lang-zh hidden">專業技能</span>
@@ -332,55 +298,50 @@
             </h3>
             <div class="skills-container">
                 <div class="skills-category">
-                    <!-- Menukar 'hidden' -->
                     <h4 class="lang-id hidden">Keahlian Teknis</h4>
                     <h4 class="lang-en">Technical Expertise</h4>
                     <h4 class="lang-zh hidden">技術專長</h4>
                     <h4 class="lang-nl hidden">Technische Expertise</h4>
                     <ul>
-                        <li class="highlight">Python</li>
-                        <li class="highlight">JavaScript</li>
-                        <li>C++</li>
-                        <li>Node.js</li>
+                        <li class="highlight">TensorFlow</li>
+                        <li class="highlight">Hugging Face Transformers</li>
+                        <li>PlatformIO</li>
+                        <li>Node-RED</li>
+                        <li class="highlight">C++</li>
+                        <li class="highlight">Node.js</li>
                         <li>Google Cloud</li>
                         <li>Docker</li>
                         <li>MQTT</li>
-                        <!-- Menukar 'hidden' -->
-                        <li class="lang-id hidden">Jaringan Sensor</li>
-                        <li class="lang-en">Sensor Networks</li>
-                        <li class="lang-zh hidden">傳感器網絡</li>
-                        <li class="lang-nl hidden">Sensornetwerken</li>
-                        <!-- Menukar 'hidden' -->
-                        <li class="lang-id hidden">Sistem Embedded</li>
-                        <li class="lang-en">Embedded Systems</li>
-                        <li class="lang-zh hidden">嵌入式系統</li>
-                        <li class="lang-nl hidden">Ingebedde Systemen</li>
+                        <li class="lang-id hidden highlight">Jaringan Sensor</li>
+                        <li class="lang-en highlight">Sensor Networks</li>
+                        <li class="lang-zh hidden highlight">傳感器網絡</li>
+                        <li class="lang-nl hidden highlight">Sensornetwerken</li>
+                        <li class="lang-id hidden highlight">Sistem Embedded</li>
+                        <li class="lang-en highlight">Embedded Systems</li>
+                        <li class="lang-zh hidden highlight">嵌入式系統</li>
+                        <li class="lang-nl hidden highlight">Ingebedde Systemen</li>
                     </ul>
                 </div>
                 <div class="skills-category">
-                    <!-- Menukar 'hidden' -->
                     <h4 class="lang-id hidden">Kompetensi Inti</h4>
                     <h4 class="lang-en">Core Competencies</h4>
                     <h4 class="lang-zh hidden">核心競爭力</h4>
                     <h4 class="lang-nl hidden">Kerncompetenties</h4>
                     <ul>
-                        <li>Machine Learning</li>
-                        <li>Internet of Things (IoT)</li>
-                        <!-- Menukar 'hidden' -->
-                        <li class="lang-id hidden">Analisis Data Real-time</li>
-                        <li class="lang-en">Real-time Data Analysis</li>
-                        <li class="lang-zh hidden">實時數據分析</li>
-                        <li class="lang-nl hidden">Real-time Data-analyse</li>
-                        <!-- Menukar 'hidden' -->
+                        <li class="highlight">Machine Learning</li>
+                        <li class="highlight">Internet of Things (IoT)</li>
+                        <li class="lang-id hidden highlight">Analisis Data Real-time</li>
+                        <li class="lang-en highlight">Real-time Data Analysis</li>
+                        <li class="lang-zh hidden highlight">實時數據分析</li>
+                        <li class="lang-nl hidden highlight">Real-time Data-analyse</li>
                         <li class="lang-id hidden">Manajemen Proyek Teknis</li>
                         <li class="lang-en">Technical Project Management</li>
                         <li class="lang-zh hidden">技術項目管理</li>
                         <li class="lang-nl hidden">Technisch Projectmanagement</li>
-                        <!-- Menukar 'hidden' -->
-                        <li class="lang-id hidden">Fasilitasi Workshop Teknis</li>
-                        <li class="lang-en">Technical Workshop Facilitation</li>
-                        <li class="lang-zh hidden">技術工作坊引導</li>
-                        <li class="lang-nl hidden">Facilitatie van Technische Workshops</li>
+                        <li class="lang-id hidden highlight">Fasilitasi Workshop Teknis</li>
+                        <li class="lang-en highlight">Technical Workshop Facilitation</li>
+                        <li class="lang-zh hidden highlight">技術工作坊引導</li>
+                        <li class="lang-nl hidden highlight">Facilitatie van Technische Workshops</li>
                     </ul>
                 </div>
             </div>
@@ -389,58 +350,22 @@
         <section class="section">
             <h3 class="section-title">
                 <i class="icon fa-solid fa-briefcase"></i>
-                <!-- Menukar 'hidden' -->
                 <span class="lang-id hidden">Pengalaman Kerja</span>
                 <span class="lang-en">Work Experience</span>
                 <span class="lang-zh hidden">工作經歷</span>
                 <span class="lang-nl hidden">Werkervaring</span>
             </h3>
-             <div class="item">
-                <div class="item-header">
-                    <h4 class="item-title">Chief Operating Officer</h4>
-                    <p class="item-subtitle">PT. Suka Bumi Resources</p>
-                    <!-- Menukar 'hidden' -->
-                    <p class="item-date lang-id hidden">Agustus 2025 – Saat Ini</p>
-                    <p class="item-date lang-en">August 2025 – Present</p>
-                    <p class="item-date lang-zh hidden">2025年8月 – 至今</p>
-                    <p class="item-date lang-nl hidden">Augustus 2025 – Heden</p>
-                </div>
-                <div class="item-description">
-                    <!-- Menukar 'hidden' -->
-                    <ul class="lang-id hidden">
-                        <li>Mengelola operasi logistik ekspor end-to-end, memastikan pengiriman tepat waktu dan kelengkapan dokumen.</li>
-                        <li>Mengimplementasikan SOP Kontrol Kualitas untuk menekan tingkat komplain pelanggan.</li>
-                        <li>Melakukan analisis biaya operasional untuk menghasilkan inisiatif penghematan tahunan.</li>
-                    </ul>
-                    <ul class="lang-en">
-                        <li>Manage end-to-end export logistics operations, ensuring on-time delivery and complete documentation.</li>
-                        <li>Implement Quality Control SOPs to reduce customer complaint rates.</li>
-                        <li>Conduct operational cost analysis, leading to annual savings initiatives.</li>
-                    </ul>
-                    <ul class="lang-zh hidden">
-                        <li>管理端到端的出口物流運營，確保準時交貨和文件齊全。</li>
-                        <li>實施質量控制標準作業程序以降低客戶投訴率。</li>
-                        <li>進行運營成本分析，提出年度節省計劃。</li>
-                    </ul>
-                    <ul class="lang-nl hidden">
-                        <li>Beheer van end-to-end exportlogistiek, waarbij tijdige levering en volledige documentatie worden gegarandeerd.</li>
-                        <li>Implementeren van Kwaliteitscontrole SOP's om het aantal klachten van klanten te verminderen.</li>
-                        <li>Uitvoeren van operationele kostenanalyses, wat leidt tot jaarlijkse besparingsinitiatieven.</li>
-                    </ul>
-                </div>
-            </div>
+
             <div class="item">
                 <div class="item-header">
-                    <h4 class="item-title">Researcher Staff</h4>
+                    <h4 class="item-title">Researcher Staff <span style="font-size: 0.9em; font-weight: normal;">(Internship)</span></h4>
                     <p class="item-subtitle">Universitas Trilogi</p>
-                    <!-- Menukar 'hidden' -->
                     <p class="item-date lang-id hidden">April 2024 – September 2024</p>
                     <p class="item-date lang-en">April 2024 – September 2024</p>
                     <p class="item-date lang-zh hidden">2024年4月 – 2024年9月</p>
                     <p class="item-date lang-nl hidden">April 2024 – September 2024</p>
                 </div>
                 <div class="item-description">
-                    <!-- Menukar 'hidden' -->
                     <ul class="lang-id hidden">
                         <li>Berpartisipasi dalam pengembangan prototipe sistem kontrol HVAC cerdas menggunakan sensor IoT dan machine learning untuk mengoptimalkan kontrol katup AC.</li>
                         <li>Merancang dan mengimplementasikan sistem integrasi sensor komprehensif dengan pipeline pemrosesan data real-time untuk pemantauan lingkungan.</li>
@@ -463,12 +388,78 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <h4 class="item-title">Web Developer <span style="font-size: 0.9em; font-weight: normal;">(Internship)</span></h4>
+                    <p class="item-subtitle">Bimbel Tiki Taka</p>
+                    <p class="item-date lang-id hidden">September 2023 – Juni 2024</p>
+                    <p class="item-date lang-en">September 2023 – June 2024</p>
+                    <p class="item-date lang-zh hidden">2023年9月 – 2024年6月</p>
+                    <p class="item-date lang-nl hidden">September 2023 – Juni 2024</p>
+                </div>
+                <div class="item-description">
+                    <ul class="lang-id hidden">
+                        <li>Membuat antarmuka yang responsif dan fungsional untuk memastikan pengalaman pengguna yang baik di semua perangkat.</li>
+                        <li>Merancang dan mengembangkan situs web yang ramah pengguna, menghasilkan peningkatan akuisisi waralaba sebesar 15%.</li>
+                    </ul>
+                    <ul class="lang-en">
+                        <li>Created a responsive and functional interface to allow users to have a good user experience when accessing the website from any device.</li>
+                        <li>Design and develop user friendly websites, resulting in 15% increase in franchise acquisition.</li>
+                    </ul>
+                    <ul class="lang-zh hidden">
+                        <li>創建響應式且功能齊全的界面，確保用戶在任何設備上都能獲得良好的用戶體驗。</li>
+                        <li>設計並開發用戶友好的網站，使特許經營收購增加了 15%。</li>
+                    </ul>
+                    <ul class="lang-nl hidden">
+                        <li>Een responsieve en functionele interface gecreëerd om een goede gebruikerservaring op alle apparaten te garanderen.</li>
+                        <li>Gebruiksvriendelijke websites ontworpen en ontwikkeld, wat resulteerde in een toename van 15% in franchise-acquisitie.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <h4 class="item-title">Meta Spark AR Designer <span style="font-size: 0.9em; font-weight: normal;">(Internship)</span></h4>
+                    <p class="item-subtitle">Revolusi Belajar Indonesia</p>
+                    <p class="item-date lang-id hidden">Februari 2023 – Juli 2023</p>
+                    <p class="item-date lang-en">February 2023 – July 2023</p>
+                    <p class="item-date lang-zh hidden">2023年2月 – 2023年7月</p>
+                    <p class="item-date lang-nl hidden">Februari 2023 – Juli 2023</p>
+                </div>
+                <div class="item-description">
+                    <ul class="lang-id hidden">
+                        <li>Mengembangkan dan memelihara pengalaman AR yang imersif dan interaktif di platform Meta Spark.</li>
+                        <li>Bekerja sama dengan desainer dan pengembang untuk membuat konten AR yang menarik dan edukatif.</li>
+                        <li>Selalu mengikuti tren dan teknologi terbaru dalam AR.</li>
+                        <li><strong>Proyek:</strong> Math Adventure (Filter Instagram dengan permainan kuis).</li>
+                    </ul>
+                    <ul class="lang-en">
+                        <li>Develop and maintain immersive and interactive AR experiences on the Meta Spark platform.</li>
+                        <li>Work with designers and developers to create engaging and educational AR content.</li>
+                        <li>Stay up-to-date with the latest trends and technology in AR.</li>
+                        <li><strong>Project:</strong> Math Adventure (Instagram filter with quiz game applied).</li>
+                    </ul>
+                    <ul class="lang-zh hidden">
+                        <li>在 Meta Spark 平台上開發和維護沉浸式及互動式 AR 體驗。</li>
+                        <li>與設計師和開發人員合作，創建引人入勝且具教育意義的 AR 內容。</li>
+                        <li>緊跟 AR 領域的最新趨勢和技術。</li>
+                        <li><strong>項目:</strong> Math Adventure (帶有問答遊戲的 Instagram 濾鏡)。</li>
+                    </ul>
+                    <ul class="lang-nl hidden">
+                        <li>Ontwikkelen en onderhouden van meeslepende en interactieve AR-ervaringen op het Meta Spark-platform.</li>
+                        <li>Samenwerken met ontwerpers en ontwikkelaars om boeiende en educatieve AR-content te creëren.</li>
+                        <li>Op de hoogte blijven van de nieuwste trends en technologieën in AR.</li>
+                        <li><strong>Project:</strong> Math Adventure (Instagram-filter met quizspel).</li>
+                    </ul>
+                </div>
+            </div>
+
         </section>
 
         <section class="section">
             <h3 class="section-title">
                 <i class="icon fa-solid fa-hands-helping"></i>
-                <!-- Menukar 'hidden' -->
                 <span class="lang-id hidden">Pengalaman Volunteer & Kepemimpinan</span>
                 <span class="lang-en">Volunteering & Leadership Experience</span>
                 <span class="lang-zh hidden">志願服務與領導經驗</span>
@@ -476,7 +467,6 @@
             </h3>
             <div class="item">
                 <div class="item-header">
-                    <!-- Menukar 'hidden' -->
                     <h4 class="item-title lang-id hidden">Fasilitator Workshop Teknis</h4>
                     <h4 class="item-title lang-en">Technical Workshop Facilitator</h4>
                     <h4 class="item-title lang-zh hidden">技術工作坊引導者</h4>
@@ -485,7 +475,6 @@
                     <p class="item-date">April 2024</p>
                 </div>
                 <div class="item-description">
-                    <!-- Menukar 'hidden' -->
                     <ul class="lang-id hidden">
                         <li>Memimpin workshop teknis tentang "Pemrograman Mikrokontroler & Sensor untuk Sistem Perangkat Keras Berbasis IoT" dengan tingkat pemahaman peserta >90%.</li>
                         <li>Mengembangkan modul praktis terstruktur yang menghasilkan peningkatan pemahaman teknis peserta sebesar 40% dari pra-tes ke pasca-tes.</li>
@@ -509,7 +498,6 @@
         <section class="section">
             <h3 class="section-title">
                 <i class="icon fa-solid fa-certificate"></i>
-                <!-- Menukar 'hidden' -->
                 <span class="lang-id hidden">Sertifikasi</span>
                 <span class="lang-en">Certifications</span>
                 <span class="lang-zh hidden">證書</span>
@@ -517,7 +505,6 @@
             </h3>
             <ul class="cert-list">
                 <li><i class="icon fa-solid fa-award"></i><div>
-                    <!-- Menukar 'hidden' -->
                     <b class="lang-id hidden">Programmer (Skema Sertifikasi)</b>
                     <b class="lang-en">Programmer (Certification Scheme)</b>
                     <b class="lang-zh hidden">程序員（認證方案）</b>
@@ -528,35 +515,28 @@
             </ul>
         </section>
 
-        <!-- === BAGIAN YANG DIPERBARUI === -->
         <section class="section">
             <h3 class="section-title">
                 <i class="icon fa-solid fa-graduation-cap"></i>
-                <!-- Menukar 'hidden' -->
                 <span class="lang-id hidden">Pendidikan</span>
                 <span class="lang-en">Education</span>
                 <span class="lang-zh hidden">教育背景</span>
                 <span class="lang-nl hidden">Opleiding</span>
             </h3>
             
-            <!-- Entri Baru untuk Asia Cyber University -->
             <div class="item">
-                 <!-- Menukar 'hidden' -->
                  <h4 class="item-title lang-id hidden">S1 - Sistem Informasi (Ekstensi)</h4>
                  <h4 class="item-title lang-en">Bachelor's Degree - Information Systems (Extension)</h4>
                  <h4 class="item-title lang-zh hidden">學士學位 - 信息系統 (擴展)</h4>
                  <h4 class="item-title lang-nl hidden">Bachelor - Informatiesystemen (Extensie)</h4>
                  <p class="item-subtitle">Asia Cyber University, Indonesia</p>
-                 <!-- Menukar 'hidden' DAN Memperbarui Tanggal -->
                  <p class="item-date lang-id hidden">Oktober 2025 – Saat Ini (Diperkirakan lulus Februari 2027)</p>
                  <p class="item-date lang-en">October 2025 – Present (Expected graduation February 2027)</p>
                  <p class="item-date lang-zh hidden">2025年10月 – 至今 (預計2027年2月畢業)</p>
                  <p class="item-date lang-nl hidden">Oktober 2025 – Heden (Verwacht afstuderen februari 2027)</p>
             </div>
             
-            <!-- Entri yang Diperbarui untuk CCIT -->
             <div class="item">
-                 <!-- Menukar 'hidden' -->
                  <h4 class="item-title lang-id hidden">Program Profesi - Otomasi Sistem Berbasis Internet</h4>
                  <h4 class="item-title lang-en">Professional Program - Internet Based System Automation</h4>
                  <h4 class="item-title lang-zh hidden">專業課程 - 基於互聯網的系統自動化</h4>
@@ -566,7 +546,6 @@
                  <p style="margin-top: 8px; text-align: left; line-height: 1.6; font-weight: 600;">GPA: 3.44</p>
             </div>
         </section>
-        <!-- === AKHIR BAGIAN YANG DIPERBARUI === -->
     </div>
 
     <script>
@@ -574,11 +553,8 @@
             const langSwitcher = document.getElementById('lang-switcher');
             const flagIcon = document.getElementById('flag-icon');
             
-            // --- PERUBAHAN JAVASCRIPT ---
-            // Mengubah urutan array agar 'en' (Inggris) menjadi yang pertama (index 0)
+            // Index 0 = 'en' (Inggris) sebagai default
             const languages = ['en', 'id', 'zh', 'nl'];
-            // --- AKHIR PERUBAHAN ---
-            
             const flagUrls = {
                 id: 'https://flagcdn.com/id.svg',
                 en: 'https://flagcdn.com/us.svg', 
@@ -586,7 +562,6 @@
                 nl: 'https://flagcdn.com/nl.svg'
             };
 
-            // Index 0 sekarang menunjuk ke 'en' (Inggris)
             let currentLangIndex = 0;
 
             langSwitcher.addEventListener('click', function() {
@@ -610,5 +585,3 @@
     </script>
 </body>
 </html>
-
-
