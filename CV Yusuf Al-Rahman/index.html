@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Yusuf Al-Rahman (A4 Style)</title>
+    <title>CV - Yusuf Al-Rahman (Single Page)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Impor font dari Google Fonts */
@@ -20,29 +20,30 @@
             --border-color: #e0e0e0;
         }
 
+        /* --- TAMPILAN LAYAR (WEB VIEW) --- */
         body {
             font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 40px 0;
-            background-color: var(--secondary-color);
+            background-color: var(--secondary-color); /* Latar belakang abu-abu di layar */
             color: var(--text-dark);
             -webkit-print-color-adjust: exact;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 30px; /* Jarak antar kertas */
         }
 
-        /* Gaya Kertas A4 */
+        /* Gaya Kertas (Satu Halaman Panjang) */
         .page {
             width: 210mm;
-            min-height: 297mm;
+            min-height: 297mm; /* Minimal setinggi A4, tapi bisa memanjang */
             background-color: var(--paper-color);
-            padding: 50px 60px; /* Margin dalam kertas */
+            padding: 40px 50px; 
             box-sizing: border-box;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Efek bayangan kertas */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Efek bayangan di layar */
             border-top: 10px solid var(--primary-color);
             position: relative;
+            overflow: visible; /* Biarkan konten memanjang ke bawah */
         }
 
         /* Tombol ganti bahasa (Floating) */
@@ -52,8 +53,8 @@
             right: 20px;
             background-color: #fff;
             border: 2px solid var(--primary-color);
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             cursor: pointer;
             padding: 0;
@@ -69,12 +70,14 @@
             transform: scale(1.1);
         }
         #lang-switcher img {
-            width: 30px;
+            width: 25px;
             height: auto;
             display: block;
         }
 
-        /* Gaya Khusus untuk Link Portfolio */
+        /* Typography & Layout Umum */
+        .hidden { display: none !important; }
+
         .portfolio-banner {
             text-align: center;
             margin-top: 25px;
@@ -103,89 +106,86 @@
         .portfolio-link i {
             margin-right: 8px;
         }
-        
-        .hidden { display: none !important; }
 
-        /* Typography & Layout yang sama */
         .main-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             position: relative;
             padding-top: 10px; 
         }
         .main-header h1 {
             font-family: 'Poppins', sans-serif;
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin: 0 0 5px 0;
             color: var(--primary-color);
             line-height: 1.1;
         }
         .main-header h2 {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 400;
             color: var(--text-dark);
-            margin: 0 0 20px 0;
+            margin: 0 0 15px 0;
             border-bottom: 2px solid var(--accent-color);
             display: inline-block;
-            padding-bottom: 8px;
+            padding-bottom: 5px;
         }
         .contact-info {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 10px 25px;
-            font-size: 0.9rem;
+            gap: 8px 20px;
+            font-size: 0.85rem;
         }
         .contact-info a {
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 600;
         }
-        .contact-info a:hover { color: var(--accent-color); }
         .contact-info span { display: flex; align-items: center; }
         .contact-info .icon { 
-            margin-right: 8px; 
+            margin-right: 6px; 
             color: var(--primary-color);
-            width: 16px; 
+            width: 14px; 
             text-align: center;
         }
 
-        .section { margin-bottom: 30px; }
+        .section { margin-bottom: 25px; }
         .section-title {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: var(--primary-color);
-            margin-bottom: 15px;
-            padding-bottom: 8px;
+            margin-bottom: 12px;
+            padding-bottom: 5px;
             border-bottom: 2px solid var(--primary-color);
             display: flex;
             align-items: center;
         }
         .section-title .icon {
-            margin-right: 15px;
+            margin-right: 10px;
             color: var(--accent-color);
-            font-size: 1.4rem;
-            width: 30px;
+            font-size: 1.3rem;
+            width: 25px;
             text-align: center;
         }
         p, ul {
             text-align: justify;
-            line-height: 1.5; /* Sedikit lebih rapat untuk fit konten */
-            margin-top: 5px;
-            margin-bottom: 5px;
+            line-height: 1.5;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            font-size: 0.95rem;
         }
 
         .skills-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 15px;
         }
         .skills-category h4 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
             font-size: 1rem;
-            margin: 0 0 10px 0;
+            margin: 0 0 8px 0;
             color: var(--text-dark);
         }
         .skills-category ul {
@@ -195,9 +195,9 @@
         }
         .skills-category li {
             background-color: #e0e0e0;
-            border-radius: 12px;
-            padding: 3px 10px;
-            margin-bottom: 6px;
+            border-radius: 10px;
+            padding: 2px 10px;
+            margin-bottom: 5px;
             font-size: 0.85rem;
             font-weight: 600;
             display: inline-block;
@@ -207,12 +207,12 @@
             color: var(--text-light);
         }
         
-        .item { margin-bottom: 20px; }
+        .item { margin-bottom: 18px; }
         .item:last-child { margin-bottom: 0; }
-        .item-header { margin-bottom: 5px; }
+        .item-header { margin-bottom: 4px; }
         .item-title {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 600;
             margin: 0;
         }
@@ -220,22 +220,22 @@
             font-weight: 700;
             color: var(--accent-color);
             margin-bottom: 2px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
         .item-date {
             font-style: italic;
-            color: #777;
+            color: #666;
             font-size: 0.85rem;
             margin-top: 0;
         }
         .item-description ul {
-            padding-left: 20px;
-            margin-top: 5px;
+            padding-left: 18px;
+            margin-top: 4px;
         }
         .item-description li {
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             padding-left: 5px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
         
         .cert-list {
@@ -243,50 +243,74 @@
             padding-left: 0;
         }
         .cert-list li {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: flex;
             align-items: center;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
         .cert-list .icon {
-            margin-right: 12px;
+            margin-right: 10px;
             color: var(--accent-color);
         }
 
-        /* Media Query untuk Cetak */
+        /* --- SETTING KHUSUS CETAK (PRINT) --- */
         @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+
             body { 
-                background-color: #fff; 
-                padding: 0; 
-                display: block;
+                background-color: white !important; 
+                padding: 0 !important; 
+                margin: 0 !important;
+                display: block !important; 
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
+
             .page { 
-                width: 100%; 
-                margin: 0; 
-                box-shadow: none; 
-                border-top: 10px solid var(--primary-color); /* Pastikan border tercetak */
-                page-break-after: always;
-                min-height: auto; /* Biarkan tinggi menyesuaikan saat print */
+                width: 100% !important; 
+                margin: 0 !important; 
+                padding: 10mm 15mm !important; 
+                box-shadow: none !important; 
+                border-top: 5px solid var(--primary-color) !important;
+                /* Hapus page-break paksa, biarkan browser mengatur break-nya */
+                page-break-after: auto; 
+                border-radius: 0;
             }
-            .page:last-child {
-                page-break-after: auto;
-            }
-            #lang-switcher { display: none; }
+
+            #lang-switcher { display: none !important; }
+            
             .portfolio-link { 
-                color: var(--text-dark); 
-                background: none; 
-                border: 1px solid #ccc; 
-                padding: 5px 15px; 
+                color: black !important; 
+                background: none !important; 
+                border: 1px solid #ccc !important; 
+                box-shadow: none !important;
+                padding: 5px 15px !important; 
             }
+            .portfolio-link i { color: black !important; }
+
+            .item-date { color: #444 !important; }
+            .skills-category li { 
+                border: 1px solid #ccc;
+                background-color: #fff !important; 
+                color: #000 !important;
+            }
+            .skills-category li.highlight {
+                background-color: #ddd !important; 
+                border-color: #999;
+            }
+
+            a { text-decoration: none !important; color: inherit !important; }
         }
         
         /* Media Query untuk Mobile */
         @media screen and (max-width: 794px) {
             .page {
                 width: 100%;
-                min-height: auto;
                 margin: 0;
-                padding: 30px 20px;
+                padding: 20px;
             }
             body {
                 padding: 0;
@@ -301,8 +325,8 @@
         <img id="flag-icon" src="https://flagcdn.com/us.svg" alt="Switch Language">
     </button>
 
-    <!-- HALAMAN 1 -->
-    <div class="page" id="page1">
+    <!-- KONTEN UTAMA (Digabung menjadi satu halaman panjang) -->
+    <div class="page" id="main-page">
         <header class="main-header">
             <h1>Yusuf Al-Rahman</h1>
             <h2 class="lang-id hidden">Analis Data & Operasi</h2>
@@ -408,8 +432,8 @@
             </div>
         </section>
 
-        <!-- Mulai Pengalaman Kerja (Bagian 1) -->
-        <section class="section" style="margin-bottom: 0;">
+        <!-- Pengalaman Kerja (Semua Item Digabung) -->
+        <section class="section">
             <h3 class="section-title">
                 <i class="icon fa-solid fa-briefcase"></i>
                 <span class="lang-id hidden">Pengalaman Kerja</span>
@@ -450,7 +474,8 @@
                     </ul>
                 </div>
             </div>
-             <div class="item">
+
+            <div class="item">
                 <div class="item-header">
                     <h4 class="item-title">Web Developer <span style="font-size: 0.9em; font-weight: normal;">(Internship)</span></h4>
                     <p class="item-subtitle">Bimbel Tiki Taka</p>
@@ -478,14 +503,8 @@
                     </ul>
                 </div>
             </div>
-        </section>
-    </div>
 
-    <!-- HALAMAN 2 -->
-    <div class="page" id="page2">
-        
-        <section class="section">
-            <!-- Lanjutan Work Experience -->
+            <!-- Item dari Halaman 2 Dipindahkan ke Sini -->
             <div class="item">
                 <div class="item-header">
                     <h4 class="item-title">Meta Spark AR Designer <span style="font-size: 0.9em; font-weight: normal;">(Internship)</span></h4>
