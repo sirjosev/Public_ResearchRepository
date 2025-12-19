@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Yusuf Al-Rahman (Multi-Language)</title>
+    <title>CV - Yusuf Al-Rahman (A4 Style)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Impor font dari Google Fonts */
@@ -12,7 +12,8 @@
         /* Variabel warna CSS */
         :root {
             --primary-color: #004d40; /* Dark Teal */
-            --secondary-color: #f5f5f5; /* Light Gray Background */
+            --secondary-color: #525659; /* Darker background for "desk" effect */
+            --paper-color: #ffffff;
             --accent-color: #ffab40;  /* Amber/Gold */
             --text-dark: #212121;
             --text-light: #ffffff;
@@ -22,33 +23,38 @@
         body {
             font-family: 'Lato', sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 40px 0;
             background-color: var(--secondary-color);
             color: var(--text-dark);
-            -webkit-print-color-adjust: exact; /* Memastikan warna tercetak */
+            -webkit-print-color-adjust: exact;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px; /* Jarak antar kertas */
         }
 
-        .container {
-            max-width: 850px;
-            min-height: 1100px; 
-            margin: 20px auto;
-            background-color: var(--text-light);
-            padding: 50px 60px;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.1);
+        /* Gaya Kertas A4 */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            background-color: var(--paper-color);
+            padding: 50px 60px; /* Margin dalam kertas */
+            box-sizing: border-box;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Efek bayangan kertas */
             border-top: 10px solid var(--primary-color);
             position: relative;
         }
-        
-        /* Tombol ganti bahasa */
+
+        /* Tombol ganti bahasa (Floating) */
         #lang-switcher {
-            position: absolute;
+            position: fixed;
             top: 20px;
-            right: 25px;
+            right: 20px;
             background-color: #fff;
             border: 2px solid var(--primary-color);
             width: 60px;
-            height: 40px;
-            border-radius: 20px;
+            height: 60px;
+            border-radius: 50%;
             cursor: pointer;
             padding: 0;
             display: flex;
@@ -56,14 +62,14 @@
             align-items: center;
             transition: transform 0.2s, box-shadow 0.2s;
             overflow: hidden;
-            z-index: 10;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
         #lang-switcher:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transform: scale(1.1);
         }
         #lang-switcher img {
-            width: 100%;
+            width: 30px;
             height: auto;
             display: block;
         }
@@ -71,8 +77,8 @@
         /* Gaya Khusus untuk Link Portfolio */
         .portfolio-banner {
             text-align: center;
-            margin-top: 25px; /* Jarak dari ikon kontak */
-            margin-bottom: 10px; 
+            margin-top: 25px;
+            margin-bottom: 20px; 
         }
         .portfolio-link {
             display: inline-block;
@@ -100,7 +106,7 @@
         
         .hidden { display: none !important; }
 
-        /* Header Utama */
+        /* Typography & Layout yang sama */
         .main-header {
             text-align: center;
             margin-bottom: 40px;
@@ -145,41 +151,41 @@
             text-align: center;
         }
 
-        /* Tata Letak Bagian */
-        .section { margin-bottom: 35px; }
+        .section { margin-bottom: 30px; }
         .section-title {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--primary-color);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid var(--primary-color);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-color);
             display: flex;
             align-items: center;
         }
         .section-title .icon {
             margin-right: 15px;
             color: var(--accent-color);
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             width: 30px;
             text-align: center;
         }
         p, ul {
             text-align: justify;
-            line-height: 1.6;
+            line-height: 1.5; /* Sedikit lebih rapat untuk fit konten */
+            margin-top: 5px;
+            margin-bottom: 5px;
         }
 
-        /* Bagian Keahlian */
         .skills-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 20px;
         }
         .skills-category h4 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
-            font-size: 1.1rem;
-            margin: 0 0 15px 0;
+            font-size: 1rem;
+            margin: 0 0 10px 0;
             color: var(--text-dark);
         }
         .skills-category ul {
@@ -189,10 +195,10 @@
         }
         .skills-category li {
             background-color: #e0e0e0;
-            border-radius: 15px;
-            padding: 4px 12px;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
+            border-radius: 12px;
+            padding: 3px 10px;
+            margin-bottom: 6px;
+            font-size: 0.85rem;
             font-weight: 600;
             display: inline-block;
         }
@@ -201,47 +207,37 @@
             color: var(--text-light);
         }
         
-        /* Item Pengalaman/Pendidikan */
-        .item { margin-bottom: 25px; }
+        .item { margin-bottom: 20px; }
         .item:last-child { margin-bottom: 0; }
-        .item-header { margin-bottom: 8px; }
+        .item-header { margin-bottom: 5px; }
         .item-title {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
             margin: 0;
         }
         .item-subtitle {
             font-weight: 700;
             color: var(--accent-color);
-            margin-bottom: 3px;
-            font-size: 1rem;
+            margin-bottom: 2px;
+            font-size: 0.95rem;
         }
         .item-date {
             font-style: italic;
             color: #777;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            margin-top: 0;
         }
         .item-description ul {
-            list-style-type: ' ';
             padding-left: 20px;
-            margin-top: 10px;
+            margin-top: 5px;
         }
         .item-description li {
-            margin-bottom: 8px;
-            padding-left: 10px;
+            margin-bottom: 5px;
+            padding-left: 5px;
+            font-size: 0.95rem;
         }
-        .project-tags, .cert-list { margin-top: 10px; }
-        .tag {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            border-radius: 5px;
-            padding: 3px 10px;
-            margin: 2px 4px 2px 0;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
+        
         .cert-list {
             list-style-type: none;
             padding-left: 0;
@@ -250,6 +246,7 @@
             margin-bottom: 8px;
             display: flex;
             align-items: center;
+            font-size: 0.95rem;
         }
         .cert-list .icon {
             margin-right: 12px;
@@ -258,27 +255,54 @@
 
         /* Media Query untuk Cetak */
         @media print {
+            body { 
+                background-color: #fff; 
+                padding: 0; 
+                display: block;
+            }
+            .page { 
+                width: 100%; 
+                margin: 0; 
+                box-shadow: none; 
+                border-top: 10px solid var(--primary-color); /* Pastikan border tercetak */
+                page-break-after: always;
+                min-height: auto; /* Biarkan tinggi menyesuaikan saat print */
+            }
+            .page:last-child {
+                page-break-after: auto;
+            }
             #lang-switcher { display: none; }
-            .container { margin: 0; box-shadow: none; border-top: none; } 
-            .portfolio-link { color: var(--text-dark); background: none; border: 1px solid #ccc; padding: 5px 15px; }
+            .portfolio-link { 
+                color: var(--text-dark); 
+                background: none; 
+                border: 1px solid #ccc; 
+                padding: 5px 15px; 
+            }
         }
         
-        /* Media Query untuk Perangkat Seluler */
-        @media screen and (max-width: 768px) {
-            .container { padding: 30px 25px; }
-            .skills-container { grid-template-columns: 1fr; }
-            #lang-switcher { top: 10px; right: 15px; }
+        /* Media Query untuk Mobile */
+        @media screen and (max-width: 794px) {
+            .page {
+                width: 100%;
+                min-height: auto;
+                margin: 0;
+                padding: 30px 20px;
+            }
+            body {
+                padding: 0;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <button id="lang-switcher">
-            <img id="flag-icon" src="https://flagcdn.com/us.svg" alt="Switch Language">
-        </button>
+    <!-- Tombol Floating -->
+    <button id="lang-switcher">
+        <img id="flag-icon" src="https://flagcdn.com/us.svg" alt="Switch Language">
+    </button>
 
+    <!-- HALAMAN 1 -->
+    <div class="page" id="page1">
         <header class="main-header">
             <h1>Yusuf Al-Rahman</h1>
             <h2 class="lang-id hidden">Analis Data & Operasi</h2>
@@ -296,7 +320,6 @@
                 <span><i class="icon fa-brands fa-github"></i><a href="https://github.com/sirjosev" target="_blank">GitHub</a></span>
             </div>
 
-            <!-- Link Pindah Ke Sini -->
             <div class="portfolio-banner">
                 <a href="https://bit.ly/JosevPorto" target="_blank" class="portfolio-link">
                     <i class="fa-solid fa-link"></i> Https://bit.ly/JosevPorto
@@ -384,8 +407,9 @@
                 </div>
             </div>
         </section>
-        
-        <section class="section">
+
+        <!-- Mulai Pengalaman Kerja (Bagian 1) -->
+        <section class="section" style="margin-bottom: 0;">
             <h3 class="section-title">
                 <i class="icon fa-solid fa-briefcase"></i>
                 <span class="lang-id hidden">Pengalaman Kerja</span>
@@ -405,13 +429,13 @@
                 </div>
                 <div class="item-description">
                     <ul class="lang-id hidden">
-                        <li>Berpartisipasi dalam pengembangan prototipe sistem kontrol HVAC cerdas menggunakan sensor IoT dan machine learning untuk mengoptimalkan kontrol katup AC.</li>
-                        <li>Merancang dan mengimplementasikan sistem integrasi sensor komprehensif dengan pipeline pemrosesan data real-time untuk pemantauan lingkungan.</li>
+                        <li>Berpartisipasi dalam pengembangan prototipe sistem kontrol HVAC cerdas menggunakan sensor IoT dan machine learning.</li>
+                        <li>Merancang dan mengimplementasikan sistem integrasi sensor komprehensif dengan pipeline pemrosesan data real-time.</li>
                         <li>Berhasil mendemonstrasikan prototipe yang berfungsi di berbagai pameran teknologi.</li>
                     </ul>
                     <ul class="lang-en">
-                        <li>Participated in the development of a smart HVAC control system prototype utilizing IoT sensors and machine learning to optimize AC valve control.</li>
-                        <li>Designed and implemented a comprehensive sensor integration system with a real-time data processing pipeline for environmental monitoring.</li>
+                        <li>Participated in the development of a smart HVAC control system prototype utilizing IoT sensors and machine learning.</li>
+                        <li>Designed and implemented a comprehensive sensor integration system with a real-time data processing pipeline.</li>
                         <li>Successfully demonstrated the working prototype at multiple technology exhibitions.</li>
                     </ul>
                     <ul class="lang-zh hidden">
@@ -420,14 +444,13 @@
                         <li>在多個技術展覽會上成功展示了可行的原型。</li>
                     </ul>
                     <ul class="lang-nl hidden">
-                        <li>Deelgenomen aan de ontwikkeling van een prototype voor een slim HVAC-regelsysteem dat gebruikmaakt van IoT-sensoren en machine learning om de regeling van AC-kleppen te optimaliseren.</li>
-                        <li>Ontworpen en geïmplementeerd een uitgebreid sensorintegratiesysteem met een real-time dataverwerkingspijplijn voor milieumonitoring.</li>
+                        <li>Deelgenomen aan de ontwikkeling van een prototype voor een slim HVAC-regelsysteem dat gebruikmaakt van IoT-sensoren en machine learning.</li>
+                        <li>Ontworpen en geïmplementeerd een uitgebreid sensorintegratiesysteem met een real-time dataverwerkingspijplijn.</li>
                         <li>Het werkende prototype met succes gedemonstreerd op meerdere technologiebeurzen.</li>
                     </ul>
                 </div>
             </div>
-
-            <div class="item">
+             <div class="item">
                 <div class="item-header">
                     <h4 class="item-title">Web Developer <span style="font-size: 0.9em; font-weight: normal;">(Internship)</span></h4>
                     <p class="item-subtitle">Bimbel Tiki Taka</p>
@@ -455,7 +478,14 @@
                     </ul>
                 </div>
             </div>
+        </section>
+    </div>
 
+    <!-- HALAMAN 2 -->
+    <div class="page" id="page2">
+        
+        <section class="section">
+            <!-- Lanjutan Work Experience -->
             <div class="item">
                 <div class="item-header">
                     <h4 class="item-title">Meta Spark AR Designer <span style="font-size: 0.9em; font-weight: normal;">(Internship)</span></h4>
@@ -469,30 +499,25 @@
                     <ul class="lang-id hidden">
                         <li>Mengembangkan dan memelihara pengalaman AR yang imersif dan interaktif di platform Meta Spark.</li>
                         <li>Bekerja sama dengan desainer dan pengembang untuk membuat konten AR yang menarik dan edukatif.</li>
-                        <li>Selalu mengikuti tren dan teknologi terbaru dalam AR.</li>
                         <li><strong>Proyek:</strong> Math Adventure (Filter Instagram dengan permainan kuis).</li>
                     </ul>
                     <ul class="lang-en">
                         <li>Develop and maintain immersive and interactive AR experiences on the Meta Spark platform.</li>
                         <li>Work with designers and developers to create engaging and educational AR content.</li>
-                        <li>Stay up-to-date with the latest trends and technology in AR.</li>
                         <li><strong>Project:</strong> Math Adventure (Instagram filter with quiz game applied).</li>
                     </ul>
                     <ul class="lang-zh hidden">
                         <li>在 Meta Spark 平台上開發和維護沉浸式及互動式 AR 體驗。</li>
                         <li>與設計師和開發人員合作，創建引人入勝且具教育意義的 AR 內容。</li>
-                        <li>緊跟 AR 領域的最新趨勢和技術。</li>
                         <li><strong>項目:</strong> Math Adventure (帶有問答遊戲的 Instagram 濾鏡)。</li>
                     </ul>
                     <ul class="lang-nl hidden">
                         <li>Ontwikkelen en onderhouden van meeslepende en interactieve AR-ervaringen op het Meta Spark-platform.</li>
                         <li>Samenwerken met ontwerpers en ontwikkelaars om boeiende en educatieve AR-content te creëren.</li>
-                        <li>Op de hoogte blijven van de nieuwste trends en technologieën in AR.</li>
                         <li><strong>Project:</strong> Math Adventure (Instagram-filter met quizspel).</li>
                     </ul>
                 </div>
             </div>
-
         </section>
 
         <section class="section">
@@ -514,20 +539,20 @@
                 </div>
                 <div class="item-description">
                     <ul class="lang-id hidden">
-                        <li>Memimpin workshop teknis tentang "Pemrograman Mikrokontroler & Sensor untuk Sistem Perangkat Keras Berbasis IoT" dengan tingkat pemahaman peserta >90%.</li>
-                        <li>Mengembangkan modul praktis terstruktur yang menghasilkan peningkatan pemahaman teknis peserta sebesar 40% dari pra-tes ke pasca-tes.</li>
+                        <li>Memimpin workshop teknis tentang "Pemrograman Mikrokontroler & Sensor" dengan tingkat pemahaman peserta >90%.</li>
+                        <li>Mengembangkan modul praktis terstruktur yang menghasilkan peningkatan pemahaman teknis peserta sebesar 40%.</li>
                     </ul>
                     <ul class="lang-en">
-                        <li>Led a technical workshop on "Microcontroller Programming & Sensors for IoT-Based Hardware Systems" with a >90% participant comprehension rate.</li>
-                        <li>Developed structured practical modules, resulting in a 40% improvement in participants' technical understanding from pre-test to post-test assessments.</li>
+                        <li>Led a technical workshop on "Microcontroller Programming & Sensors" with a >90% participant comprehension rate.</li>
+                        <li>Developed structured practical modules, resulting in a 40% improvement in participants' technical understanding.</li>
                     </ul>
                     <ul class="lang-zh hidden">
                         <li>主講關於“物聯網硬件系統的微控制器編程與傳感器”的技術工作坊，參與者理解率超過90%。</li>
                         <li>開發了結構化的實踐模塊，使參與者的技術理解能力從前測到後測提高了40%。</li>
                     </ul>
                     <ul class="lang-nl hidden">
-                        <li>Een technische workshop geleid over "Microcontrollerprogrammering & Sensoren voor op IoT gebaseerde hardwaresystemen" met een begripspercentage van >90% onder de deelnemers.</li>
-                        <li>Gestructureerde praktische modules ontwikkeld, resulterend in een verbetering van 40% in het technische begrip van de deelnemers van pre-test naar post-test.</li>
+                        <li>Een technische workshop geleid over "Microcontrollerprogrammering & Sensoren" met een begripspercentage van >90% onder de deelnemers.</li>
+                        <li>Gestructureerde praktische modules ontwikkeld, resulterend in een verbetering van 40% in het technische begrip van de deelnemers.</li>
                     </ul>
                 </div>
             </div>
@@ -623,5 +648,3 @@
     </script>
 </body>
 </html>
-
-
