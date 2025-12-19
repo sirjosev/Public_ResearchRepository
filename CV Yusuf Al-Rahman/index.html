@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Yusuf Al-Rahman (Multi-Language)</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Impor font dari Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap');
@@ -67,6 +67,36 @@
             height: auto;
             display: block;
         }
+
+        /* Gaya Khusus untuk Link Portfolio */
+        .portfolio-banner {
+            text-align: center;
+            margin-top: 25px; /* Jarak dari ikon kontak */
+            margin-bottom: 10px; 
+        }
+        .portfolio-link {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+        .portfolio-link:hover {
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .portfolio-link i {
+            margin-right: 8px;
+        }
         
         .hidden { display: none !important; }
 
@@ -75,7 +105,7 @@
             text-align: center;
             margin-bottom: 40px;
             position: relative;
-            padding-top: 20px; 
+            padding-top: 10px; 
         }
         .main-header h1 {
             font-family: 'Poppins', sans-serif;
@@ -230,6 +260,7 @@
         @media print {
             #lang-switcher { display: none; }
             .container { margin: 0; box-shadow: none; border-top: none; } 
+            .portfolio-link { color: var(--text-dark); background: none; border: 1px solid #ccc; padding: 5px 15px; }
         }
         
         /* Media Query untuk Perangkat Seluler */
@@ -263,6 +294,13 @@
                 <span class="lang-nl hidden"><i class="icon fa-solid fa-location-dot"></i>Jakarta, Indonesië</span>
                 <span><i class="icon fa-brands fa-linkedin"></i><a href="https://linkedin.com/in/yusuf-al-rahman-8049a21b3/" target="_blank">LinkedIn</a></span>
                 <span><i class="icon fa-brands fa-github"></i><a href="https://github.com/sirjosev" target="_blank">GitHub</a></span>
+            </div>
+
+            <!-- Link Pindah Ke Sini -->
+            <div class="portfolio-banner">
+                <a href="https://bit.ly/JosevPorto" target="_blank" class="portfolio-link">
+                    <i class="fa-solid fa-link"></i> Https://bit.ly/JosevPorto
+                </a>
             </div>
         </header>
 
@@ -585,3 +623,5 @@
     </script>
 </body>
 </html>
+
+
